@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FirstnamePageRoutingModule } from './firstname-routing.module';
 
 import { FirstnamePage } from './firstname.page';
+import { QuestionComponent } from 'src/app/components/question/question.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { FirstnamePage } from './firstname.page';
     IonicModule,
     FirstnamePageRoutingModule
   ],
-  declarations: [FirstnamePage]
+  declarations: [
+    FirstnamePage,
+    QuestionComponent
+  ]
 })
 export class FirstnamePageModule {}
