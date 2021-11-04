@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'age',
     loadChildren: () => import('./pages/age/age.module').then( m => m.AgePageModule)
+  },  {
+    path: 'ville',
+    loadChildren: () => import('./pages/ville/ville.module').then( m => m.VillePageModule)
   },
+
 
 ];
 
