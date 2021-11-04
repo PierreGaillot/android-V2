@@ -1,0 +1,89 @@
+/* #### REPONSE CHECKBOX RADIO ####*/
+.reponse-checkbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 7.5em;
+}
+
+.rep-cb-circle-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 5em;
+    width: 5em;
+    background: #E3E3E3;
+    border-radius: 100%;
+}
+
+.rep-cb-circle-cont img{
+    display: block;
+}
+
+.rep-cb-circl-stroke{
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 4.9em;
+    width: 4.9em;
+    border: 0.3em solid #000000;
+    border-radius: 100%;
+}
+
+.reponse-checkbox-txt{
+    display: block;
+    white-space:normal;
+    width: 6em;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1em;
+    text-align: center;
+    color: #000000;
+
+}
+
+.reponses-cb-row{
+    width: 20em;
+    margin-top: 2em;
+    margin-left: calc(50% - 20em/2 - 1px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* ############### RADIO BTN ############ */
+
+input[type="radio"].radio-btn {
+    display: none;
+  }
+
+  input[type="radio"].radio-btn:checked + label .rep-cb-circle-cont {
+    transition: all 0.2s ease-in-out 0s;
+    height: 3.8em;
+    width: 3.8em;
+  }
+
+/* ############### Couleurs contours :: checked ############ */
+
+  label[for="16-18"] .rep-cb-circl-stroke {
+    border: 0.3em solid gray;
+ }
+
+ label[for="19-30"] .rep-cb-circl-stroke {
+    border: 0.3em solid gray;
+ }
+
+ label[for="+30"] .rep-cb-circl-stroke {
+    border: 0.3em solid gray;
+ }
+ 
