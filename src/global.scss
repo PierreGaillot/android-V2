@@ -70,32 +70,36 @@ table {
 	border-spacing: 0;
 }
 
-// @font-face {
-// 	font-family: 'gotham';
-// 	src: url('/src/assets/fonts/GothamBook.ttf') format("truetype");
-// }
+/////////////////////////////////  FONTS  /////////////////////////////////  
 
 @font-face {
 	font-family: 'Gotham';
 	font-style: normal;
 	font-weight: normal;
 	src: url('./assets/fonts/GothamBook.ttf') format("truetype");
+
 }
-
-// @font-face {
-// 	font-family: 'gotham-bold';
-// 	src: url('/src/assets/fonts/GothamBold.ttf') format("truetype");
-// }
-
-
-// *{
-// 	font-family: 'Gotham' !important;
-// }
+@font-face {
+	font-family: 'Gotham-bold';
+	font-style: normal;
+	font-weight: bold;
+	src: url('./assets/fonts/GothamBold.ttf') format("truetype");
+}
 
 :root[mode=ios] .Gotham,
 :root[mode=md] .Gotham {
 	--ion-font-family: 'Gotham' !important;
 	font-family: 'Gotham' !important;
+}
+
+:root[mode=ios] .Gotham-bold,
+:root[mode=md] .Gotham-bold {
+	--ion-font-family: 'Gotham-bold' !important;
+	font-family: 'Gotham-bold' !important;
+}
+
+* {
+	font-family: "Gotham" !important;
 }
 
 /////////////////////////////////  BULLE  /////////////////////////////////  
@@ -127,7 +131,7 @@ table {
     display: inline-block;
 }
 
-/////////////////////////////////  BOUTONS  /////////////////////////////////  
+/////////////////////////////////  BUTTONS  /////////////////////////////////  
 .cont-btn {
     position: relative;
     display: inline-block;
@@ -147,4 +151,37 @@ table {
 	text-transform: uppercase;
 	box-shadow: 0px 0px 50px rgba(116, 179, 226, 0.3);
 	cursor: pointer;
+}
+
+/////////////////////////////////  INPUTS  /////////////////////////////////  
+
+// INPUT TEXT
+ion-item {
+    max-width: 250px;
+    margin: auto !important;
+    margin-left: 10%;
+    --color: #92B7D0;
+}
+
+ion-item::part(native) {
+    padding-left: unset;
+}
+
+ion-item {
+    --inner-border-width: 0px;
+    --inner-padding-end: 0 !important;
+}
+
+ion-input {
+    background: #E9F6FF !important;
+    border-radius: 7px !important;
+    height: 45px !important;
+	padding-left: 15px !important;
+}
+
+// LABEL 
+ion-label {
+    z-index: 100;
+    font-size: 15px !important;
+    padding-left: 15px !important;
 }
