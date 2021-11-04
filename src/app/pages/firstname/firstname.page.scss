@@ -1,0 +1,21 @@
+.reponse-txt .reponse-txt-field{
+    margin: 2em;
+    padding-left: 1em;
+    background: #E9F6FF;
+    border-radius: 7px;
+    border: none;
+    height: 3em;
+    width: 70%;
+    margin-left: 15%;
+
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8em;
+    line-height: 0.8em;
+
+}
+
+input[type=text]:focus {
+    outline: none;
+  }
