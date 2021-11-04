@@ -73,4 +73,14 @@ input[type="radio"].radio-btn {
     width: 3.8em;
   }
 
-  
+/* ############### Couleurs contours :: checked ############ */
+
+  label[for="homme"] .rep-cb-circl-stroke {
+    border: 0.3em solid #74B3E2;
+ }
+
+ label[for="femme"] .rep-cb-circl-stroke {
+    border: 0.3em solid #EC7CB2;
+ }
+
+ 
