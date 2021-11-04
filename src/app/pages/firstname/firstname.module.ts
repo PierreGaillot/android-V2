@@ -8,6 +8,7 @@ import { FirstnamePageRoutingModule } from './firstname-routing.module';
 
 import { FirstnamePage } from './firstname.page';
 import { QuestionComponent } from 'src/app/components/question/question.component';
+import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { QuestionComponent } from 'src/app/components/question/question.componen
   ],
   declarations: [
     FirstnamePage,
-    QuestionComponent
+    QuestionComponent,
+    SwipeupComponent
   ]
 })
 export class FirstnamePageModule {}

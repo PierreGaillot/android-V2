@@ -8,6 +8,7 @@ import { SexePageRoutingModule } from './sexe-routing.module';
 
 import { SexePage } from './sexe.page';
 import { QuestionComponent } from 'src/app/components/question/question.component';
+import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { QuestionComponent } from 'src/app/components/question/question.componen
   declarations: [
     SexePage, 
     QuestionComponent,
+    SwipeupComponent,
   ]
 })
 export class SexePageModule {}
