@@ -7,14 +7,20 @@ import { IonicModule } from '@ionic/angular';
 import { RecapPageRoutingModule } from './recap-routing.module';
 
 import { RecapPage } from './recap.page';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
+import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-infos.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecapPageRoutingModule
+    RecapPageRoutingModule,
   ],
-  declarations: [RecapPage]
+  declarations: [
+    RecapPage,
+    NavbarComponent,
+    EugenieInfosComponent,
+  ]
 })
 export class RecapPageModule {}
