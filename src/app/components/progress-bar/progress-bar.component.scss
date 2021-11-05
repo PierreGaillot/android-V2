@@ -41,18 +41,16 @@
     // transition: 3s ease-in-out 0.5s;
     // transition-delay: 2s;
 
-    width: 33%;
+    width: calc(100%/3);
     animation-name: progress-grow;
     animation-duration: 1s;
 }
 
 @keyframes progress-grow {
     from {
-       
         width: 1%;
     }
     to {
-       
         width: 33%;
     }
 }
