@@ -129,7 +129,7 @@ table {
 
 /////////////////////////////////  BUTTONS  /////////////////////////////////  
 ion-button {
-	width: 15em !important;
+	min-width: 15em !important;
 	height: 4em !important;
 	--background: #FFFFFF;
 	--background-activated: #FFFFFF;
