@@ -2,9 +2,7 @@
 
   <app-navbar></app-navbar>
 
-  <app-eugenie-infos 
-    title = "Parfait"
-    txtInfos = "
+  <app-eugenie-infos title="Parfait" txtInfos="
     Nous allons essayer d’en savoir
     plus sur vos besoins pour vous proposer
     un accompagnement « Sur Mesure ».">
@@ -13,4 +11,8 @@
   <div class="center">
     <ion-button [routerLink]="['/firstname']" class="btn">voici mon récapitulatif.</ion-button>
   </div>
+
+  <app-progress-bar stape=1></app-progress-bar>
+
+  <app-swipeup></app-swipeup>
 </ion-content>
