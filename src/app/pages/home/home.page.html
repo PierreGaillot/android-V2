@@ -1,3 +1,28 @@
 <ion-content [fullscreen]="true">
+    <app-navbar></app-navbar>
+
+    <div class="comp-bonjour">
+        <div>
+            <p class="intro-bonjour">bonjour !</p>
+        </div>
+        <div>
+            <div class="bulle-txt">
+                Et bienvenue sur l’application <span class="bold">SUR-MESURE !</span><br>
+                Une prise de contact <span class="bold">simple</span><br>
+                 en <span class="bold">3 étapes</span>,<br>
+                pour vous aider à définir votre projet !
+            </div>
+            <div class="bulle-triangle"> 
+                <img src="../../../assets/img/triangle.svg" alt="">
+            </div>
+        </div>
+        <div class="bulle-group-eugenie-shadow">
+            <img src="../../../assets/img/eugenie.svg" alt="Eugenie bonjour"  class="bulle-img-eugenie">
+        </div>
+    </div>
+
+    <div class="center">
+        <ion-button [routerLink]="['/firstname']" class="btn">Commencer !</ion-button>
+    </div>
 
 </ion-content>

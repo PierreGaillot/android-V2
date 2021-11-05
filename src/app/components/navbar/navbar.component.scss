@@ -6,6 +6,7 @@ ion-header::after {
 
 nav {
     z-index: 1;
+    height: 4rem;
     background: #74B3E2;
     display: flex;
     flex-direction:row ;
@@ -34,8 +35,9 @@ nav span {
 }
 
 .btn-retour {
-    width: 4em;
-    height: 4em;
+    width: 4rem;
+    height: 4rem;
+    // height: 100%;
     background:rgba(255, 255, 255, 0.4); 
     border: none;
 }

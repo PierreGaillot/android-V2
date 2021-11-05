@@ -127,31 +127,20 @@ table {
 	margin-top: -1px;
 }
 
-.bulle-img-eugenie {
-    display: inline-block;
-}
-
 /////////////////////////////////  BUTTONS  /////////////////////////////////  
-.cont-btn {
-    position: relative;
-    display: inline-block;
-    margin-left: calc(50% - 15em/2 - 1px);
-    width: 15em;
-    height: 4em;
-}
-
-.btn {
-	background: #FFFFFF;
-	display: inline-block;
-	height: 100%;
-	width: 100%;
-	border: 2px solid #74B3E2;
-	box-sizing: border-box;
-	border-radius: 1em;
+ion-button {
+	width: 15em !important;
+	height: 4em !important;
+	--background: #FFFFFF;
+	--background-activated: #FFFFFF;
+	--color: #000000;
+	--border-color: #74B3E2;
+	--border-radius: 1em;
+	--border-style: solid;
+	--border-width: 2px;
+	--box-shadow: 0px 0px 50px rgba(116, 179, 226, 0.3);
 	text-transform: uppercase;
-	box-shadow: 0px 0px 50px rgba(116, 179, 226, 0.3);
-	cursor: pointer;
-}
+  }
 
 /////////////////////////////////  INPUTS  /////////////////////////////////  
 
