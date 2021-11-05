@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { IonicModule } from '@ionic/angular';
+
+import { RecapPageRoutingModule } from './recap-routing.module';
+
+import { RecapPage } from './recap.page';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-infos.component';
 
@@ -13,12 +15,12 @@ import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    RecapPageRoutingModule,
   ],
   declarations: [
-    HomePage,
+    RecapPage,
     NavbarComponent,
-    EugenieInfosComponent
+    EugenieInfosComponent,
   ]
 })
-export class HomePageModule {}
+export class RecapPageModule {}
