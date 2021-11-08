@@ -7,6 +7,7 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class NavigationService {
   private history: string[] = [];
+  public route: string = "";
 
   constructor(
     private router: Router,
@@ -17,6 +18,8 @@ export class NavigationService {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.history.push(event.urlAfterRedirects)
+        this.route = event.urlAfterRedirects;
+        // console.log(this.route);
       }
     })
   }
