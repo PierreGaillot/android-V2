@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
+import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-infos.component';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
-import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-infos.component';
+
 
 @NgModule({
   imports: [
@@ -17,7 +17,6 @@ import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-
   ],
   declarations: [
     HomePage,
-    NavbarComponent,
     EugenieInfosComponent
   ]
 })

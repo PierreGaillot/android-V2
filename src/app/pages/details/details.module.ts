@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { DetailsPageRoutingModule } from './details-routing.module';
 
 import { DetailsPage } from './details.page';
-import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -18,7 +15,6 @@ import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
   ],
   declarations: [
     DetailsPage,
-    NavbarComponent,
   ]
 })
 export class DetailsPageModule {}

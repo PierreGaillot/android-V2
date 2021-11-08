@@ -53,6 +53,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    padding-top: 3rem !important;
 }
 ol, ul {
 	list-style: none;
@@ -147,8 +148,7 @@ ion-button {
 // INPUT TEXT
 ion-item {
     max-width: 250px;
-    margin: auto !important;
-    margin-left: 10%;
+    margin: 1rem auto !important;
     --color: #92B7D0;
 }
 
