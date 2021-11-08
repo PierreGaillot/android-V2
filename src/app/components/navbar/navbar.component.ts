@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,17 +9,18 @@ import { Router } from '@angular/router';
 })
 
 export class NavbarComponent implements OnInit {
-  @Input() title: string;
-
-  public href: string = "";
+  
+  public title: string = "";
+  // public href: string = "";
 
   constructor(
-    private router: Router
+    public router: Router,
+    public navigation: NavigationService
   ) { }
 
   ngOnInit() {
-    this.href = this.router.url;
-    console.log(this.href);
+    // this.href = this.router.url;
+    // console.log(this.href);
   }
 
 }

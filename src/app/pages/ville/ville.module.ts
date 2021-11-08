@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { VillePageRoutingModule } from './ville-routing.module';
 
 import { VillePage } from './ville.page';
-import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
+// import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { QuestionComponent } from 'src/app/components/question/question.component';
 import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
 
@@ -18,7 +18,7 @@ import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
   ],
   declarations: [
     VillePage,
-    NavbarComponent,
+    // NavbarComponent,
     QuestionComponent,
     SwipeupComponent, 
   ]

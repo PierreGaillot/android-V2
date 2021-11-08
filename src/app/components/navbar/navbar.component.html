@@ -2,7 +2,7 @@
   <nav>
     <img class="icon-SM-blanc" src="../../../assets/img/icon-sm-blanc.svg" alt="logo sur mesure n&b">
     <h1>{{title}}</h1>
-    <button *ngIf="href != '/home'" class="btn-retour" type="button">
+    <button *ngIf="href != '/home'" (click)="navigation.goBack()" class="btn-retour" type="button">
         <img src="../../../assets/img/arrow-left.svg" alt="retour">
     </button>
   </nav>

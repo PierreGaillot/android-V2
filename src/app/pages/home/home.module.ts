@@ -5,8 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+<<<<<<< HEAD
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-infos.component';
+=======
+// import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
+>>>>>>> bdc9f3c... return button : ok
 
 @NgModule({
   imports: [
@@ -17,8 +21,12 @@ import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-
   ],
   declarations: [
     HomePage,
+<<<<<<< HEAD
     NavbarComponent,
     EugenieInfosComponent
+=======
+    // NavbarComponent
+>>>>>>> bdc9f3c... return button : ok
   ]
 })
 export class HomePageModule {}
