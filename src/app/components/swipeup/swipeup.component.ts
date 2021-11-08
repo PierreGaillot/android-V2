@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-swipeup',
@@ -7,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SwipeupComponent implements OnInit {
 
-  constructor() { }
+  @Input() nextPage: string = '';
 
-  ngOnInit() {}
+  constructor(public navigation: NavigationService) { }
+
+  getRoutes(): string[] {
+    this.navigation.getRoutes();
+    return this.navigation.routes;
+  }
+
+  ngOnInit() {
+    console.log(this.getRoutes());
+  }
 
 }

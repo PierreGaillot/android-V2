@@ -4,7 +4,7 @@
     <h1 [ngClass]="{'center-ttl': isHome}">{{title}}</h1>
 
     <!-- Back btn is hidden on home page -->
-    <button *ngIf="href != '/home'" (click)="navigation.goBack()" class="btn-retour" type="button">
+    <button *ngIf="route != '/home'" (click)="navigation.goBack()" class="btn-retour" type="button">
         <img src="../../../assets/img/arrow-left.svg" alt="retour">
     </button>
   </nav>
