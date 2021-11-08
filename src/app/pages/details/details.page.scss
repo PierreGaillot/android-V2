@@ -1,24 +1,20 @@
-/* ############ RECAPITULATIF #################  */
+@import '../../../global.scss';
+
 .recapitulatif{
-    width: 20em;
-    margin-left: calc(50% - 20em/2 - 1px);
-    margin-top: 2em;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 7em;
 }
 
 .recap-cont-question{
     display: block;
     margin-top: .2em;
 }
+
 .recap-rubrique-txt{
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
-    font-family: Gotham;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    font-family: 'Gotham-bold' !important;
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
     text-transform: uppercase;
     color: #74B3E2;
 }
@@ -29,31 +25,24 @@
     justify-content: space-between;
 }
 
-
 .recap-question-txt{
-display: flex;
-flex-direction: column;
-justify-content: start;
-gap: 0.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5em;
 }
 
 .recap-separateur{
-    margin-top: 0.5em;
+    margin: 0.9em 0;
     display: block;
     width: 100%;
     height: 0.1em;
     background: #E9F6FF;
     border-radius: 1em;
 }
+
 .recap-num-question{
-    margin-bottom: 0.2em;
-    font-family: Gotham;
-    font-style: normal;
     font-weight: bold;
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
-    text-align: center;
     text-transform: uppercase;
 }
 
@@ -63,27 +52,10 @@ gap: 0.2em;
     gap: 0.5em;
 }
 
-.recap-goupeElement-question{
-    font-family: Gotham;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8em;
-    line-height: 0.8em;
-    display: flex;
-    align-items: center;
-    text-align: center;
+.recap-goupeElement-question, .recap-goupeElement-reponse{
     text-transform: uppercase;
 }
 
 .recap-goupeElement-reponse{
-    font-family: Gotham;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8em;
-    line-height: 0.8em;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
     color: #74B3E2;
 }
