@@ -1,7 +1,7 @@
 <ion-header>
   <nav>
     <img class="icon-SM-blanc" src="../../../assets/img/icon-sm-blanc.svg" alt="logo sur mesure n&b">
-    <h1>{{title}}</h1>
+    <h1 [ngClass]="{'center-ttl': isHome}">{{title}}</h1>
 
     <!-- Back btn is hidden on home page -->
     <button *ngIf="href != '/home'" (click)="navigation.goBack()" class="btn-retour" type="button">

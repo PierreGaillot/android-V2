@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { NavigationService } from 'src/app/services/navigation.service';
 
@@ -10,11 +10,12 @@ import { NavigationService } from 'src/app/services/navigation.service';
 
 export class NavbarComponent implements OnInit {
   
-  private title: string = "intro";
+  private title: string = "";
   private href: string = "";
   private routes: string[] = [
     "/home", "/firstname", "/age", "/sexe", "/ville", "/quartier", "/recap-a-propos" 
   ];
+  private isHome: boolean = false;
 
   constructor(
     private router: Router,
@@ -25,10 +26,11 @@ export class NavbarComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.href = event.urlAfterRedirects;
-        console.log(`Comp NAVBAR : ${this.href}`);
+        // console.log(`Comp NAVBAR : ${this.href}`);
 
+        // Change navbar title depending on the page 
         const index: number = this.routes.indexOf(this.href);
-        console.log(`INDEX : ${index}`);
+        // console.log(`INDEX : ${index}`);
 
         if (index === 0) {
           this.title = "introduction";
@@ -38,6 +40,13 @@ export class NavbarComponent implements OnInit {
         }
         else {
           this.title = "test";
+        }
+
+        // Center navbar title on page with no return btn
+        if (this.href === "/home") {
+          this.isHome = true;
+        } else {
+          this.isHome = false;
         }
       }
     })
