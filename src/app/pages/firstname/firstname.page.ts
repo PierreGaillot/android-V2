@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { UserDataModel } from 'src/app/models/user-data.model';
+import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
   selector: 'app-firstname',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstnamePage implements OnInit {
 
-  constructor() { }
+  public firstname: string = '';
+  // public userFirstname: UserDataModel;
 
-  ngOnInit() {
+  constructor(
+    public userDataService: UserDataService;
+  ) { }
+
+  ngOnInit() { }
+
+  getFirstame() {
+    this.userDataService.createUser(this.firstname);
   }
 
 }
