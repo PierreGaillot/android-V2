@@ -250,3 +250,26 @@ input[type="radio"].radio-btn {
     height: 3.8em;
     width: 3.8em;
   }
+
+
+  .separateur{
+    z-index:1;
+    display: inline-block;
+    position: relative;
+    border-radius: 1em;
+    bottom: 0%;
+    height: 0.3em;
+    width: 100%;
+    background: #74B3E2;
+}
+.separateur-opacity50{
+    z-index:1;
+    display: inline-block;
+    position: relative;
+    border-radius: 1em;
+    bottom: 0%;
+    height: 0.2em;
+    width: 100%;
+    background: #74B3E2;
+    opacity: 50%;
+}

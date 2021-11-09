@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RecapPage } from './recap.page';
+import { RecapAProposPage } from './recap-a-propos.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: RecapPage
+    component: RecapAProposPage
   }
 ];
 

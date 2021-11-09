@@ -1,0 +1,105 @@
+// .reponses-cb-col{
+//     width: 20em;
+//     margin-top: 2em;
+//     margin-left: calc(50% - 20em/2 - 1px);
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+// 	gap: 1em;
+// }
+
+// // .checkbox-btn-hor{
+
+// // }
+
+// .reponse-checkbox-hor{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content:start;
+//     padding-bottom: 1em ;
+//     border-bottom-right-radius: 1em;
+//     border-bottom-left-radius: 1em;
+// }
+
+// .rep-cb-circl-stroke_hor{
+//     z-index: -1;
+
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+
+//     height: 4.9em;
+//     width: 4.9em;
+//     border: 0.3em solid #000000;
+//     border-radius: 100%;
+// }
+
+// .reponse-checkbox-txt-hor{
+//     margin-left: 1em;
+// }
+
+// .rep-cb-circle-cont-hor{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-between;
+//     height: 5em;
+//     width: 5em;
+//     background: #E3E3E3;
+//     border-radius: 100%;
+// }
+
+// .rep-cb-circle-cont-hor > img {
+//     width: 100%;
+//     height: 100%;
+// }
+//   /* ############### RADIO BTN ############ */
+// input[type="checkbox"]::before .checkbox-btn-hor{
+//     width: 5em;
+//     height: 5em;
+//     display: none;
+// }
+
+
+//   input[type="checkbox"].checkbox-btn-hor {
+//     background: red;
+//   }
+
+//   input[type="checkbox"]:checked + label .rep-cb-circle-cont-hor{
+//     transition: all 0.2s ease-in-out 0s;
+//     height: 3.8em;
+//     margin: 0.2em;
+//     width: 3.8em;
+//   }
+
+
+
+//   ############### " NEW TEST "
+
+
+label{
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+}
+
+input[type="checkbox"]{
+    display: inline-block;
+
+}
+
+input[type="checkbox"]::before {
+    display: inline-block;
+    content: "";
+    background: blue;
+    width: 5em;
+    height: 5em;
+    transition: all 1s ease-in-out 0s;
+}
+
+input[type="checkbox"]:checked::before{
+    background: chartreuse;
+    transition: all 1s ease-in-out 0s;
+}
