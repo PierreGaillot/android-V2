@@ -10,9 +10,9 @@ import { NavigationService } from 'src/app/services/navigation.service';
 
 export class NavbarComponent implements OnInit {
   
-  title: string = "";
-  route: string = "";
-  isHome: boolean = false;
+  private title: string = "";
+  private route: string = "";
+  private isHome: boolean = false;
 
   constructor(
     private router: Router,

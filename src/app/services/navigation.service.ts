@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class NavigationService {
   history: string[] = [];
   routes: string[] = [
-    "/home", "/firstname", "/age", "/sexe", "/ville", "/quartier", "/recap", "/details" 
+    "/home", "/firstname", "/age", "/sexe", "/ville", "/quartier", "/recap-a-propos", "/details" 
   ];
 
   constructor(
