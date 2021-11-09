@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'age',
     loadChildren: () => import('./pages/age/age.module').then( m => m.AgePageModule)
-  },  {
+  },
+  {
     path: 'ville',
     loadChildren: () => import('./pages/ville/ville.module').then( m => m.VillePageModule)
   },
@@ -27,12 +28,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/quartier/quartier.module').then( m => m.QuartierPageModule)
   },
   {
-    path: 'recap',
-    loadChildren: () => import('./pages/recap/recap.module').then( m => m.RecapPageModule)
+    path: 'recap-a-propos',
+    loadChildren: () => import('./pages/recap/recap-a-propos.module').then( m => m.RecapAProposPageModule)
   },
   {
     path: 'details',
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'motif',
+    loadChildren: () => import('./pages/motif/motif.module').then( m => m.MotifPageModule)
   },
 
 
