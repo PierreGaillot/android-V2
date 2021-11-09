@@ -1,3 +1,5 @@
+@import '../../../global.scss';
+
 .swipe-btn{
     position: relative;
     position: fixed;
@@ -13,16 +15,13 @@
     background: linear-gradient(180deg, #E9F6FF 23.22%, #FFFFFF 93.7%), #E9F6FF;
     border-radius: 60px 60px 0px 0px;
     box-shadow: 0px 0px 50px rgba(116, 179, 226, 0.8);
+}
 
-}
 .swipe-btn img{
-height: 1.5em;
+    height: 1.5em;  
 }
-.swipe-btn span p{
-    font-family: Gotham;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1em;
+
+.swipe-btn p{
     line-height: 0.5em;
     text-align: center;
     color: #74B3E2;
