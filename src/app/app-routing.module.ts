@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'recap-a-propos',
-    loadChildren: () => import('./pages/recap/recap-a-propos.module').then( m => m.RecapAProposPageModule)
+    loadChildren: () => import('./pages/recap-a-propos/recap-a-propos.module').then( m => m.RecapAProposPageModule)
   },
   {
     path: 'details',
