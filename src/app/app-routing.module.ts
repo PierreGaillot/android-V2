@@ -27,10 +27,10 @@ const routes: Routes = [
     path: 'quartier',
     loadChildren: () => import('./pages/quartier/quartier.module').then( m => m.QuartierPageModule)
   },
-  // {
-  //   path: 'recap-a-propos',
-  //   loadChildren: () => import('./pages/recap-a-propos/recap-a-propos.module').then( m => m.RecapAProposPageModule)
-  // },
+  {
+    path: 'recap-a-propos',
+    loadChildren: () => import('./pages/recap-a-propos/recap-a-propos.module').then( m => m.RecapAProposPageModule)
+  },
   {
     path: 'details',
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
