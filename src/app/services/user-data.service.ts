@@ -5,15 +5,28 @@ import { UserDataModel } from 'src/app/models/user-data.model';
   providedIn: 'root'
 })
 export class UserDataService {
-  public newUser: UserDataModel;
+  public user: UserDataModel[];
 
   constructor() { }
 
-  createUser(userFirstname): UserDataModel {
-    this.newUser = new UserDataModel();
-    this.newUser.firstname = userFirstname;
-    console.log(this.newUser);
+  createUser(userFirstname): UserDataModel[] {
+    // Create new user using UserDataModel class
+    this.user = [new UserDataModel()];
+    // set new user firstname
+    this.user[0].firstname = userFirstname;
+    console.log(this.user);
     
-    return this.newUser;
+    return this.user;
+  }
+
+  setUserName(userAge) {
+    if (this.user) return this.user[0].age = userAge, 
+      console.log(this.user);
+    return console.log('User is undefined');
+  }
+
+  showUserData() {
+    if (this.user) return console.log(this.user);
+    return console.log('userData is undefined');
   }
 }
