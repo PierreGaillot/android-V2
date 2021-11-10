@@ -7,8 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { MotifPageRoutingModule } from './motif-routing.module';
 
 import { MotifPage } from './motif.page';
-import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { QuestionComponent } from 'src/app/components/question/question.component';
+import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
 
 @NgModule({
   imports: [
@@ -19,8 +19,8 @@ import { QuestionComponent } from 'src/app/components/question/question.componen
   ],
   declarations: [
     MotifPage,
-    NavbarComponent,
     QuestionComponent,
+    SwipeupComponent,
   ]
 })
 export class MotifPageModule {}

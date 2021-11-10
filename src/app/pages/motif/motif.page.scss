@@ -1,105 +1,72 @@
-// .reponses-cb-col{
-//     width: 20em;
-//     margin-top: 2em;
-//     margin-left: calc(50% - 20em/2 - 1px);
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-// 	gap: 1em;
-// }
-
-// // .checkbox-btn-hor{
-
-// // }
-
-// .reponse-checkbox-hor{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content:start;
-//     padding-bottom: 1em ;
-//     border-bottom-right-radius: 1em;
-//     border-bottom-left-radius: 1em;
-// }
-
-// .rep-cb-circl-stroke_hor{
-//     z-index: -1;
-
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-
-//     height: 4.9em;
-//     width: 4.9em;
-//     border: 0.3em solid #000000;
-//     border-radius: 100%;
-// }
-
-// .reponse-checkbox-txt-hor{
-//     margin-left: 1em;
-// }
-
-// .rep-cb-circle-cont-hor{
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: space-between;
-//     height: 5em;
-//     width: 5em;
-//     background: #E3E3E3;
-//     border-radius: 100%;
-// }
-
-// .rep-cb-circle-cont-hor > img {
-//     width: 100%;
-//     height: 100%;
-// }
-//   /* ############### RADIO BTN ############ */
-// input[type="checkbox"]::before .checkbox-btn-hor{
-//     width: 5em;
-//     height: 5em;
-//     display: none;
-// }
-
-
-//   input[type="checkbox"].checkbox-btn-hor {
-//     background: red;
-//   }
-
-//   input[type="checkbox"]:checked + label .rep-cb-circle-cont-hor{
-//     transition: all 0.2s ease-in-out 0s;
-//     height: 3.8em;
-//     margin: 0.2em;
-//     width: 3.8em;
-//   }
-
-
-
-//   ############### " NEW TEST "
-
-
-label{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.reponses-cb-col{
+  padding: 2em 0 4em 0;
 }
 
-input[type="checkbox"]{
-    display: inline-block;
+.checkbox-hor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  width: 80%;
+  margin-left: 10%;
+  border-bottom: 0.1em solid rgba($color: #86BAE5, $alpha: 0.5);
+  padding: 0.5em 0 1em 0;
+}
 
+input[type="checkbox"] {
+  appearance: none;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  background: #E3E3E3;
 }
 
 input[type="checkbox"]::before {
-    display: inline-block;
-    content: "";
-    background: blue;
-    width: 5em;
-    height: 5em;
-    transition: all 1s ease-in-out 0s;
+  display: flex;
+  content: "";
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 75%;
+  width: 4.7em;
+  height: 4.7em;
+  transition: all 0.1s ease-out 0s;
+  border: 0em solid #86BAE5;
+  border-radius: 100%;
+  margin: 0.3em;
 }
 
-input[type="checkbox"]:checked::before{
-    background: chartreuse;
-    transition: all 1s ease-in-out 0s;
+input[type="checkbox"]:checked::before {
+  transition: all 0.1s ease-in 0s;
+  width: 4.7em;
+  height: 4.7em;
+  border-radius: 100%;
+  border: 0.3em solid #86BAE5;
+  margin: 0em;
+}
+
+// ################### IMAGE DES CHECKBOX ###################
+label[for="reponse-1"]>input {
+  background-image: url(../../../assets/img/icon-ne-sais-pas.svg);
+}
+
+label[for="reponse-2"]>input {
+  background-image: url(../../../assets/img/icon-ne-sais-pas.svg);
+}
+
+label[for="reponse-3"]>input {
+  background-image: url(../../../assets/img/icon-ne-sais-pas.svg);
+}
+
+label[for="reponse-4"]>input {
+  background-image: url(../../../assets/img/icon-ne-sais-pas.svg);
+}
+
+label[for="reponse-5"]>input {
+  background-image: url(../../../assets/img/icon-ne-sais-pas.svg);
+}
+
+label[for="reponse-6"]>input {
+  background-image: url(../../../assets/img/icon-ne-sais-pas.svg);
 }
