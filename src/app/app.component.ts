@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+// import { NavigationEnd, Router } from '@angular/router';
 import { NavigationService } from './services/navigation.service';
 
 @Component({
@@ -9,11 +9,9 @@ import { NavigationService } from './services/navigation.service';
 })
 export class AppComponent {
 
-  public href: string = "";
-
   constructor(
     public navigation: NavigationService,
-    private router: Router,
+    // private router: Router,
   ) {
     this.navigation.startSaveHistory();
   }

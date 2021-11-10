@@ -1,14 +1,8 @@
 /* ############### Couleurs contours :: checked ############ */
 
-  label[for="16-18"] .rep-cb-circl-stroke {
-    border: 0.3em solid gray;
- }
-
- label[for="19-30"] .rep-cb-circl-stroke {
-    border: 0.3em solid gray;
- }
-
- label[for="+30"] .rep-cb-circl-stroke {
+  label[for="16-18"] .rep-cb-circl-stroke,
+  label[for="19-30"] .rep-cb-circl-stroke,
+  label[for="+30"] .rep-cb-circl-stroke {
     border: 0.3em solid gray;
  }
  
