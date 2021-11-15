@@ -178,10 +178,9 @@ ion-label {
 /* #### REPONSE CHECKBOX RADIO ####*/
 .reponse-checkbox{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 7.5em;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .rep-cb-circle-cont{
@@ -233,7 +232,7 @@ ion-label {
     margin-left: calc(50% - 20em/2 - 1px);
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 	gap: 0.5em;
 }
