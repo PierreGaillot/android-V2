@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'motif',
     loadChildren: () => import('./pages/motif/motif.module').then( m => m.MotifPageModule)
+  },  {
+    path: 'methode',
+    loadChildren: () => import('./pages/methode/methode.module').then( m => m.MethodePageModule)
   },
+
 
 
 ];
