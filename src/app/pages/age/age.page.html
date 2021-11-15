@@ -5,7 +5,7 @@
     <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
     <div class="reponses-cb-row">
         <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
-        <input (change)="setUserAge($event.target.value)" type="radio" name="age" value="16-18 ans" class="radio-btn" id="16-18">
+        <input (change)="getUserAge($event.target.value)" type="radio" name="age" value="16-18 ans" class="radio-btn" id="16-18">
         <label for="16-18">
             <span class="reponse-checkbox">
                 <span class="rep-cb-circl-stroke">
@@ -18,7 +18,7 @@
         </label>
 
         <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
-        <input (change)="setUserAge($event.target.value)" type="radio" name="age" value="19-30 ans" class="radio-btn" id="19-30">
+        <input (change)="getUserAge($event.target.value)" type="radio" name="age" value="19-30 ans" class="radio-btn" id="19-30">
         <label for="19-30">
             <span class="reponse-checkbox">
                 <span class="rep-cb-circl-stroke">
@@ -31,7 +31,7 @@
         </label>
 
         <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
-        <input (change)="setUserAge($event.target.value)" type="radio" name="age" value="plus de 30 ans" class="radio-btn" id="+30">
+        <input (change)="getUserAge($event.target.value)" type="radio" name="age" value="plus de 30 ans" class="radio-btn" id="+30">
         <label for="+30">
             <span class="reponse-checkbox">
                 <span class="rep-cb-circl-stroke">

@@ -18,4 +18,9 @@ export class SexePage implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.userDataService.showUserData();
   }
+
+  getUserSexe(sexe) {
+    this.userDataService.setUserSexe(sexe);
+  }
+
 }

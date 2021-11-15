@@ -12,15 +12,33 @@ export class UserDataService {
   createUser(userFirstname): UserDataModel[] {
     // Create new user using UserDataModel class
     this.user = [new UserDataModel()];
-    // set new user firstname
+    // set user firstname
     this.user[0].firstname = userFirstname;
     console.log(this.user);
     
     return this.user;
   }
 
-  setUserName(userAge) {
+  setUserAge(userAge) {
     if (this.user) return this.user[0].age = userAge, 
+      console.log(this.user);
+    return console.log('User is undefined');
+  }
+
+  setUserSexe(userSexe) {
+    if (this.user) return this.user[0].sexe = userSexe,
+      console.log(this.user);
+    return console.log('User is undefined');
+  }
+
+  setUserCity(userCity) {
+    if (this.user) return this.user[0].city = userCity,
+      console.log(this.user);
+    return console.log('User is undefined');
+  }
+
+  setUserArea(userArea) {
+    if (this.user) return this.user[0].area = userArea,
       console.log(this.user);
     return console.log('User is undefined');
   }
@@ -28,5 +46,9 @@ export class UserDataService {
   showUserData() {
     if (this.user) return console.log(this.user);
     return console.log('userData is undefined');
+  }
+
+  getUserData() {
+    return this.user;
   }
 }

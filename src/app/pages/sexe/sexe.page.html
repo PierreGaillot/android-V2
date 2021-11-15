@@ -8,7 +8,7 @@
     <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
     <div class="reponses-cb-row">
         <!-- ############ Reponse "Femme" chekbox Radio ##### -->
-        <input type="radio" name="radio-btn" class="radio-btn" id="femme">
+        <input (change)="getUserSexe($event.target.value)" type="radio" name="sexe" value="Femme" class="radio-btn" id="femme">
         <label for="femme">
             <span class="reponse-checkbox">
                 <span class="rep-cb-circl-stroke">
@@ -20,7 +20,7 @@
             </span>
         </label>
         <!-- ############ Reponse "Je ne sais pas"chekbox Radio ##### -->
-        <input type="radio" name="radio-btn" class="radio-btn" id="ne-sais-pas">
+        <input (change)="getUserSexe($event.target.value)" type="radio" name="sexe" value="Autre" class="radio-btn" id="ne-sais-pas">
         <label for="ne-sais-pas">
             <span class="reponse-checkbox">
                 <span class="rep-cb-circl-stroke">
@@ -33,7 +33,7 @@
         </label>
 
         <!-- ############ Reponse "Homme" chekbox Radio ##### -->
-        <input type="radio" name="radio-btn" class="radio-btn" id="homme">
+        <input (change)="getUserSexe($event.target.value)" type="radio" name="sexe" value="Homme" class="radio-btn" id="homme">
         <label for="homme">
             <span class="reponse-checkbox">
                 <span class="rep-cb-circl-stroke">

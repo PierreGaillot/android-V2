@@ -1,5 +1,4 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
@@ -9,11 +8,8 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class AgePage implements OnInit, AfterViewInit {
 
-  private age: string = '';
-
   constructor(
-    public userDataService: UserDataService,
-    public formsModule: FormsModule,
+    public userDataService: UserDataService
   ) { }
 
   ngOnInit() {
@@ -23,8 +19,8 @@ export class AgePage implements OnInit, AfterViewInit {
     this.userDataService.showUserData();
   }
 
-  setUserAge(value): void {
-    this.userDataService.setUserName(value);
+  getUserAge(value): void {
+    this.userDataService.setUserAge(value);
   }
 
 }

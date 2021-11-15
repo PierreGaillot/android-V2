@@ -4,7 +4,7 @@
 
   <ion-item>
     <ion-label position="floating">Quel est votre quartier ?</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-input (keydown)="getUserArea($event)" type="text" name="area" [(ngModel)]="area"></ion-input>
   </ion-item>
 
   <app-swipeup nextPage = "/recap-a-propos"></app-swipeup>

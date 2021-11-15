@@ -16,8 +16,8 @@ export class FirstnamePage implements OnInit {
 
   ngOnInit() { }
 
-  setUserFirstame() {
-    this.userDataService.createUser(this.firstname);
+  getUserFirstame(event) {
+    if (event.key === "Enter") return this.userDataService.createUser(this.firstname);
   }
 
 }

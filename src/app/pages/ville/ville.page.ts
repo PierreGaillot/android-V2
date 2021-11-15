@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
   selector: 'app-ville',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VillePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public userDataService: UserDataService
+  ) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.userDataService.showUserData();
+  }
+
+  getUserCity(city) {
+    this.userDataService.setUserCity(city);
   }
 
 }
