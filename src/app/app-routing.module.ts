@@ -38,13 +38,18 @@ const routes: Routes = [
   {
     path: 'motif',
     loadChildren: () => import('./pages/motif/motif.module').then( m => m.MotifPageModule)
-  },  {
+  },
+  {
     path: 'methode',
     loadChildren: () => import('./pages/methode/methode.module').then( m => m.MethodePageModule)
   },
   {
     path: 'rythme',
     loadChildren: () => import('./pages/rythme/rythme.module').then( m => m.RythmePageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
   },
 
 

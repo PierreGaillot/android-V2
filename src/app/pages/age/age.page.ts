@@ -19,8 +19,8 @@ export class AgePage implements OnInit, AfterViewInit {
     this.userDataService.showUserData();
   }
 
-  getUserAge(value): void {
-    this.userDataService.setUserAge(value);
+  getUserAge(ageValue): void {
+    this.userDataService.setUserAge(ageValue);
   }
 
 }

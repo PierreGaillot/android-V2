@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
+import { ModalController } from '@ionic/angular';
+import { ModalPage } from '../modal/modal.page';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +9,12 @@ import { UserDataService } from 'src/app/services/user-data.service';
   styleUrls: ['./details.page.scss'],
 })
 export class DetailsPage implements OnInit, AfterViewInit {
+
+  // public question: string = '';
   
   constructor(
-    public userDataService: UserDataService
+    public userDataService: UserDataService,
+    public modalController: ModalController
   ) { }
 
   getUserData() {
@@ -21,6 +26,17 @@ export class DetailsPage implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.getUserData();
+  }
+
+  async presentModal(questionName) {
+    const modal = await this.modalController.create({
+      component: ModalPage,
+      // passing value for dynamic display in the modal
+      componentProps: {
+        'question': questionName
+      }
+    });
+    return await modal.present();
   }
 
 }

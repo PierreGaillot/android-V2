@@ -1,7 +1,7 @@
-import { UserData } from './user-data.model';
+import { UserDataModel } from './user-data.model';
 
-describe('UserData', () => {
+describe('UserDataModel', () => {
   it('should create an instance', () => {
-    expect(new UserData()).toBeTruthy();
+    expect(new UserDataModel()).toBeTruthy();
   });
 });
