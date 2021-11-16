@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'methode',
     loadChildren: () => import('./pages/methode/methode.module').then( m => m.MethodePageModule)
   },
+  {
+    path: 'rythme',
+    loadChildren: () => import('./pages/rythme/rythme.module').then( m => m.RythmePageModule)
+  },
 
 
 
