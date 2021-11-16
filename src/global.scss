@@ -183,6 +183,13 @@ ion-label {
     gap: 1em;
 }
 
+.reponse-checkbox-row{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1em;
+}
+
 .rep-cb-circle-cont{
     display: flex;
     flex-direction: column;
@@ -215,7 +222,7 @@ ion-label {
 .reponse-checkbox-txt{
     display: block;
     white-space:normal;
-    width: 6em;
+    width: 100%;
     font-family: Gotham;
     font-style: normal;
     font-weight: normal;
@@ -223,18 +230,42 @@ ion-label {
     line-height: 1em;
     text-align: center;
     color: #000000;
+}
 
+.reponse-checkbox-txt-row{
+    display: block;
+    white-space:normal;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1em;
+    text-align: left;
+    color: #000000;
 }
 
 .reponses-cb-row{
     width: 20em;
     margin-top: 2em;
     margin-left: calc(50% - 20em/2 - 1px);
+    margin-bottom: 5em;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
 	gap: 0.5em;
+}
+
+.reponses-cb-col{
+    width: 20em;
+    margin-top: 2em;
+    margin-left: calc(50% - 20em/2 - 1px);
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+	gap: 1em;
 }
 
 
