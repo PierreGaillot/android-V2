@@ -130,8 +130,8 @@ table {
 
 /////////////////////////////////  BUTTONS  /////////////////////////////////  
 ion-button {
-	min-width: 15em !important;
-	height: 4em !important;
+	min-width: 15em;
+	height: 4em;
 	--background: #FFFFFF;
 	--background-activated: #FFFFFF;
 	--color: #000000;
@@ -273,16 +273,15 @@ ion-label {
 
 input[type="radio"].radio-btn {
     display: none;
-  }
+}
 
-  input[type="radio"].radio-btn:checked + label .rep-cb-circle-cont {
-    transition: all 0.2s ease-in-out 0s;
-    height: 3.8em;
-    width: 3.8em;
-  }
+input[type="radio"].radio-btn:checked + label .rep-cb-circle-cont {
+transition: all 0.2s ease-in-out 0s;
+height: 3.8em;
+width: 3.8em;
+}
 
-
-  .separateur{
+.separateur{
     z-index:1;
     display: inline-block;
     position: relative;
@@ -292,6 +291,7 @@ input[type="radio"].radio-btn {
     width: 100%;
     background: #74B3E2;
 }
+
 .separateur-opacity50{
     z-index:1;
     display: inline-block;

@@ -1,0 +1,38 @@
+@import  '../../../../global.scss';
+
+.ion-page {
+    justify-content: flex-start;
+}
+
+// Modal dimensions
+.sc-ion-modal-ios-h {
+    --width: 90%;
+    --height: 85%;
+    --border-radius: 1.5rem;
+}
+
+// Close modal icon
+ion-icon {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #74B3E2;
+}
+
+.modal-text > .comp-question {
+    margin-top: 3rem !important;
+}
+
+.modal-radio > .comp-question {
+    margin-top: 3rem !important;
+}
+
+// Input text
+ion-input, ion-label {
+	padding-left: 15px !important;
+}
+
+// Button
+ion-button {
+    margin: auto;
+}

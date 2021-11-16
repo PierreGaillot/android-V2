@@ -1,0 +1,86 @@
+<ion-content>
+
+  <!-- ############ Récaputulatif ##### -->
+  <div *ngFor="let data of userDataService.user" class="recapitulatif">
+    <div class="recap-rubrique-txt">1 - à propos de vous</div>
+
+    <div class="recap-cont-question">
+      <div class="recap-question">
+        <div class="recap-question-txt">
+          <p class="recap-num-question">Question 1</p>
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">prenom :</p>
+            <p class="recap-goupeElement-reponse">{{ data.firstname }}</p>
+          </div>
+        </div>
+        <img (click)="presentModal('firstname')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+      </div>
+      <div class="recap-separateur"></div>
+    </div>
+
+
+    <div class="recap-cont-question">
+      <div class="recap-question">
+        <div class="recap-question-txt">
+          <p class="recap-num-question">Question 2</p>
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">age :</p>
+            <p class="recap-goupeElement-reponse">{{ data.age }}</p>
+          </div>
+        </div>
+        <img (click)="presentModal('age')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+      </div>
+      <div class="recap-separateur"></div>
+    </div>
+
+
+    <div class="recap-cont-question">
+      <div class="recap-question">
+        <div class="recap-question-txt">
+          <p class="recap-num-question">Question 3</p>
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">sexe :</p>
+            <p class="recap-goupeElement-reponse">{{ data.sexe }}</p>
+          </div>
+        </div>
+        <img (click)="presentModal('sexe')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+      </div>
+      <div class="recap-separateur"></div>
+    </div>
+
+
+    <div class="recap-cont-question">
+      <div class="recap-question">
+        <div class="recap-question-txt">
+          <p class="recap-num-question">Question 4</p>
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">ville :</p>
+            <p class="recap-goupeElement-reponse">{{ data.city }}</p>
+          </div>
+        </div>
+        <img (click)="presentModal('city')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+      </div>
+      <div class="recap-separateur"></div>
+    </div>
+
+
+    <div class="recap-cont-question">
+      <div class="recap-question">
+        <div class="recap-question-txt">
+          <p class="recap-num-question">Question 5</p>
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">quartier :</p>
+            <p class="recap-goupeElement-reponse">{{ data.area }}</p>
+          </div>
+        </div>
+        <img src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+      </div>
+      <div class="recap-separateur"></div>
+    </div>
+  </div>
+
+  <div class="center">
+    <ion-button [routerLink]="['/']" class="btn">Continuer !</ion-button>
+</div>
+
+</ion-content>

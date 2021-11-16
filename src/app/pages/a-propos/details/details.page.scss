@@ -1,0 +1,68 @@
+@import '../../../../global.scss';
+
+.recapitulatif{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 7em;
+}
+
+.recap-cont-question{
+    display: block;
+    margin-top: .2em;
+}
+
+.recap-rubrique-txt{
+    font-family: 'Gotham-bold' !important;
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    color: #74B3E2;
+}
+
+.recap-question{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recap-question-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5em;
+}
+
+.recap-separateur{
+    margin: 0.9em 0;
+    display: block;
+    width: 100%;
+    height: 0.1em;
+    background: #E9F6FF;
+    border-radius: 1em;
+}
+
+.recap-num-question{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.recap-goupe-question-reponse{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.recap-goupeElement-question, .recap-goupeElement-reponse{
+    text-transform: uppercase;
+}
+
+.recap-goupeElement-reponse{
+    color: #74B3E2;
+}
+
+.center {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
