@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ModalPageRoutingModule } from './modal-routing.module';
+import { ModalPageRoutingModule } from './modal-a-propos-routing.module';
 
-import { ModalPage } from './modal.page';
+import { ModalAProposPage } from './modal-a-propos.page';
 import { QuestionComponent } from 'src/app/components/question/question.component';
 
 @NgModule({
@@ -17,8 +17,8 @@ import { QuestionComponent } from 'src/app/components/question/question.componen
     ModalPageRoutingModule
   ],
   declarations: [
-    ModalPage,
+    ModalAProposPage,
     QuestionComponent
   ]
 })
-export class ModalPageModule {}
+export class ModalAProposPageModule {}

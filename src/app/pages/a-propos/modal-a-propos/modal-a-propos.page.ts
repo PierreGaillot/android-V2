@@ -5,12 +5,12 @@ import { ModalController } from '@ionic/angular';
 import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.page.html',
-  styleUrls: ['./modal.page.scss'],
+  selector: 'app-modal-a-propos',
+  templateUrl: './modal-a-propos.page.html',
+  styleUrls: ['./modal-a-propos.page.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ModalPage implements OnInit {
+export class ModalAProposPage implements OnInit {
 
   private firstname: string = '';
   private disabledStatus: boolean = true;

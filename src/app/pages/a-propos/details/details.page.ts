@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../modal/modal.page';
+import { ModalAProposPage } from '../modal-a-propos/modal-a-propos.page';
 
 @Component({
   selector: 'app-details',
@@ -30,7 +30,7 @@ export class DetailsPage implements OnInit, AfterViewInit {
 
   async presentModal(questionName) {
     const modal = await this.modalController.create({
-      component: ModalPage,
+      component: ModalAProposPage,
       // passing value for dynamic display in the modal
       componentProps: {
         'question': questionName
