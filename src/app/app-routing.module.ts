@@ -32,11 +32,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/a-propos/recap-a-propos/recap-a-propos.module').then( m => m.RecapAProposPageModule)
   },
   {
-    path: 'detail-a-propos',
+    path: 'details-a-propos',
     loadChildren: () => import('./pages/a-propos/details-a-propos/details-a-propos.module').then( m => m.DetailsAProposPageModule)
   },
   {
-    path: 'modal',
+    path: 'modal-a-propos',
     loadChildren: () => import('./pages/a-propos/modal-a-propos/modal-a-propos.module').then( m => m.ModalAProposPageModule)
   },
   {
