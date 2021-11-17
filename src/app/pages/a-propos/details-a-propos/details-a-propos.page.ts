@@ -5,10 +5,10 @@ import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
   selector: 'app-details',
-  templateUrl: './details.page.html',
-  styleUrls: ['./details.page.scss'],
+  templateUrl: './details-a-propos.page.html',
+  styleUrls: ['./details-a-propos.page.scss'],
 })
-export class DetailsPage implements OnInit, AfterViewInit {
+export class DetailsAProposPage implements OnInit, AfterViewInit {
 
   // public question: string = '';
   
