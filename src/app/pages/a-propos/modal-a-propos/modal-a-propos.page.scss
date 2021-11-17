@@ -1,5 +1,7 @@
 @import  '../../../../global.scss';
 
+// ***************** GENERAL *****************
+
 .ion-page {
     justify-content: flex-start;
 }
@@ -19,12 +21,16 @@ ion-icon {
     color: #74B3E2;
 }
 
-.modal-text > .comp-question {
+.modal-text > .comp-question, .modal-radio > .comp-question {
     margin-top: 3rem !important;
 }
 
-.modal-radio > .comp-question {
-    margin-top: 3rem !important;
+// .modal-radio > .comp-question {
+//     margin-top: 3rem !important;
+// }
+
+.reponses-cb-row {
+    margin-bottom: 0;
 }
 
 // Input text
@@ -33,6 +39,55 @@ ion-input, ion-label {
 }
 
 // Button
+.btn-container {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 ion-button {
     margin: auto;
 }
+
+
+// ***************** AGE *****************
+
+label[for="16-18"] .rep-cb-circl-stroke,
+label[for="19-30"] .rep-cb-circl-stroke,
+label[for="+30"] .rep-cb-circl-stroke {
+    border: 0.3em solid #74B3E2;
+}
+
+
+// ***************** SEXE *****************
+
+label[for="homme"] .rep-cb-circl-stroke {
+    border: 0.3em solid #74B3E2;
+ }
+
+ label[for="femme"] .rep-cb-circl-stroke {
+    border: 0.3em solid #EC7CB2;
+ }
+
+
+ // ***************** VILLE *****************
+
+ label[for="tourcoing"] .rep-cb-circl-stroke {
+    border: 0.3em solid #F4D90F;
+ }
+ 
+ label[for="roubaix"] .rep-cb-circl-stroke {
+    border: 0.3em solid #E30B6B;
+ }
+ 
+ label[for="lille"] .rep-cb-circl-stroke {
+    border: 0.3em solid #E3000B;
+ }
+ 
+ label[for="ne-sais-pas"] .rep-cb-circl-stroke {
+    border: 0.3em solid gray;
+ }
+
+ .reponse-checkbox-txt{
+    width: 6em;
+ }

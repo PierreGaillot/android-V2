@@ -32,8 +32,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/a-propos/recap-a-propos/recap-a-propos.module').then( m => m.RecapAProposPageModule)
   },
   {
-    path: 'details',
-    loadChildren: () => import('./pages/a-propos/details/details.module').then( m => m.DetailsPageModule)
+    path: 'detail-a-propos',
+    loadChildren: () => import('./pages/a-propos/details-a-propos/details-a-propos.module').then( m => m.DetailsAProposPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./pages/a-propos/modal-a-propos/modal-a-propos.module').then( m => m.ModalAProposPageModule)
   },
   {
     path: 'motif',
@@ -48,9 +52,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/accompagnement/rythme/rythme.module').then( m => m.RythmePageModule)
   },
   {
-    path: 'modal',
-    loadChildren: () => import('./pages/a-propos/modal-a-propos/modal-a-propos.module').then( m => m.ModalAProposPageModule)
-  },  {
     path: 'recap-accompagnement',
     loadChildren: () => import('./pages/accompagnement/recap-accompagnement/recap-accompagnement.module').then( m => m.RecapAccompagnementPageModule)
   },
@@ -58,7 +59,6 @@ const routes: Routes = [
     path: 'detail-accompagnement',
     loadChildren: () => import('./pages/accompagnement/detail-accompagnement/detail-accompagnement.module').then( m => m.DetailAccompagnementPageModule)
   },
-
 
 ];
 
