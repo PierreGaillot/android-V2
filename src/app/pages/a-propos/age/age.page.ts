@@ -8,15 +8,20 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class AgePage implements OnInit, AfterViewInit {
 
+
+  private userFirstname: string = '';
+
   constructor(
     public userDataService: UserDataService
   ) { }
+
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
     this.userDataService.showUserData();
+    this.userFirstname = this.userDataService.getUserFirstname();
   }
 
   getUserAge(ageValue): void {

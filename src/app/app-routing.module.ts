@@ -50,7 +50,11 @@ const routes: Routes = [
   {
     path: 'modal',
     loadChildren: () => import('./pages/a-propos/modal-a-propos/modal-a-propos.module').then( m => m.ModalAProposPageModule)
+  },  {
+    path: 'recap-accompagnement',
+    loadChildren: () => import('./pages/accompagnement/recap-accompagnement/recap-accompagnement.module').then( m => m.RecapAccompagnementPageModule)
   },
+
 
 ];
 
