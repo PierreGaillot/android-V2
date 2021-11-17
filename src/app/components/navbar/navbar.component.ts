@@ -28,6 +28,7 @@ export class NavbarComponent implements OnInit {
         // Change navbar title depending on the page 
         const index: number = this.navigation.routes.indexOf(this.route);
         // console.log(`INDEX : ${index}`);
+        // console.log(this.navigation.getRoutes());
 
         if (index === 0) {
           this.title = "introduction";
@@ -37,6 +38,9 @@ export class NavbarComponent implements OnInit {
         }
         else if (index === 7) {
           this.title = "récapitulatif"
+        }
+        else if (index > 7 && index < 10) {
+          this.title = "accompagnement";
         }
         else {
           this.title = "test";

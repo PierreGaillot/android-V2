@@ -1,190 +1,201 @@
-<ion-content [scrollEvents]="true" [scrollY]="true" [scrollX]="true">
-
-  <div class="ion-page">
+<ion-content>
 
     <ion-icon (click)="dismiss()" name="close-outline" size="large"></ion-icon>
 
     <!-- ************* IF QUESTION = FIRSTNAME ************* -->
     <div *ngIf="question == 'firstname'">
-      <app-question class="modal-text"
-        txtQuestion = "Vous pouvez modifier votre prénom ici.">
-      </app-question>
-    
-      <ion-item>
-          <ion-label position="floating">Entrez votre prénom</ion-label>
-          <ion-input (keydown)="updateUserFirstame($event)" type="text" name="firstname" [(ngModel)]="firstname"></ion-input>
-      </ion-item>
+        <app-question class="modal-text" txtQuestion="Vous pouvez modifier votre prénom ici.">
+        </app-question>
+
+        <ion-item>
+            <ion-label position="floating">Entrez votre prénom</ion-label>
+            <ion-input (keydown)="updateUserFirstame($event)" type="text" name="firstname" [(ngModel)]="firstname">
+            </ion-input>
+        </ion-item>
     </div>
+
 
     <!-- ************* IF QUESTION = AGE ************* -->
-    <div *ngIf="question == 'age'">
-      <app-question 
-        txtQuestion="Modifier votre age."
-        class="modal-radio">
-      </app-question>
+    <div *ngIf="question == 'age'" class="question-age">
+        <app-question txtQuestion="Modifier votre age." class="modal-radio">
+        </app-question>
 
-      <div class="reponses-cb-row">
-        <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
-        <input (change)="updateUserAge($event.target.value)" type="radio" name="age" value="16-18 ans" class="radio-btn" id="16-18">
-        <label for="16-18">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../assets/img/Perso 1.svg" alt="entre 16 et 18 ans">
+        <div class="reponses-cb-row">
+            <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
+            <input (change)="updateUserAge($event.target.value)" type="radio" name="age" value="16-18 ans"
+                class="radio-btn" id="16-18">
+            <label for="16-18">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/Perso 1.svg" alt="entre 16 et 18 ans">
+                        </span>
                     </span>
+                    <span class="reponse-checkbox-txt">j'ai entre 16 et 18 ans.</span>
                 </span>
-                <span class="reponse-checkbox-txt">j'ai entre 16 et 18 ans.</span>
-            </span>
-        </label>
-  
-        <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
-        <input (change)="updateUserAge($event.target.value)" type="radio" name="age" value="19-30 ans" class="radio-btn" id="19-30">
-        <label for="19-30">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../assets/img/Perso 2.svg" alt="entre 19 et 30 ans">
+            </label>
+
+            <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
+            <input (change)="updateUserAge($event.target.value)" type="radio" name="age" value="19-30 ans"
+                class="radio-btn" id="19-30">
+            <label for="19-30">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/Perso 2.svg" alt="entre 19 et 30 ans">
+                        </span>
                     </span>
+                    <span class="reponse-checkbox-txt">j'ai entre 19 et 30 ans.</span>
                 </span>
-                <span class="reponse-checkbox-txt">j'ai entre 19 et 30 ans.</span>
-            </span>
-        </label>
-  
-        <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
-        <input (change)="updateUserAge($event.target.value)" type="radio" name="age" value="plus de 30 ans" class="radio-btn" id="+30">
-        <label for="+30">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../assets/img/Perso 3.svg" alt="j'ai plus de 30 ans">
+            </label>
+
+            <!-- ############ Reponse "16 > 18 ans" chekbox Radio ##### -->
+            <input (change)="updateUserAge($event.target.value)" type="radio" name="age" value="plus de 30 ans"
+                class="radio-btn" id="+30">
+            <label for="+30">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/Perso 3.svg" alt="j'ai plus de 30 ans">
+                        </span>
                     </span>
+                    <span class="reponse-checkbox-txt">j'ai plus de 30 ans.</span>
                 </span>
-                <span class="reponse-checkbox-txt">j'ai plus de 30 ans.</span>
-            </span>
-        </label>
-      </div>
+            </label>
+        </div>
     </div>
+
 
     <!-- ************* IF QUESTION = SEXE ************* -->
     <div *ngIf="question == 'sexe'">
-      <app-question 
-        txtQuestion="Etes-vous un homme ou une femme ?"
-        class="modal-radio">
-    </app-question>
+        <app-question txtQuestion="Etes-vous un homme ou une femme ?" class="modal-radio">
+        </app-question>
 
-    <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
-    <div class="reponses-cb-row">
-        <!-- ############ Reponse "Femme" chekbox Radio ##### -->
-        <input (change)="updateUserSexe($event.target.value)" type="radio" name="sexe" value="Femme" class="radio-btn" id="femme">
-        <label for="femme">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../assets/img/icon-femme.svg" alt="Je suis une femme">
+        <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
+        <div class="reponses-cb-row">
+            <!-- ############ Reponse "Femme" chekbox Radio ##### -->
+            <input (change)="updateUserSexe($event.target.value)" type="radio" name="sexe" value="Femme"
+                class="radio-btn" id="femme">
+            <label for="femme">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/icon-femme.svg" alt="Je suis une femme">
+                        </span>
                     </span>
+                    <span class="reponse-checkbox-txt">Je suis une femme</span>
                 </span>
-                <span class="reponse-checkbox-txt">Je suis une femme</span>
-            </span>
-        </label>
-        <!-- ############ Reponse "Je ne sais pas"chekbox Radio ##### -->
-        <input (change)="updateUserSexe($event.target.value)" type="radio" name="sexe" value="Autre" class="radio-btn" id="ne-sais-pas">
-        <label for="ne-sais-pas">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../assets/img/icon-ne-sais-pas.svg" alt="Je ne sais pas !">
+            </label>
+            <!-- ############ Reponse "Je ne sais pas"chekbox Radio ##### -->
+            <input (change)="updateUserSexe($event.target.value)" type="radio" name="sexe" value="Autre"
+                class="radio-btn" id="ne-sais-pas">
+            <label for="ne-sais-pas">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/icon-ne-sais-pas.svg" alt="Je ne sais pas !">
+                        </span>
                     </span>
+                    <span class="reponse-checkbox-txt">Autre</span>
                 </span>
-                <span class="reponse-checkbox-txt">Autre</span>
-            </span>
-        </label>
+            </label>
 
-        <!-- ############ Reponse "Homme" chekbox Radio ##### -->
-        <input (change)="updateUserSexe($event.target.value)" type="radio" name="sexe" value="Homme" class="radio-btn" id="homme">
-        <label for="homme">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../assets/img/icon-homme.svg" alt="Je suis un homme">
+            <!-- ############ Reponse "Homme" chekbox Radio ##### -->
+            <input (change)="updateUserSexe($event.target.value)" type="radio" name="sexe" value="Homme"
+                class="radio-btn" id="homme">
+            <label for="homme">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/icon-homme.svg" alt="Je suis un homme">
+                        </span>
                     </span>
+                    <span class="reponse-checkbox-txt">Je suis un homme</span>
                 </span>
-                <span class="reponse-checkbox-txt">Je suis un homme</span>
-            </span>
-        </label>
-      </div>
+            </label>
+        </div>
     </div>
+
 
     <!-- ************* IF QUESTION = CITY ************* -->
     <div *ngIf="question == 'city'">
-      <app-question 
-        txtQuestion="Dans quelle ville habitez-vous ?"
-        class="modal-radio">
-      </app-question>
 
-      <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
-      <div class="reponses-cb-row">
-          <!-- ############ Reponse "Tourcoing" chekbox Radio ##### -->
-          <input (change)="updateUserCity($event.target.value)" type="radio" name="city" value="Tourcoing" class="radio-btn" id="tourcoing">
-          <label for="tourcoing">
-              <span class="reponse-checkbox">
-                  <span class="rep-cb-circl-stroke">
-                      <span class="rep-cb-circle-cont">
-                          <img src="../../../assets/img/icon-tourcoing.svg" alt="ville de Tourcoing">
-                      </span>
-                  </span>
-                  <span class="reponse-checkbox-txt">Tourcoing.</span>
-              </span>
-          </label>
-          <!-- ############ Reponse "Roubaix"chekbox Radio ##### -->
-          <input (change)="updateUserCity($event.target.value)" type="radio" name="city" value="Roubaix" class="radio-btn" id="roubaix">
-          <label for="roubaix">
-              <span class="reponse-checkbox">
-                  <span class="rep-cb-circl-stroke">
-                      <span class="rep-cb-circle-cont">
-                          <img src="../../../assets/img/icon-Roubaix.svg" alt="ville de Roubaix">
-                      </span>
-                  </span>
-                  <span class="reponse-checkbox-txt">Roubaix</span>
-              </span>
-          </label>
-      </div>
-      <div class="reponses-cb-row">
-          <!-- ############ Reponse "Lille" chekbox Radio ##### -->
-          <input (change)="updateUserCity($event.target.value)" type="radio" name="city" value="Lille" class="radio-btn" id="lille">
-          <label for="lille">
-              <span class="reponse-checkbox">
-                  <span class="rep-cb-circl-stroke">
-                      <span class="rep-cb-circle-cont">
-                          <img src="../../../assets/img/icon-Lille.svg" alt="ville de Lille">
-                      </span>
-                  </span>
-                  <span class="reponse-checkbox-txt">Lille</span>
-              </span>
-          </label>
-          <!-- ############ Reponse "Je ne sais pas" chekbox Radio ##### -->
-          <input (change)="updateUserCity($event.target.value)" type="radio" name="city" value="Non renseignée" class="radio-btn" id="ne-sais-pas">
-          <label for="ne-sais-pas">
-              <span class="reponse-checkbox">
-                  <span class="rep-cb-circl-stroke">
-                      <span class="rep-cb-circle-cont">
-                          <img src="../../../assets/img/icon-ne-sais-pas.svg" alt="je ne sais pas">
-                      </span>
-                  </span>
-                  <span class="reponse-checkbox-txt">boh ! ché po mi !?</span>
-              </span>
-          </label>
-      </div>
+        <app-question txtQuestion="Modifier votre ville" class="modal-radio">
+        </app-question>
+
+        <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
+        <div class="reponses-cb-row">
+            <!-- ############ Reponse "Tourcoing" chekbox Radio ##### -->
+            <input (change)="updateUserCity($event.target.value)" type="radio" name="city" value="Tourcoing"
+                class="radio-btn" id="tourcoing">
+            <label for="tourcoing">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/icon-tourcoing.svg" alt="ville de Tourcoing">
+                        </span>
+                    </span>
+                    <span class="reponse-checkbox-txt">Tourcoing.</span>
+                </span>
+            </label>
+            <!-- ############ Reponse "Roubaix"chekbox Radio ##### -->
+            <input (change)="updateUserCity($event.target.value)" type="radio" name="city" value="Roubaix"
+                class="radio-btn" id="roubaix">
+            <label for="roubaix">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/icon-Roubaix.svg" alt="ville de Roubaix">
+                        </span>
+                    </span>
+                    <span class="reponse-checkbox-txt">Roubaix</span>
+                </span>
+            </label>
+        </div>
+        <div class="reponses-cb-row mb-4">
+            <!-- ############ Reponse "Lille" chekbox Radio ##### -->
+            <input (change)="updateUserCity($event.target.value)" type="radio" name="city" value="Lille"
+                class="radio-btn" id="lille">
+            <label for="lille">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/icon-Lille.svg" alt="ville de Lille">
+                        </span>
+                    </span>
+                    <span class="reponse-checkbox-txt">Lille</span>
+                </span>
+            </label>
+            <!-- ############ Reponse "Je ne sais pas" chekbox Radio ##### -->
+            <input (change)="updateUserCity($event.target.value)" type="radio" name="city" value="Non renseignée"
+                class="radio-btn" id="ne-sais-pas">
+            <label for="ne-sais-pas">
+                <span class="reponse-checkbox">
+                    <span class="rep-cb-circl-stroke">
+                        <span class="rep-cb-circle-cont">
+                            <img src="../../../assets/img/icon-ne-sais-pas.svg" alt="je ne sais pas">
+                        </span>
+                    </span>
+                    <span class="reponse-checkbox-txt">boh ! ché po mi !?</span>
+                </span>
+            </label>
+        </div>
     </div>
 
     <!-- ************* IF QUESTION = AREA ************* -->
-  
-    <ion-button 
-      (click)="dismiss()" 
-      size="small" 
-      [disabled]="disabledStatus">
-      Valider
-    </ion-button>
+    <div *ngIf="question == 'area'">
+        <app-question class="modal-text" txtQuestion="Vous pouvez modifier votre quartier ici.">
+        </app-question>
 
-  </div>  
+        <ion-item>
+            <ion-label position="floating">Entrez votre quartier</ion-label>
+            <ion-input (keydown)="updateUserArea($event)" type="text" name="area" [(ngModel)]="area">
+            </ion-input>
+        </ion-item>
+    </div>
+
+    <div class="btn-container">
+        <ion-button (click)="dismiss()" size="small" [disabled]="disabledStatus">Valider</ion-button>
+    </div>
 
 </ion-content>

@@ -14,7 +14,8 @@ export class UserDataService {
       age: '19-30 ans',
       sexe: 'homme',
       city: 'lille',
-      area: 'five'
+      area: 'five',
+      motif: ['Trouver un stage en entreprise', 'Effectuer un Service Civique']
     }
   ]
 

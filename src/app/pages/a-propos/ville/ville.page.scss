@@ -1,17 +1,25 @@
 /* ############### Couleurs contours :: checked ############ */
 
-  label[for="tourcoing"] .rep-cb-circl-stroke {
-    border: 0.3em solid #F4D90F;
- }
+label[for="tourcoing"] .rep-cb-circl-stroke {
+   border: 0.3em solid #F4D90F;
+}
 
- label[for="roubaix"] .rep-cb-circl-stroke {
-    border: 0.3em solid #E30B6B;
- }
- 
- label[for="lille"] .rep-cb-circl-stroke {
-    border: 0.3em solid #E3000B;
- }
+label[for="roubaix"] .rep-cb-circl-stroke {
+   border: 0.3em solid #E30B6B;
+}
 
- label[for="ne-sais-pas"] .rep-cb-circl-stroke {
-    border: 0.3em solid gray;
- }
+label[for="lille"] .rep-cb-circl-stroke {
+   border: 0.3em solid #E3000B;
+}
+
+label[for="ne-sais-pas"] .rep-cb-circl-stroke {
+   border: 0.3em solid gray;
+}
+
+.reponse-checkbox-txt{
+   width: 6em;
+}
+
+.reponses-cb-row {
+   margin-bottom: 0;
+}

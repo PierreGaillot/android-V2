@@ -73,14 +73,14 @@
             <p class="recap-goupeElement-reponse">{{ data.area }}</p>
           </div>
         </div>
-        <img src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img (click)="presentModal('area')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
       </div>
       <div class="recap-separateur"></div>
     </div>
   </div>
 
   <div class="center">
-    <ion-button [routerLink]="['/']" class="btn">Continuer !</ion-button>
+    <ion-button [routerLink]="['/motif']" size="small" class="btn">Continuer !</ion-button>
 </div>
 
 </ion-content>

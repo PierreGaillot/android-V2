@@ -13,6 +13,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
 export class ModalAProposPage implements OnInit {
 
   private firstname: string = '';
+  private area: string = '';
   private disabledStatus: boolean = true;
 
   constructor(
@@ -66,6 +67,13 @@ export class ModalAProposPage implements OnInit {
     if (cityValue !== '') {
       this.disabledStatus = false;
     }       
+  }
+
+  updateUserArea(event): void {
+    if (event.key === "Enter" && this.area !== '') {
+      this.userDataService.setUserArea(this.area)
+      this.disabledStatus = false;
+    } 
   }
 
 }

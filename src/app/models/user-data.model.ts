@@ -4,4 +4,5 @@ export class UserDataModel {
     sexe: string = '';
     city: string = '';
     area: string = '';
+    motif: string[] = [];
 }
