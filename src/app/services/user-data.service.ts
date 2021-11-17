@@ -18,6 +18,8 @@ export class UserDataService {
     }
   ]
 
+  public userFirstname: string = '';
+
   constructor() { }
 
   createUser(userFirstname): void {
@@ -28,13 +30,13 @@ export class UserDataService {
   }
 
   setUserFirstname(userFirstname): void {
-    if (this.user) return this.user[0].firstname = userFirstname, 
+    if (this.user) return this.user[0].firstname = userFirstname,
       console.log(this.user);
     return console.log('User is undefined');
   }
 
   setUserAge(userAge): void {
-    if (this.user) return this.user[0].age = userAge, 
+    if (this.user) return this.user[0].age = userAge,
       console.log(this.user);
     return console.log('User is undefined');
   }
@@ -65,4 +67,11 @@ export class UserDataService {
   getUserData(): UserDataModel[] {
     return this.user;
   }
+
+  getUserFirstname() {
+    this.userFirstname = this.user[0].firstname;
+    // console.log(this.userFirstname);
+    return this.userFirstname;
+  }
+
 }

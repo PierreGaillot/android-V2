@@ -6,7 +6,11 @@ import { UserDataService } from 'src/app/services/user-data.service';
   templateUrl: './sexe.page.html',
   styleUrls: ['./sexe.page.scss'],
 })
+
+
 export class SexePage implements OnInit, AfterViewInit {
+  
+private userFirstname: string  = '';
 
   constructor(
     public userDataService: UserDataService
@@ -17,6 +21,7 @@ export class SexePage implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.userDataService.showUserData();
+    this.userFirstname = this.userDataService.getUserFirstname();
   }
 
   getUserSexe(sexe) {
