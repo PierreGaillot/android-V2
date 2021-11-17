@@ -1,0 +1,55 @@
+<ion-content>
+
+  <!-- ############ Récaputulatif ACCOMPAGNEMENT ##### -->
+  <div *ngFor="let data of userDataService.user" class="recapitulatif">
+    <div class="recap-rubrique-txt">2 - accompagnement</div>
+
+    <div class="recap-cont-question">
+      <div class="recap-question">
+        <div class="recap-question-txt">
+          <p class="recap-num-question">Question 6</p>
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">motif :</p>
+            <p class="recap-goupeElement-reponse">############## MOTIF</p>
+          </div>
+        </div>
+        <img (click)="presentModal('firstname')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+      </div>
+      <div class="recap-separateur"></div>
+    </div>
+
+
+    <div class="recap-cont-question">
+      <div class="recap-question">
+        <div class="recap-question-txt">
+          <p class="recap-num-question">Question 7</p>
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">methode :</p>
+            <p class="recap-goupeElement-reponse">############## METHODE</p>
+          </div>
+        </div>
+        <img (click)="presentModal('age')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+      </div>
+      <div class="recap-separateur"></div>
+    </div>
+
+
+    <div class="recap-cont-question">
+      <div class="recap-question">
+        <div class="recap-question-txt">
+          <p class="recap-num-question">Question 8</p>
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">rythme :</p>
+            <p class="recap-goupeElement-reponse">############## RYTHME</p>
+          </div>
+        </div>
+        <img (click)="presentModal('sexe')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+      </div>
+      <div class="recap-separateur"></div>
+    </div>
+  </div>
+  <div class="center">
+    <ion-button [routerLink]="['/']" class="btn">Continuer !</ion-button>
+  </div>
+
+</ion-content>
