@@ -1,17 +1,15 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { ModalAProposPage } from '../modal-a-propos/modal-a-propos.page';
 import { UserDataService } from 'src/app/services/user-data.service';
+import { ModalController } from '@ionic/angular';
+import { ModalAProposPage } from '../../a-propos/modal-a-propos/modal-a-propos.page';
 
 @Component({
-  selector: 'app-details',
-  templateUrl: './details.page.html',
-  styleUrls: ['./details.page.scss'],
+  selector: 'app-detail-accompagnement',
+  templateUrl: './detail-accompagnement.page.html',
+  styleUrls: ['./detail-accompagnement.page.scss'],
 })
-export class DetailsPage implements OnInit, AfterViewInit {
+export class DetailAccompagnementPage implements OnInit, AfterViewInit {
 
-  // public question: string = '';
-  
   constructor(
     public userDataService: UserDataService,
     public modalController: ModalController
@@ -22,7 +20,7 @@ export class DetailsPage implements OnInit, AfterViewInit {
     console.log(this.userDataService.user);
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     this.getUserData();
@@ -38,5 +36,5 @@ export class DetailsPage implements OnInit, AfterViewInit {
     });
     return await modal.present();
   }
-
 }
+
