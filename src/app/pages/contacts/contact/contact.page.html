@@ -1,0 +1,122 @@
+<ion-content>
+
+  <app-question txtQuestion="
+  Super {{ userFirstname }} .
+  J’ai déjà beaucoup d’informations
+  qui me permettront de vous recontacter rapidement !
+  Merci de me dire comment vous recontacter :
+  "></app-question>
+
+  <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
+  <div class="reponses-cb-row">
+    <!-- ############ Reponse "TELEPHONE" chekbox Radio ##### -->
+    <input (change)="isPhoneChecked($event.target.checked)" type="radio" name="phoneOrMail" value="phone"
+      class="radio-btn" id="phone">
+    <label for="phone">
+      <span class="reponse-checkbox">
+        <span class="rep-cb-circl-stroke">
+          <span class="rep-cb-circle-cont">
+            <img src="../../../../assets/img/Perso 1.svg" alt="je veux etre recontacté par téléphone">
+          </span>
+        </span>
+        <span class="reponse-checkbox-txt">Téléphone</span>
+      </span>
+    </label>
+
+    <!-- ############ Reponse "MAIL" chekbox Radio ##### -->
+    <input (change)="isMailChecked($event.target.checked)" type="radio" name="phoneOrMail" value="mail"
+      class="radio-btn" id="mail">
+    <label for="mail">
+      <span class="reponse-checkbox">
+        <span class="rep-cb-circl-stroke">
+          <span class="rep-cb-circle-cont">
+            <img src="../../../../assets/img/Perso 2.svg" alt="je veux etre recontacté par e-mail">
+          </span>
+        </span>
+        <span class="reponse-checkbox-txt">e-mail</span>
+      </span>
+    </label>
+  </div>
+
+  <div *ngIf="!phoneChecked && !mailChecked ;then hideAll else testCheck"></div>
+
+  <ng-template #testCheck>
+    <div *ngIf="phoneChecked ;then phone else mail"></div>
+  </ng-template>
+
+  <ng-template #phone>
+    <ion-item>
+      <ion-label position="floating">Votre téléphone ...</ion-label>
+      <ion-input  type="number" name="area" [(ngModel)]="userPhone"></ion-input>
+      </ion-item>
+  </ng-template>
+
+  <ng-template #mail>
+    <ion-item>
+      <ion-label position="floating">Votre adresse e-mail ...</ion-label>
+      <ion-input  type="email" name="area" [(ngModel)]="userMail"></ion-input>
+    </ion-item>
+  </ng-template>
+
+  <ng-template #hideAll>
+  </ng-template>
+
+</ion-content>
+
+
+
+<!-- 
+  
+
+<ion-item *ngIf="phoneChecked" class="display">
+  <ion-label position="floating">Votre numéro de téléphone ...</ion-label>
+  <ion-input (keydown)="getUserArea($event)" type="number" name="area" [(ngModel)]="area"></ion-input>
+</ion-item>
+
+<ion-item *ngIf="!phoneChecked" class="hide">
+<ion-label position="floating">Votre numéro de téléphone ...</ion-label>
+<ion-input (keydown)="getUserArea($event)" type="number" name="area" [(ngModel)]="area"></ion-input>
+</ion-item>
+
+<ion-item *ngIf="mailChecked" class="display">
+<ion-label position="floating">Votre adresse e-mail ...</ion-label>
+<ion-input (keydown)="getUserArea($event)" type="mail" name="area" [(ngModel)]="area"></ion-input>
+</ion-item> 
+
+
+
+<ion-item>
+<ion-label position="floating">Votre numéro de téléphone ...</ion-label>
+<ion-input (keydown)="getUserArea($event)" type="number" name="area" [(ngModel)]="area"></ion-input>
+</ion-item>
+
+
+
+
+
+
+
+  <ion-item *ngIf="phoneChecked" class="display">
+    <ion-label position="floating">Votre adresse e-mail ...</ion-label>
+    <ion-input (keydown)="getUserArea($event)" type="mail" name="area" [(ngModel)]="area"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="phoneChecked" class="hide">
+    <ion-label position="floating">Votre numéro de téléphone ...</ion-label>
+    <ion-input (keydown)="getUserArea($event)" type="number" name="area" [(ngModel)]="area"></ion-input>
+  </ion-item>
+
+
+
+
+  <ion-item *ngIf="mailChecked" class="display">
+    <ion-label position="floating">Votre numéro de téléphone ...</ion-label>
+    <ion-input (keydown)="getUserArea($event)" type="number" name="area" [(ngModel)]="area"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="mailChecked" class="hide">
+    <ion-label position="floating">Votre adresse e-mail ...</ion-label>
+    <ion-input (keydown)="getUserArea($event)" type="mail" name="area" [(ngModel)]="area"></ion-input>
+  </ion-item>
+
+-->

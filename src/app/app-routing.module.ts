@@ -58,7 +58,11 @@ const routes: Routes = [
   {
     path: 'detail-accompagnement',
     loadChildren: () => import('./pages/accompagnement/detail-accompagnement/detail-accompagnement.module').then( m => m.DetailAccompagnementPageModule)
+  },  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contacts/contact/contact.module').then( m => m.ContactPageModule)
   },
+
 
 ];
 
