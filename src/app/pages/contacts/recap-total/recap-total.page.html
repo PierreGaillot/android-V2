@@ -1,0 +1,19 @@
+<ion-content>
+
+  <app-eugenie-infos title="Parfait" txtInfos="
+  Super {{ userFirstname }} ! 
+  J'ai toutes les informations
+  qu'il me fallait je vais vous contacter
+  dans quelques jours, alors à bientôt !
+  ">
+  </app-eugenie-infos>
+
+  <div class="center">
+    <ion-button [routerLink]="['/details-total']" class="btn">voici mon récapitulatif.</ion-button>
+  </div>
+
+  <app-progress-bar step=3></app-progress-bar>
+
+  <app-swipeup></app-swipeup>
+
+</ion-content>

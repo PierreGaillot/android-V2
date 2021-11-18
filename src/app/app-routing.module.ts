@@ -58,10 +58,19 @@ const routes: Routes = [
   {
     path: 'detail-accompagnement',
     loadChildren: () => import('./pages/accompagnement/detail-accompagnement/detail-accompagnement.module').then( m => m.DetailAccompagnementPageModule)
-  },  {
+  },
+  {
     path: 'contact',
     loadChildren: () => import('./pages/contacts/contact/contact.module').then( m => m.ContactPageModule)
   },
+  {
+    path: 'recap-total',
+    loadChildren: () => import('./pages/contacts/recap-total/recap-total.module').then( m => m.RecapTotalPageModule)
+  },  {
+    path: 'detail-total',
+    loadChildren: () => import('./pages/contacts/detail-total/detail-total.module').then( m => m.DetailTotalPageModule)
+  },
+
 
 
 ];
