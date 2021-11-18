@@ -5,10 +5,6 @@
   <!-- ############ tableau de Reponses : chekboxs Horizontal ##### -->
   <div class="reponses-cb-col">
 
-    <div>
-      {{ selectedAnsersList }}
-    </div>
-
     <div *ngFor="let item of checkboxesAnswersList" class="checkbox-hor">
       <label for="{{item.id}}">
         <input 
@@ -17,106 +13,17 @@
           id="{{item.id}}"
           [(ngModel)]="item.isChecked"
           (change)="changeSelection()">
-          <!-- (change)="getUserSexe($event.target.value)" -->
       </label>
       <span>
-        {{ item.value }}
+        {{ item.content }}
       </span>
     </div>
 
-    <!-- checkbox horizontale REP1 
-    <div class="checkbox-hor">
-      <label for="reponse-1">
-        <input 
-          type="checkbox" 
-          name="checkbox-btn" 
-          id="reponse-1"
-          value="Être aidé pour les modes de garde d’enfants,
-          la mobilité, l’accès aux droits,
-          l’accompagnement numérique…">
-      </label>
-      <span>
-        Être aidé pour les modes de garde d’enfants,
-        la mobilité, l’accès aux droits,
-        l’accompagnement numérique…
-      </span>
-    </div>
-
-    checkbox horizontale REP2 
-    <div class="checkbox-hor">
-      <label for="reponse-2">
-        <input 
-          type="checkbox" 
-          name="checkbox-btn" 
-          id="reponse-2"
-          value="Être coaché pour mes démarches d’emploi
-          (simulations entretiens d’embauche, insertion par le sport…)">
-      </label>
-      <span>
-        Être coaché pour mes démarches d’emploi
-        (simulations entretiens d’embauche, insertion par le sport…)
-      </span>
-    </div>
-
-    checkbox horizontale REP3 
-    <div class="checkbox-hor">
-      <label for="reponse-3">
-        <input 
-          type="checkbox" 
-          name="checkbox-btn" 
-          id="reponse-3"
-          value="Trouver un stage en entreprise">
-      </label>
-      <span>
-        Trouver un stage en entreprise
-      </span>
-    </div>
-
-    checkbox horizontale REP4 
-    <div class="checkbox-hor">
-      <label for="reponse-4">
-        <input 
-          type="checkbox" 
-          name="checkbox-btn" 
-          id="reponse-4"
-          value="Effectuer un Service Civique">
-      </label>
-      <span>
-        Effectuer un Service Civique
-      </span>
-    </div>
-
-    checkbox horizontale REP5 
-    <div class="checkbox-hor">
-      <label for="reponse-5">
-        <input 
-          type="checkbox" 
-          name="checkbox-btn" 
-          id="reponse-5"
-          value="Trouver une Alternance
-          (contrat d’apprentissage ou contrat de professionnalisation)">
-      </label>
-      <span>
-        Trouver une Alternance
-        (contrat d’apprentissage ou contrat de professionnalisation)
-      </span>
-    </div>
-
-    checkbox horizontale REP6 
-    <div class="checkbox-hor">
-      <label for="reponse-6">
-        <input 
-          type="checkbox" 
-          name="checkbox-btn" 
-          id="reponse-6"
-          value="Accéder à une formation professionnelle
-          Trouver un Emploi (Intérim, CDD, CDI…)">
-      </label>
-      <span>
-        Accéder à une formation professionnelle
-        Trouver un Emploi (Intérim, CDD, CDI…)
-      </span>
-    </div> -->
+    <ion-button 
+      (click)="getUserPurpose()"
+      [disabled]="disabledStatus" 
+      size="small" 
+      class="btn">Valider</ion-button>
 
   </div>
 

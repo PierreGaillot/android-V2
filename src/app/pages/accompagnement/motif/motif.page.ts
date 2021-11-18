@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
   selector: 'app-motif',
@@ -7,67 +8,72 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MotifPage implements OnInit {
 
-  checkedAnswersValue: string[] = [];
-  selectedAnswersList = []; 
-  
-  checkboxesAnswersList = [
+  private disabledStatus: boolean = true;
+  private selectedAnswersList = []; 
+  private finalAnswersContent = [];
+  private checkboxesAnswersList = [
     {
-      id: 1,
-      value: 'Être aidé pour les modes de gardes d\'enfant, la mobilité, l\'accès aux droits, l\'accompagnement numérique...',
+      id: 'reponse-1',
+      content: 'Être aidé pour les modes de gardes d\'enfant, la mobilité, l\'accès aux droits, l\'accompagnement numérique...',
       isChecked: false
     },
     {
-      id: 2,
-      value: 'Être coaché pour mes démarches d\'emploi (simulations entretiens d\'embauche, insertion par le sport…)',
+      id: 'reponse-2',
+      content: 'Être coaché pour mes démarches d\'emploi (simulations entretiens d\'embauche, insertion par le sport…)',
       isChecked: false
     },
     {
-      id: 3,
-      value: 'Trouver un stage en entreprise',
+      id: 'reponse-3',
+      content: 'Trouver un stage en entreprise',
       isChecked: false
     },
     {
-      id: 4,
-      value: 'Effectuer un Service Civique',
+      id: 'reponse-4',
+      content: 'Effectuer un Service Civique',
       isChecked: false
     },
     {
-      id: 5,
-      value: 'Trouver une Alternance (contrat d’apprentissage ou contrat de professionnalisation)',
+      id: 'reponse-5',
+      content: 'Trouver une Alternance (contrat d’apprentissage ou contrat de professionnalisation)',
       isChecked: false
     },
     {
-      id: 6,
-      value: 'Accéder à une formation professionnelle. Trouver un Emploi (Intérim, CDD, CDI…)',
+      id: 'reponse-6',
+      content: 'Accéder à une formation professionnelle. Trouver un Emploi (Intérim, CDD, CDI…)',
       isChecked: false
     },
   ] 
 
-  constructor() { }
 
-  ngOnInit() {
-    // this.fetchSelectedItems();
-    // this.fetchCheckedValues();
-  }
+  constructor(
+    public userDataService: UserDataService
+  ) { }
+
+  ngOnInit(): void {}
 
   changeSelection() {
-    this.fetchSelectedItems()
- }
+    this.fetchSelectedAnswers();
+  }
 
-  fetchSelectedItems() {
+  fetchSelectedAnswers() {
+    // Create a new array of objects where isChecked key = true
     this.selectedAnswersList = this.checkboxesAnswersList.filter((answer, index) => {
-      console.log(this.selectedAnswersList);
       return answer.isChecked
     });
+
+    // Allow user to click on validate btn when at least one option is checked 
+    if (this.selectedAnswersList.length > 0) return this.disabledStatus = false;
+    return this.disabledStatus = true;
   }
 
-  fetchCheckedValues() {
-    this.checkboxesAnswersList.forEach((answer, index) => {
-      if (answer.isChecked) {
-          this.checkedAnswersValue.push(answer.value);
-          console.log(this.checkedAnswersValue);
-      }
+  getUserPurpose() {
+    // Get the content of every checked answer 
+    this.selectedAnswersList.forEach((answer) => {
+      this.finalAnswersContent.push(answer.content);
     });
-  }
 
+    // Set User purpose with checked answers content 
+    if (this.finalAnswersContent.length > 0) return this.userDataService.setUserPurpose(this.finalAnswersContent);
+    return console.log('Aucun motif n\'a été sélectionné');
+  }
 }

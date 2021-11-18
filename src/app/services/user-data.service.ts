@@ -6,6 +6,7 @@ import { UserDataModel } from 'src/app/models/user-data.model';
 })
 export class UserDataService {
   // public user: UserDataModel[];
+  public userFirstname: string = '';
 
   // testing
   public user: UserDataModel[] = [
@@ -15,14 +16,14 @@ export class UserDataService {
       sexe: 'homme',
       city: 'lille',
       area: 'five',
-      motif: ['Trouver un stage en entreprise', 'Effectuer un Service Civique']
+      purpose: ['Trouver un stage en entreprise', 'Effectuer un Service Civique']
     }
   ]
 
-  public userFirstname: string = '';
 
   constructor() { }
 
+  // Create / Update User data 
   createUser(userFirstname): void {
     // Create new user using UserDataModel class
     this.user = [new UserDataModel()];
@@ -60,19 +61,26 @@ export class UserDataService {
     return console.log('User is undefined');
   }
 
-  showUserData(): void {
-    if (this.user) return console.log(this.user);
-    return console.log('userData is undefined');
+  setUserPurpose(userPurpose): void {
+    if (this.user) return this.user[0].purpose = userPurpose,
+      console.log(this.user);
+    return console.log('User is undefined');
   }
 
+  // Expose User data 
   getUserData(): UserDataModel[] {
     return this.user;
   }
 
-  getUserFirstname() {
+  getUserFirstname(): string {
     this.userFirstname = this.user[0].firstname;
     // console.log(this.userFirstname);
     return this.userFirstname;
+  }
+
+  showUserData(): void {
+    if (this.user) return console.log(this.user);
+    return console.log('userData is undefined');
   }
 
 }

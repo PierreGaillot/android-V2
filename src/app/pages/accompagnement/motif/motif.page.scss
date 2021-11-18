@@ -48,11 +48,11 @@ input[type="checkbox"]:checked::before {
 }
 
 // ################### IMAGE DES CHECKBOX ###################
-label[for="1"] > input,
-label[for="2"] > input,
-label[for="3"] > input,
-label[for="4"] > input,
-label[for="5"] > input,
-label[for="6"] > input {
+label[for="reponse-1"] > input,
+label[for="reponse-2"] > input,
+label[for="reponse-3"] > input,
+label[for="reponse-4"] > input,
+label[for="reponse-5"] > input,
+label[for="reponse-6"] > input {
   background-image: url(../../../../assets/img/icon-ne-sais-pas.svg);
 }
