@@ -5,4 +5,5 @@ export class UserDataModel {
     city: string = '';
     area: string = '';
     purpose: string[] = [];
+    method: string = '';
 }
