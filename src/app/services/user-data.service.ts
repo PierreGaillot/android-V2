@@ -16,7 +16,8 @@ export class UserDataService {
       sexe: 'homme',
       city: 'lille',
       area: 'five',
-      purpose: ['Trouver un stage en entreprise', 'Effectuer un Service Civique']
+      purpose: ['Trouver un stage en entreprise', 'Effectuer un Service Civique'],
+      method: 'présentiel'
     }
   ]
 
@@ -63,6 +64,12 @@ export class UserDataService {
 
   setUserPurpose(userPurpose): void {
     if (this.user) return this.user[0].purpose = userPurpose,
+      console.log(this.user);
+    return console.log('User is undefined');
+  }
+
+  setUserMethod(userMethod): void {
+    if (this.user) return this.user[0].method = userMethod,
       console.log(this.user);
     return console.log('User is undefined');
   }

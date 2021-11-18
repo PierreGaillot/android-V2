@@ -1,7 +1,5 @@
 <ion-content>
 
-  <app-navbar></app-navbar>
-
   <app-question txtQuestion="
   Comment souhaitez vous être accompagné ?">
   </app-question>
@@ -10,46 +8,53 @@
   <div class="reponses-cb-row">
 
     <!-- ############ Reponse "accompagnement presentiel" chekbox Radio ##### -->
-    <input (change)="setUserMethode($event.target.value)" type="radio" name="methode" value="en presentiel"
+    <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="présentiel"
       class="radio-btn" id="presentiel">
-    <label for="presentiel">
-      <span class="reponse-checkbox">
-        <span class="rep-cb-circl-stroke">
-          <span class="rep-cb-circle-cont">
-            <img src="../../../../assets/img/Perso 2.svg" alt="entre 19 et 30 ans">
+    <div class="label">
+      <label for="presentiel">
+        <span class="reponse-checkbox">
+          <span class="rep-cb-circl-stroke">
+            <span class="rep-cb-circle-cont">
+              <img src="../../../../assets/img/Perso 2.svg" alt="entre 19 et 30 ans">
+            </span>
           </span>
         </span>
-        <span class="reponse-checkbox-txt">Je peux me déplacer et venir en présentiel.</span>
-      </span>
-    </label>
+      </label>
+      <span class="reponse-checkbox-txt">Je peux me déplacer et venir en présentiel.</span>
+    </div>
 
     <!-- ############ Reponse "accompagnement distanciel" chekbox Radio ##### -->
-    <input (change)="setUserMethode($event.target.value)" type="radio" name="methode" value="en distanciel"
+    <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel"
       class="radio-btn" id="distanciel">
-    <label for="distanciel">
-      <span class="reponse-checkbox">
-        <span class="rep-cb-circl-stroke">
-          <span class="rep-cb-circle-cont">
-            <img src="../../../../assets/img/Perso 1.svg" alt="entre 16 et 18 ans">
+    <div class="label">
+      <label for="distanciel">
+        <span class="reponse-checkbox">
+          <span class="rep-cb-circl-stroke">
+            <span class="rep-cb-circle-cont">
+              <img src="../../../../assets/img/Perso 1.svg" alt="entre 16 et 18 ans">
+            </span>
           </span>
         </span>
-        <span class="reponse-checkbox-txt">Je préfère être suivi à distance grâce aux outils numériques.</span>
-      </span>
-    </label>
+      </label>
+      <span class="reponse-checkbox-txt">Je préfère être suivi à distance grâce aux outils numériques.</span>
+    </div>
 
     <!-- ############ Reponse "en distanciel & presentiel" chekbox Radio ##### -->
-    <input (change)="setUserMethode($event.target.value)" type="radio" name="methode" value="en distanciel & presentiel"
+    <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel & présentiel"
       class="radio-btn" id="presentiel-distanciel">
-    <label for="presentiel-distanciel">
-      <span class="reponse-checkbox">
-        <span class="rep-cb-circl-stroke">
-          <span class="rep-cb-circle-cont">
-            <img src="../../../../assets/img/Perso 3.svg" alt="j'ai plus de 30 ans">
+    <div class="label">
+      <label for="presentiel-distanciel">
+        <span class="reponse-checkbox">
+          <span class="rep-cb-circl-stroke">
+            <span class="rep-cb-circle-cont">
+              <img src="../../../../assets/img/Perso 3.svg" alt="j'ai plus de 30 ans">
+            </span>
           </span>
         </span>
-        <span class="reponse-checkbox-txt">Un mixte des deux types d’accompagnement pourrait me convenir.</span>
-      </span>
-    </label>
+      </label>
+      <span class="reponse-checkbox-txt">Un mixte des deux types d’accompagnement pourrait me convenir.</span>
+    </div>
+
   </div>
 
   <app-swipeup></app-swipeup>

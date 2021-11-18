@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
   selector: 'app-methode',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MethodePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public userDataService: UserDataService
+  ) { }
 
   ngOnInit() {
+  }
+
+  getUserMethod(userMethod) {
+    this.userDataService.setUserMethod(userMethod);
   }
 
 }
