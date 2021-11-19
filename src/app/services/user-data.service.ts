@@ -17,7 +17,11 @@ export class UserDataService {
       city: 'lille',
       area: 'five',
       purpose: ['Trouver un stage en entreprise', 'Effectuer un Service Civique'],
-      method: 'présentiel'
+      method: 'présentiel',
+      rate: 'Tous les 15 jours',
+      contact: 'georges.bougloudou@gmail.com',
+      isMail: true,
+      isPhone: false
     }
   ]
 
