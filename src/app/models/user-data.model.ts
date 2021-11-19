@@ -6,4 +6,8 @@ export class UserDataModel {
     area: string = '';
     purpose: string[] = [];
     method: string = '';
+    rate: string = '';
+    contact: string = '';
+    isMail: boolean;
+    isPhone: boolean;
 }
