@@ -2,19 +2,19 @@
   <app-question txtQuestion="A quel rythme souhaitez-vous être accompagné ?"></app-question>
 
   <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
-  <div class="reponses-cb-col">
+  <div class="reponses-cb-row">
 
     <!-- ############ Reponse "1x semaine" chekbox Radio ##### -->
     <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="Une fois par semaine"
       class="radio-btn" id="1x-semaine">
     <label for="1x-semaine">
-      <span class="reponse-checkbox-row">
+      <span class="reponse-checkbox">
         <span class="rep-cb-circl-stroke">
           <span class="rep-cb-circle-cont">
             <img src="../../../../assets/img/icon-calendar-01.svg" alt="une fois par semaine">
           </span>
         </span>
-        <span class="reponse-checkbox-txt-row">Une fois par semaine</span>
+        <span class="reponse-checkbox-txt">Une fois par semaine</span>
       </span>
     </label>
 
@@ -22,13 +22,13 @@
     <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="tous les 15 jours"
       class="radio-btn" id="1x-2semaine">
     <label for="1x-2semaine">
-      <span class="reponse-checkbox-row">
+      <span class="reponse-checkbox">
         <span class="rep-cb-circl-stroke">
           <span class="rep-cb-circle-cont">
             <img src="../../../../assets/img/icon-calendar-02.svg" alt="tous les 15 jours.">
           </span>
         </span>
-        <span class="reponse-checkbox-txt-row">Tous les 15 jours</span>
+        <span class="reponse-checkbox-txt">Tous les 15 jours</span>
       </span>
     </label>
 
@@ -36,20 +36,22 @@
     <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="tous les mois"
       class="radio-btn" id="1x-mois">
     <label for="1x-mois">
-      <span class="reponse-checkbox-row">
+      <span class="reponse-checkbox">
         <span class="rep-cb-circl-stroke">
           <span class="rep-cb-circle-cont">
             <img src="../../../../assets/img/icon-calendar-03.svg" alt="j'ai plus de 30 ans">
           </span>
         </span>
-        <span class="reponse-checkbox-txt-row">Tous les mois</span>
+        <span class="reponse-checkbox-txt">Tous les mois</span>
       </span>
     </label>
 
+  </div>
 
+  <div class="reponses-cb-row autre">
 
     <!-- ############ Reponse "autre" chekbox Radio ##### -->
-    <!-- <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="autre" class="radio-btn"
+    <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="autre" class="radio-btn"
       id="autre">
     <label for="autre">
       <span class="reponse-checkbox-row">
@@ -60,18 +62,15 @@
         </span>
         <span class="reponse-checkbox-txt-row">
           <ion-item>
-            <ion-label position="floating">Autre : comment voulez-vous être contacté ?</ion-label>
+            <ion-label position="floating">Autre</ion-label>
             <ion-input type="text" name="autre" [(ngModel)]="contact"></ion-input>
-        </ion-item>
+          </ion-item>
         </span>
       </span>
-    </label> -->
-    <ion-item>
-      <ion-label class="ion-text-wrap">Autre : à quelle fréquence voulez-vous être contacté ?</ion-label>
-      <ion-input type="text" name="autre" [(ngModel)]="contact"></ion-input>
-    </ion-item>
+    </label>
 
   </div>
+
 
   <app-swipeup nextPage = "/recap-accompagnement"></app-swipeup>
 </ion-content>
