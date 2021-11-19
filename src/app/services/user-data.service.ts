@@ -77,6 +77,12 @@ export class UserDataService {
       console.log(this.user);
     return console.log('User is undefined');
   }
+  
+  setUserContactFrequency(userContactFrequency): void {
+    if (this.user) return this.user[0].contactFrequency = userContactFrequency,
+    console.log(this.user);
+    return console.log('User is undefined');
+  }
 
   // Expose User data 
   getUserData(): UserDataModel[] {

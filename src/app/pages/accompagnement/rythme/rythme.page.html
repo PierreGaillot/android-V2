@@ -5,7 +5,7 @@
   <div class="reponses-cb-row">
 
     <!-- ############ Reponse "1x semaine" chekbox Radio ##### -->
-    <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="Une fois par semaine"
+    <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="Une fois par semaine"
       class="radio-btn" id="1x-semaine">
     <label for="1x-semaine">
       <span class="reponse-checkbox">
@@ -19,7 +19,7 @@
     </label>
 
     <!-- ############ Reponse "1 fois toute les deux semaines" chekbox Radio ##### -->
-    <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="tous les 15 jours"
+    <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="tous les 15 jours"
       class="radio-btn" id="1x-2semaine">
     <label for="1x-2semaine">
       <span class="reponse-checkbox">
@@ -33,7 +33,7 @@
     </label>
 
     <!-- ############ Reponse "tout les mois" chekbox Radio ##### -->
-    <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="tous les mois"
+    <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="tous les mois"
       class="radio-btn" id="1x-mois">
     <label for="1x-mois">
       <span class="reponse-checkbox">
@@ -51,8 +51,7 @@
   <div class="reponses-cb-row autre">
 
     <!-- ############ Reponse "autre" chekbox Radio ##### -->
-    <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="autre" class="radio-btn"
-      id="autre">
+    <input (change)="toggleTextInput()" type="radio" name="rythme" value="autre" class="radio-btn" id="autre">
     <label for="autre">
       <span class="reponse-checkbox-row">
         <span class="rep-cb-circl-stroke">
@@ -60,14 +59,20 @@
             <img src="../../../../assets/img/icon-calendar-non-defini.svg" alt="autre">
           </span>
         </span>
-        <span class="reponse-checkbox-txt-row">
-          <ion-item>
-            <ion-label position="floating">Autre</ion-label>
-            <ion-input type="text" name="autre" [(ngModel)]="contactFrequency"></ion-input>
-          </ion-item>
-        </span>
       </span>
     </label>
+    <span class="reponse-checkbox-txt-row">
+      <ion-item>
+        <ion-label position="floating">Autre</ion-label>
+        <ion-input
+          (keydown)="getTextContactFrequency($event)"
+          [disabled]="disabledStatus"
+          type="text" 
+          name="autre" 
+          [(ngModel)]="contactFrequency">
+        </ion-input>
+      </ion-item>
+    </span>
 
   </div>
 
