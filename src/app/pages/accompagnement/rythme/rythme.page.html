@@ -49,7 +49,7 @@
 
 
     <!-- ############ Reponse "autre" chekbox Radio ##### -->
-    <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="autre" class="radio-btn"
+    <!-- <input (change)="setUserRythme($event.target.value)" type="radio" name="rythme" value="autre" class="radio-btn"
       id="autre">
     <label for="autre">
       <span class="reponse-checkbox-row">
@@ -60,14 +60,18 @@
         </span>
         <span class="reponse-checkbox-txt-row">
           <ion-item>
-            <ion-label position="floating">Autre</ion-label>
-            <ion-textarea rows="1" colums="2" placeholder="votre rythme ..." maxlength="30"></ion-textarea>
-          </ion-item>
+            <ion-label position="floating">Autre : comment voulez-vous être contacté ?</ion-label>
+            <ion-input type="text" name="autre" [(ngModel)]="contact"></ion-input>
+        </ion-item>
         </span>
       </span>
-    </label>
+    </label> -->
+    <ion-item>
+      <ion-label class="ion-text-wrap">Autre : à quelle fréquence voulez-vous être contacté ?</ion-label>
+      <ion-input type="text" name="autre" [(ngModel)]="contact"></ion-input>
+    </ion-item>
 
   </div>
 
-  <app-swipeup></app-swipeup>
+  <app-swipeup nextPage = "/recap-accompagnement"></app-swipeup>
 </ion-content>

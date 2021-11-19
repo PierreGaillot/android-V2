@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Location } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
-import { Observable } from 'rxjs';
-// import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +9,9 @@ export class NavigationService {
   history: string[] = [];
   routes: string[] = [
     "/home", "/firstname", "/sexe", "/age", "/ville", "/quartier", "/recap-a-propos", "/details-a-propos",
-    "/motif", "/methode", "/rythme"
+    "/motif", "/methode", "/rythme", "/recap-accompagnement", "/detail-accompagnement",
+    "/contact", "/recap-total", "/detail-total",
+    "/fin"
   ];
 
   constructor(
