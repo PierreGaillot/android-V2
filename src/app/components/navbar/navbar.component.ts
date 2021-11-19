@@ -36,14 +36,17 @@ export class NavbarComponent implements OnInit {
         else if (index > 0 && index < 7) {
           this.title = "à propos de vous";
         }
-        else if (index === 7) {
-          this.title = "récapitulatif"
-        }
-        else if (index > 7 && index < 10) {
+        else if (index > 7 && index < 12) {
           this.title = "accompagnement";
         }
+        else if (index > 12 && index < 15) {
+          this.title = "contact";
+        }
+        else if (index === 7 || index === 12 || index === 15) {
+          this.title = "récapitulatif"
+        }
         else {
-          this.title = "test";
+          this.title = "A bientôt";
         }
 
         // Center navbar title on page with no return btn
