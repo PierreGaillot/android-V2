@@ -18,7 +18,7 @@ export class UserDataService {
       area: 'five',
       purpose: ['Trouver un stage en entreprise', 'Effectuer un Service Civique'],
       method: 'présentiel',
-      rate: 'Tous les 15 jours',
+      contactFrequency: 'Tous les 15 jours',
       contact: 'georges.bougloudou@gmail.com',
       isMail: true,
       isPhone: false

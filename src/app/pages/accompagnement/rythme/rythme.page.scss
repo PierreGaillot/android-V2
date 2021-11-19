@@ -1,6 +1,20 @@
 @import '../../../../global.scss';
 
+.reponses-cb-row {
+    margin-bottom: 1.5rem;
+}
+
+.reponses-cb-row.autre {
+    margin-top: 0;
+    margin-bottom: 10rem;
+}
+
+.autre .reponse-checkbox-row {
+    align-items: flex-end;
+}
+
 ion-item::part(native) {
     display: flex;
     flex-direction: column;
 }
+

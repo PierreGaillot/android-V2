@@ -49,7 +49,7 @@ export class MotifPage implements OnInit {
     public userDataService: UserDataService
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 
   changeSelection() {
     this.fetchSelectedAnswers();
