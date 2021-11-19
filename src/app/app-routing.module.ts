@@ -70,6 +70,10 @@ const routes: Routes = [
     path: 'detail-total',
     loadChildren: () => import('./pages/contacts/detail-total/detail-total.module').then( m => m.DetailTotalPageModule)
   },
+  {
+    path: 'fin',
+    loadChildren: () => import('./pages/contacts/fin/fin.module').then( m => m.FinPageModule)
+  },
 
 
 
