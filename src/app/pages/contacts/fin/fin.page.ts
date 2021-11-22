@@ -8,7 +8,6 @@ import { UserDataService } from 'src/app/services/user-data.service';
   styleUrls: ['./fin.page.scss'],
 })
 export class FinPage implements OnInit, AfterViewInit {
-  private userFirstname: string = '';
   private userContactType: string = '';
   private contactIsPhone : boolean;
   private userData: UserDataModel[] = [];
@@ -18,7 +17,6 @@ export class FinPage implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
-    this.userFirstname = this.userDataService.getUserFirstname();
   }
 
   ngAfterViewInit() { 

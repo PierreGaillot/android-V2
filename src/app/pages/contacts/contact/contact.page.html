@@ -47,14 +47,14 @@
   <ng-template #phone>
     <ion-item>
       <ion-label position="floating">Votre téléphone ...</ion-label>
-      <ion-input  type="number" name="area" [(ngModel)]="userPhone"></ion-input>
+      <ion-input (keydown)="getUserContact($event)" type="number" name="area" [(ngModel)]="contact"></ion-input>
       </ion-item>
   </ng-template>
 
   <ng-template #mail>
     <ion-item>
       <ion-label position="floating">Votre adresse e-mail ...</ion-label>
-      <ion-input  type="email" name="area" [(ngModel)]="userMail"></ion-input>
+      <ion-input (keydown)="getUserContact($event)" type="email" name="area" [(ngModel)]="contact"></ion-input>
     </ion-item>
   </ng-template>
 
