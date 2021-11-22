@@ -20,8 +20,8 @@ export class UserDataService {
       method: 'présentiel',
       contactFrequency: 'Tous les 15 jours',
       contact: 'georges.bougloudou@gmail.com',
-      isMail: false,
-      isPhone: true,
+      isMail: true,
+      isPhone: false,
     }
   ]
 
@@ -100,4 +100,12 @@ export class UserDataService {
     return console.log('userData is undefined');
   }
 
+
+  // ################## PIERRE ####################
+  setUserContact(userContact): void {
+    if (this.user) return this.user[0].contact = userContact,
+      console.log(this.user);
+    return console.log('UserContact is undefined');
+  }
+  
 }

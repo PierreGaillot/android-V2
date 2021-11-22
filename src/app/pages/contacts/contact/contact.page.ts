@@ -6,11 +6,12 @@ import { UserDataService } from 'src/app/services/user-data.service';
   templateUrl: './contact.page.html',
   styleUrls: ['./contact.page.scss'],
 })
-export class ContactPage implements OnInit {
+export class ContactPage implements OnInit, AfterViewInit {
 
   private userFirstname: string = '';
   private phoneChecked: boolean = false;
   private mailChecked: boolean = false;
+  public contact: string = '';
 
   constructor(
     public userDataService: UserDataService
@@ -28,7 +29,6 @@ export class ContactPage implements OnInit {
   isPhoneChecked(status) {
     this.phoneChecked = status;
     this.mailChecked = !status;
-    console.log('phone check !');
   }
 
   isMailChecked(status) {
@@ -40,5 +40,18 @@ export class ContactPage implements OnInit {
   reset() {
     this.phoneChecked = false;
     this.mailChecked = false;
+  }
+
+  getUserContact(event) {
+    if (event.key === "Enter") {
+      this.userDataService.setUserContact(this.contact);
+      console.log('Contact : ' + this.contact);
+    } else if (this.phoneChecked) {
+      this.userDataService.user[0].isPhone = true;
+      this.userDataService.user[0].isMail = false;
+    } else if (this.mailChecked) {
+      this.userDataService.user[0].isMail = true;
+      this.userDataService.user[0].isPhone = false;
+    }
   }
 }
