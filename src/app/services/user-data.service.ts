@@ -20,8 +20,8 @@ export class UserDataService {
       method: 'présentiel',
       contactFrequency: 'Tous les 15 jours',
       contact: 'georges.bougloudou@gmail.com',
-      isMail: true,
-      isPhone: false
+      isMail: false,
+      isPhone: true,
     }
   ]
 
