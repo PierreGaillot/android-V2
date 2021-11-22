@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { UserDataModel } from 'src/app/models/user-data.model';
 import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
@@ -6,8 +7,11 @@ import { UserDataService } from 'src/app/services/user-data.service';
   templateUrl: './fin.page.html',
   styleUrls: ['./fin.page.scss'],
 })
-export class FinPage implements OnInit {
-  private userFirstname:string = '';
+export class FinPage implements OnInit, AfterViewInit {
+  private userFirstname: string = '';
+  private userContactType: string = '';
+  private contactIsPhone : boolean;
+  private userData: UserDataModel[] = [];
 
   constructor(
     public userDataService: UserDataService
@@ -15,7 +19,21 @@ export class FinPage implements OnInit {
 
   ngOnInit() {
     this.userFirstname = this.userDataService.getUserFirstname();
+  }
 
+  ngAfterViewInit() { 
+    this.userData = this.userDataService.getUserData();
+    this.contactIsPhone = this.userData[0].isPhone;
+    console.log(this.contactIsPhone);
+    this.getContactType(this.contactIsPhone);
+  }
+
+  getContactType(isPhone) {
+    if (isPhone) {
+      this.userContactType = 'téléphone';
+    } else {
+      this.userContactType = 'e-mail';
+    } 
   }
 
 }
