@@ -8,6 +8,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class MotifPage implements OnInit {
 
+  private isCompleted: boolean = false; 
   private disabledStatus: boolean = true;
   private selectedAnswersList = []; 
   private finalAnswersContent = [];
@@ -73,7 +74,7 @@ export class MotifPage implements OnInit {
     });
 
     // Set User purpose with checked answers content 
-    if (this.finalAnswersContent.length > 0) return this.userDataService.setUserPurpose(this.finalAnswersContent);
+    if (this.finalAnswersContent.length > 0) return this.userDataService.setUserPurpose(this.finalAnswersContent), this.isCompleted = true;
     return console.log('Aucun motif n\'a été sélectionné');
   }
 }

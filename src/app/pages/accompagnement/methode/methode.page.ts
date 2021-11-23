@@ -8,6 +8,8 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class MethodePage implements OnInit {
 
+  private isCompleted: boolean = false; 
+
   constructor(
     public userDataService: UserDataService
   ) { }
@@ -17,6 +19,7 @@ export class MethodePage implements OnInit {
 
   getUserMethod(userMethod) {
     this.userDataService.setUserMethod(userMethod);
+    this.isCompleted = true;
   }
 
 }

@@ -13,5 +13,8 @@
         </ion-item>
     </div>
     
-    <app-swipeup nextPage = "/sexe"></app-swipeup>
+    <div *ngIf="isCompleted">
+        <app-swipeup nextPage = "/sexe"></app-swipeup>
+    </div>
+
 </ion-content>

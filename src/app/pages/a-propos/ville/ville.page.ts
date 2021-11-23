@@ -8,6 +8,8 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class VillePage implements OnInit {
 
+  private isCompleted: boolean = false; 
+
   constructor(
     public userDataService: UserDataService
   ) { }
@@ -21,6 +23,7 @@ export class VillePage implements OnInit {
 
   getUserCity(city) {
     this.userDataService.setUserCity(city);
+    this.isCompleted = true;
   }
 
 }

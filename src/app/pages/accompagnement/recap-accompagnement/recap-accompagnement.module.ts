@@ -27,6 +27,7 @@ export function playerFactory(){
     IonicModule,
     RecapAccompagnementPageRoutingModule
   ],
+  
   declarations: [
     RecapAccompagnementPage,
     EugenieInfosComponent,
@@ -35,4 +36,5 @@ export function playerFactory(){
     EugenieAnimComponent,
   ]
 })
+
 export class RecapAccompagnementPageModule {}
