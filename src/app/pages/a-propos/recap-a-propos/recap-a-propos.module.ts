@@ -9,8 +9,17 @@ import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-
 import { ProgressBarComponent } from 'src/app/components/progress-bar/progress-bar.component';
 import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
 
+import {LottieModule} from 'ngx-lottie';
+import player from 'lottie-web';
+import { EugenieAnimComponent } from 'src/app/components/eugenie-anim/eugenie-anim.component';
+
+export function playerFactory(){
+  return player
+}
+
 @NgModule({
   imports: [
+    LottieModule.forRoot({player:playerFactory}),
     CommonModule,
     FormsModule,
     IonicModule,
@@ -21,6 +30,7 @@ import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
     EugenieInfosComponent,
     ProgressBarComponent,
     SwipeupComponent,
+    EugenieAnimComponent
   ]
 })
 export class RecapAProposPageModule {}

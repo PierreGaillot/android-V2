@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 import { UserDataModel } from 'src/app/models/user-data.model';
 import { UserDataService } from 'src/app/services/user-data.service';
 
@@ -8,6 +9,11 @@ import { UserDataService } from 'src/app/services/user-data.service';
   styleUrls: ['./fin.page.scss'],
 })
 export class FinPage implements OnInit, AfterViewInit {
+  
+options:AnimationOptions = {
+  path:'../../../../assets/img/data.json'
+}
+
   private userContactType: string = '';
   private contactIsPhone : boolean;
   private userData: UserDataModel[] = [];

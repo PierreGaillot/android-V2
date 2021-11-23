@@ -9,14 +9,27 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+
+export function playerFactory() {
+  return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
+}
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [
+    LottieModule.forRoot({player:playerFactory}),
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+  ],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy, }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
