@@ -19,6 +19,10 @@
     color: #74B3E2;
 }
 
+.recap-rubrique-list {
+    color: #74B3E2;
+}
+
 .recap-question{
     display: flex;
     flex-direction: row;
@@ -52,12 +56,17 @@
     gap: 0.5em;
 }
 
-.recap-goupeElement-question, .recap-goupeElement-reponse{
+.recap-goupeElement-question {
     text-transform: uppercase;
+    min-width: 65px !important;
 }
 
 .recap-goupeElement-reponse{
     color: #74B3E2;
+}
+
+.recap-goupeElement-reponse::first-letter {
+    text-transform: uppercase;
 }
 
 .center {

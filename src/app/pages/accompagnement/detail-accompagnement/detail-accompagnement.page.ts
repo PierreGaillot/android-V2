@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 import { ModalController } from '@ionic/angular';
-import { ModalAProposPage } from '../../a-propos/modal-a-propos/modal-a-propos.page';
+import { ModalAccompagnementPage } from '../modal-accompagnement/modal-accompagnement.page';
 
 @Component({
   selector: 'app-detail-accompagnement',
@@ -15,20 +15,18 @@ export class DetailAccompagnementPage implements OnInit, AfterViewInit {
     public modalController: ModalController
   ) { }
 
-  getUserData() {
-    this.userDataService.getUserData();
-    console.log(this.userDataService.user);
-  }
+  // getUserData() {
+  //   this.userDataService.getUserData();
+  //   console.log(this.userDataService.user);
+  // }
 
   ngOnInit() {}
 
-  ngAfterViewInit() {
-    this.getUserData();
-  }
+  ngAfterViewInit() { }
 
   async presentModal(questionName) {
     const modal = await this.modalController.create({
-      component: ModalAProposPage,
+      component: ModalAccompagnementPage,
       // passing value for dynamic display in the modal
       componentProps: {
         'question': questionName

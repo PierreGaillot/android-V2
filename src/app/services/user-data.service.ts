@@ -15,7 +15,7 @@ export class UserDataService {
       age: '19-30 ans',
       sexe: 'homme',
       city: 'lille',
-      area: 'five',
+      area: 'fives',
       purpose: ['Trouver un stage en entreprise', 'Effectuer un Service Civique'],
       method: 'présentiel',
       contactFrequency: 'Tous les 15 jours',
