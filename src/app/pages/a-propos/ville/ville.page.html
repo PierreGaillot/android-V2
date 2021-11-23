@@ -1,60 +1,65 @@
 <ion-content>
 
-    <app-question txtQuestion="Dans quelle ville habitez-vous ?"></app-question>
+  <app-question txtQuestion="Dans quelle ville habitez-vous ?"></app-question>
 
-    <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
-    <div class="reponses-cb-row">
-        <!-- ############ Reponse "Tourcoing" chekbox Radio ##### -->
-        <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Tourcoing" class="radio-btn" id="tourcoing">
-        <label for="tourcoing">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../../assets/img/icon-tourcoing.svg" alt="ville de Tourcoing">
-                    </span>
-                </span>
-                <span class="reponse-checkbox-txt">Tourcoing.</span>
-            </span>
-        </label>
-        <!-- ############ Reponse "Roubaix"chekbox Radio ##### -->
-        <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Roubaix" class="radio-btn" id="roubaix">
-        <label for="roubaix">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../../assets/img/icon-Roubaix.svg" alt="ville de Roubaix">
-                    </span>
-                </span>
-                <span class="reponse-checkbox-txt">Roubaix</span>
-            </span>
-        </label>
-    </div>
-    <div class="reponses-cb-row">
-        <!-- ############ Reponse "Lille" chekbox Radio ##### -->
-        <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Lille" class="radio-btn" id="lille">
-        <label for="lille">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../../assets/img/icon-Lille.svg" alt="ville de Lille">
-                    </span>
-                </span>
-                <span class="reponse-checkbox-txt">Lille</span>
-            </span>
-        </label>
-        <!-- ############ Reponse "Je ne sais pas" chekbox Radio ##### -->
-        <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Non renseignée" class="radio-btn" id="ne-sais-pas">
-        <label for="ne-sais-pas">
-            <span class="reponse-checkbox">
-                <span class="rep-cb-circl-stroke">
-                    <span class="rep-cb-circle-cont">
-                        <img src="../../../../assets/img/icon-ne-sais-pas.svg" alt="je ne sais pas">
-                    </span>
-                </span>
-                <span class="reponse-checkbox-txt">boh ! ché po mi !?</span>
-            </span>
-        </label>
-    </div>
-
-    <app-swipeup nextPage = "/quartier"></app-swipeup>
+  <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
+  <div class="reponses-cb-row">
+    <!-- ############ Reponse "Tourcoing" chekbox Radio ##### -->
+    <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Tourcoing" class="radio-btn"
+      id="tourcoing">
+    <label for="tourcoing">
+      <span class="reponse-checkbox">
+        <span class="rep-cb-circl-stroke">
+          <span class="rep-cb-circle-cont">
+            <img src="../../../../assets/img/icon-tourcoing.svg" alt="ville de Tourcoing">
+          </span>
+        </span>
+        <span class="reponse-checkbox-txt">Tourcoing.</span>
+      </span>
+    </label>
+    <!-- ############ Reponse "Roubaix"chekbox Radio ##### -->
+    <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Roubaix" class="radio-btn"
+      id="roubaix">
+    <label for="roubaix">
+      <span class="reponse-checkbox">
+        <span class="rep-cb-circl-stroke">
+          <span class="rep-cb-circle-cont">
+            <img src="../../../../assets/img/icon-Roubaix.svg" alt="ville de Roubaix">
+          </span>
+        </span>
+        <span class="reponse-checkbox-txt">Roubaix</span>
+      </span>
+    </label>
+  </div>
+  <div class="reponses-cb-row">
+    <!-- ############ Reponse "Lille" chekbox Radio ##### -->
+    <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Lille" class="radio-btn"
+      id="lille">
+    <label for="lille">
+      <span class="reponse-checkbox">
+        <span class="rep-cb-circl-stroke">
+          <span class="rep-cb-circle-cont">
+            <img src="../../../../assets/img/icon-Lille.svg" alt="ville de Lille">
+          </span>
+        </span>
+        <span class="reponse-checkbox-txt">Lille</span>
+      </span>
+    </label>
+    <!-- ############ Reponse "Je ne sais pas" chekbox Radio ##### -->
+    <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Non renseignée" class="radio-btn"
+      id="ne-sais-pas">
+    <label for="ne-sais-pas">
+      <span class="reponse-checkbox">
+        <span class="rep-cb-circl-stroke">
+          <span class="rep-cb-circle-cont">
+            <img src="../../../../assets/img/icon-ne-sais-pas.svg" alt="je ne sais pas">
+          </span>
+        </span>
+        <span class="reponse-checkbox-txt">boh ! ché po mi !?</span>
+      </span>
+    </label>
+  </div>
+  <div *ngIf="isCompleted">
+    <app-swipeup nextPage="/quartier"></app-swipeup>
+  </div>
 </ion-content>

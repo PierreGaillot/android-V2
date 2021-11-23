@@ -60,7 +60,9 @@
 
   <ng-template #hideAll>
   </ng-template>
-
+<div *ngIf="isCompleted">
   <app-swipeup nextPage = "/recap-total"></app-swipeup>
+</div>
+  
 
 </ion-content>

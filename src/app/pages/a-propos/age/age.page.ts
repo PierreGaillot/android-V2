@@ -10,6 +10,7 @@ export class AgePage implements OnInit, AfterViewInit {
 
 
   private userFirstname: string = '';
+  private isCompleted: boolean = false; 
 
   constructor(
     public userDataService: UserDataService
@@ -26,6 +27,7 @@ export class AgePage implements OnInit, AfterViewInit {
 
   getUserAge(ageValue): void {
     this.userDataService.setUserAge(ageValue);
+    this.isCompleted = true;
   }
 
 }

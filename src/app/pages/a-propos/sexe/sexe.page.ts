@@ -11,6 +11,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
 export class SexePage implements OnInit, AfterViewInit {
   
 private userFirstname: string  = '';
+private isCompleted: boolean = false; 
 
   constructor(
     public userDataService: UserDataService
@@ -26,6 +27,7 @@ private userFirstname: string  = '';
 
   getUserSexe(sexe) {
     this.userDataService.setUserSexe(sexe);
+    this.isCompleted = true;
   }
 
 }

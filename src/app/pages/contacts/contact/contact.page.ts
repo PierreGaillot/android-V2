@@ -8,6 +8,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class ContactPage implements OnInit, AfterViewInit {
 
+  private isCompleted: boolean = false;
   private userFirstname: string = '';
   private phoneChecked: boolean = false;
   private mailChecked: boolean = false;
@@ -46,12 +47,13 @@ export class ContactPage implements OnInit, AfterViewInit {
     if (event.key === "Enter") {
       this.userDataService.setUserContact(this.contact);
       console.log('Contact : ' + this.contact);
+      this.isCompleted = true;
     } else if (this.phoneChecked) {
       this.userDataService.user[0].isPhone = true;
       this.userDataService.user[0].isMail = false;
     } else if (this.mailChecked) {
       this.userDataService.user[0].isMail = true;
       this.userDataService.user[0].isPhone = false;
-    }
+    } 
   }
 }

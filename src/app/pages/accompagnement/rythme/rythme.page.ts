@@ -7,6 +7,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
   styleUrls: ['./rythme.page.scss'],
 })
 export class RythmePage implements OnInit {
+  private isCompleted: boolean = false; 
   private contactFrequency: string = '';
   private disabledStatus: boolean = true;
 
@@ -20,6 +21,7 @@ export class RythmePage implements OnInit {
   getUserContactFrequency(userContactFrequency) {
     this.disabledStatus = true;
     this.userDataService.setUserContactFrequency(userContactFrequency);
+    this.isCompleted = true
   }
 
   toggleTextInput() {

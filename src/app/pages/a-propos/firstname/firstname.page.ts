@@ -9,15 +9,20 @@ import { UserDataService } from 'src/app/services/user-data.service';
 export class FirstnamePage implements OnInit {
 
   public firstname: string = '';
+  private isCompleted: boolean = false;
+
 
   constructor(
     public userDataService: UserDataService
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+   }
 
   getUserFirstame(event) {
     if (event.key === "Enter") return this.userDataService.createUser(this.firstname);
-  }
+    return this.isCompleted = true;
 
+  }
+  
 }
