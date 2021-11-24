@@ -18,7 +18,5 @@ export class SwipeupComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log(this.getRoutes());
   }
-
 }

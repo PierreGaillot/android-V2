@@ -31,6 +31,7 @@ export class RythmePage implements OnInit {
 
   getTextContactFrequency(event) {
     if (event.key === "Enter") return this.userDataService.setUserContactFrequency(this.contactFrequency);
+    this.isCompleted = true;
   }
 
 }
