@@ -62,6 +62,7 @@ export class ContactPage implements OnInit {
 
       if (tel || email) {
         this.userDataService.setUserContact(this.contact);
+        this.isCompleted = true;
         this.displayAlert = false;
         console.log(`regex tel : ${tel} - regex mail : ${email}`);
         console.log(this.userDataService.user[0]);
@@ -79,6 +80,10 @@ export class ContactPage implements OnInit {
         console.log(this.userDataService.user[0]);
       }
     } 
+  }
+
+  onSwipeUp($event) {
+    this.navCtrl.navigateForward(['/', 'recap-total']);
   }
 
 }
