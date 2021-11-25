@@ -7,6 +7,7 @@
     <ion-input (keydown)="getUserArea($event)" type="text" name="area" [(ngModel)]="area"></ion-input>
   </ion-item>
 
-  <app-swipeup nextPage = "/recap-a-propos"></app-swipeup>
+  <app-swipeup nextPage = "/recap-a-propos" appSwipe
+  (swipeUp)="onSwipeUp($event)"></app-swipeup>
 
 </ion-content>

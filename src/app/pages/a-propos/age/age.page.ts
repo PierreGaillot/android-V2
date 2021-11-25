@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 
+import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-age',
   templateUrl: './age.page.html',
@@ -13,7 +15,9 @@ export class AgePage implements OnInit, AfterViewInit {
   private isCompleted: boolean = false; 
 
   constructor(
-    public userDataService: UserDataService
+    public userDataService: UserDataService,
+    private navCtrl: NavController,
+
   ) { }
 
 
@@ -30,4 +34,7 @@ export class AgePage implements OnInit, AfterViewInit {
     this.isCompleted = true;
   }
 
+  onSwipeUp($event) {
+    this.navCtrl.navigateForward(['/', 'ville']);
+}
 }

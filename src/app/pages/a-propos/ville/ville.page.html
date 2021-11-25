@@ -60,6 +60,7 @@
     </label>
   </div>
   <div *ngIf="isCompleted">
-    <app-swipeup nextPage="/quartier"></app-swipeup>
+    <app-swipeup nextPage="/quartier" appSwipe
+    (swipeUp)="onSwipeUp($event)"></app-swipeup>
   </div>
 </ion-content>

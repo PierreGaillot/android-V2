@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 
+import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-quartier',
   templateUrl: './quartier.page.html',
@@ -11,7 +13,8 @@ export class QuartierPage implements OnInit, AfterViewInit {
   public area: string = '';
 
   constructor(
-    public userDataService: UserDataService
+    public userDataService: UserDataService,
+    private navCtrl: NavController,
   ) { }
 
   ngOnInit() {
@@ -24,5 +27,9 @@ export class QuartierPage implements OnInit, AfterViewInit {
   getUserArea(event) {
     if (event.key === "Enter") return this.userDataService.setUserArea(this.area);
   }
+
+  onSwipeUp($event) {
+    this.navCtrl.navigateForward(['/', 'recap-a-propos']);
+}
 
 }

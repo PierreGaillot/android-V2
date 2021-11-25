@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 
+import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-ville',
   templateUrl: './ville.page.html',
@@ -8,10 +10,12 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class VillePage implements OnInit {
 
-  private isCompleted: boolean = false; 
+  private isCompleted: boolean = false;
 
   constructor(
-    public userDataService: UserDataService
+    public userDataService: UserDataService,
+    private navCtrl: NavController,
+
   ) { }
 
   ngOnInit() {
@@ -24,6 +28,10 @@ export class VillePage implements OnInit {
   getUserCity(city) {
     this.userDataService.setUserCity(city);
     this.isCompleted = true;
+  }
+
+  onSwipeUp($event) {
+    this.navCtrl.navigateForward(['/', 'quartier']);
   }
 
 }
