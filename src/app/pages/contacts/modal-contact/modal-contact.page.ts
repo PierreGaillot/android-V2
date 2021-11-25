@@ -1,28 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { UserDataService } from 'src/app/services/user-data.service';
 
-import { NavController } from '@ionic/angular';
-
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.page.html',
-  styleUrls: ['./contact.page.scss'],
+  selector: 'app-modal-contact',
+  templateUrl: './modal-contact.page.html',
+  styleUrls: ['./modal-contact.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class ContactPage implements OnInit {
+export class ModalContactPage implements OnInit {
 
-  private isCompleted: boolean = false;
   private phoneChecked: boolean = false;
   private mailChecked: boolean = false;
   public contact: string = '';
+  public disabledStatus: boolean = true;
   public displayAlert: boolean = false;
 
   constructor(
     public userDataService: UserDataService,
-    private navCtrl: NavController,
+    public modalController: ModalController
   ) { }
+
+  @Input() question: string;
 
   ngOnInit() {
     this.reset()
+  }
+
+  // Dismiss modal
+  dismiss(): void {
+    this.modalController.dismiss({
+      'dismissed': true
+    });
   }
 
   isPhoneChecked(status) {
@@ -33,7 +42,7 @@ export class ContactPage implements OnInit {
   isMailChecked(status) {
     this.mailChecked = status;
     this.phoneChecked = !status;
-    console.log('mail check !');
+    // console.log('mail check !');
   }
 
   reset() {
@@ -62,9 +71,10 @@ export class ContactPage implements OnInit {
 
       if (tel || email) {
         this.userDataService.setUserContact(this.contact);
+        this.disabledStatus = false;
         this.displayAlert = false;
-        console.log(`regex tel : ${tel} - regex mail : ${email}`);
-        console.log(this.userDataService.user[0]);
+        // console.log(`regex tel : ${tel} - regex mail : ${email}`);
+        // console.log(this.userDataService.user[0]);
 
         if (this.phoneChecked) {
           this.userDataService.user[0].isPhone = true;
@@ -75,8 +85,9 @@ export class ContactPage implements OnInit {
         } 
       } else {
         this.displayAlert = true;
-        console.log(`regex error ${tel}`);
-        console.log(this.userDataService.user[0]);
+        this.disabledStatus = true;
+        // console.log(`regex error ${tel}`);
+        // console.log(this.userDataService.user[0]);
       }
     } 
   }

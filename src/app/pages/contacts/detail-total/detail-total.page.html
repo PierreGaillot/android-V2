@@ -1,7 +1,7 @@
 <ion-content>
 
   <!-- ############ Récaputulatif DETAIL TOTAL ##### -->
-  <div class="recapitulatif">
+  <div *ngFor="let data of userDataService.user" class="recapitulatif">
     <div class="recap-rubrique-txt">3 - contact</div>
 
     <div class="recap-cont-question">
@@ -10,10 +10,10 @@
           <p class="recap-num-question">Question 9</p>
           <div class="recap-goupe-question-reponse">
             <p class="recap-goupeElement-question">contact :</p>
-            <p class="recap-goupeElement-reponse">############## CONTACT</p>
+            <p class="recap-goupeElement-reponse">{{ data.contact }}</p>
           </div>
         </div>
-        <img (click)="presentModal('firstname')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img (click)="presentModal('contact')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
       </div>
       <div class="recap-separateur"></div>
     </div>

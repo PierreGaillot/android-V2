@@ -1,11 +1,11 @@
 <ion-content>
 
-  <app-question txtQuestion="
-  Super {{ userFirstname }} .
-  J’ai déjà beaucoup d’informations
-  qui me permettront de vous recontacter rapidement !
-  Merci de me dire comment vous recontacter :
-  "></app-question>
+  <app-question 
+    txtQuestion="Super {{ userFirstname }} .
+    J’ai déjà beaucoup d’informations
+    qui me permettront de vous recontacter rapidement !
+    Merci de me dire comment vous recontacter :">
+  </app-question>
 
   <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
   <div class="reponses-cb-row">
@@ -47,19 +47,23 @@
   <ng-template #phone>
     <ion-item>
       <ion-label position="floating">Votre téléphone ...</ion-label>
-      <ion-input (keydown)="getUserContact($event)" type="number" name="area" [(ngModel)]="contact"></ion-input>
+      <ion-input (keydown)="getUserContact($event)" type="tel" name="phone" autocomplete="off" [(ngModel)]="contact"></ion-input>
       </ion-item>
+
+      <div *ngIf="displayAlert" class="alert">Le format du numéro est incorrect</div>
   </ng-template>
 
   <ng-template #mail>
     <ion-item>
       <ion-label position="floating">Votre adresse e-mail ...</ion-label>
-      <ion-input (keydown)="getUserContact($event)" type="email" name="area" [(ngModel)]="contact"></ion-input>
+      <ion-input (keydown)="getUserContact($event)" type="email" name="email" autocomplete="off" [(ngModel)]="contact"></ion-input>
     </ion-item>
+
+    <div *ngIf="displayAlert" class="alert">Le format de l'adresse email est incorrect</div>
   </ng-template>
 
-  <ng-template #hideAll>
-  </ng-template>
+  <ng-template #hideAll></ng-template>
+
 <div *ngIf="isCompleted">
   <app-swipeup nextPage = "/recap-total" appSwipe
   (swipeUp)="onSwipeUp($event)"></app-swipeup>
