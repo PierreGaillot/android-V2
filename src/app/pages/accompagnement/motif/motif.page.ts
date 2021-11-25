@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-motif',
@@ -8,9 +10,9 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class MotifPage implements OnInit {
 
-  private isCompleted: boolean = false; 
+  private isCompleted: boolean = false;
   private disabledStatus: boolean = true;
-  private selectedAnswersList = []; 
+  private selectedAnswersList = [];
   private finalAnswersContent = [];
   private checkboxesAnswersList = [
     {
@@ -43,14 +45,16 @@ export class MotifPage implements OnInit {
       content: 'Accéder à une formation professionnelle. Trouver un Emploi (Intérim, CDD, CDI…)',
       isChecked: false
     },
-  ] 
+  ]
 
 
   constructor(
-    public userDataService: UserDataService
+    public userDataService: UserDataService,
+    private navCtrl: NavController,
+
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   changeSelection() {
     this.fetchSelectedAnswers();
@@ -76,5 +80,9 @@ export class MotifPage implements OnInit {
     // Set User purpose with checked answers content 
     if (this.finalAnswersContent.length > 0) return this.userDataService.setUserPurpose(this.finalAnswersContent), this.isCompleted = true;
     return console.log('Aucun motif n\'a été sélectionné');
+  }
+
+  onSwipeUp($event) {
+    this.navCtrl.navigateForward(['/', 'methode']);
   }
 }

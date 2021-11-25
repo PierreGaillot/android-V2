@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { SwipeDirective } from './directives/swipes/swipe.directive';
 
 
 export function playerFactory() {
@@ -20,7 +21,8 @@ export function playerFactory() {
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    SwipeDirective
   ],
   entryComponents: [],
   imports: [

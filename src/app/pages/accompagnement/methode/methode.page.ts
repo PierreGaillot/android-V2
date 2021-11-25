@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-methode',
@@ -11,7 +13,9 @@ export class MethodePage implements OnInit {
   private isCompleted: boolean = false; 
 
   constructor(
-    public userDataService: UserDataService
+    public userDataService: UserDataService,
+    private navCtrl: NavController,
+
   ) { }
 
   ngOnInit() {
@@ -21,5 +25,8 @@ export class MethodePage implements OnInit {
     this.userDataService.setUserMethod(userMethod);
     this.isCompleted = true;
   }
-
+  onSwipeUp($event) {
+    this.navCtrl.navigateForward(['/', 'rythme']);
+}
+  
 }

@@ -76,7 +76,8 @@
 
   </div>
 <div *ngIf="isCompleted">
-  <app-swipeup nextPage = "/recap-accompagnement"></app-swipeup>
+  <app-swipeup nextPage = "/recap-accompagnement" appSwipe
+  (swipeUp)="onSwipeUp($event)"></app-swipeup>
 
 </div>
   

@@ -13,7 +13,8 @@
 
   <app-progress-bar step=2></app-progress-bar>
 
-  <app-swipeup nextPage = "/contact"></app-swipeup>
+  <app-swipeup nextPage = "/contact" appSwipe
+  (swipeUp)="onSwipeUp($event)"></app-swipeup>
   
 </ion-content>
 

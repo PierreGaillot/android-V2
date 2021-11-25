@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 
+import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.page.html',
@@ -15,7 +17,8 @@ export class ContactPage implements OnInit, AfterViewInit {
   public contact: string = '';
 
   constructor(
-    public userDataService: UserDataService
+    public userDataService: UserDataService,
+    private navCtrl: NavController,
   ) { }
 
   ngOnInit() {
@@ -54,6 +57,10 @@ export class ContactPage implements OnInit, AfterViewInit {
     } else if (this.mailChecked) {
       this.userDataService.user[0].isMail = true;
       this.userDataService.user[0].isPhone = false;
-    } 
+    }
+  }
+
+  onSwipeUp($event) {
+    this.navCtrl.navigateForward(['/', 'recap-total']);
   }
 }

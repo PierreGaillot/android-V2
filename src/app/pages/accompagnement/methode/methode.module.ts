@@ -8,9 +8,11 @@ import { MethodePage } from './methode.page';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { QuestionComponent } from 'src/app/components/question/question.component';
 import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
+import { SwipeModule } from 'src/app/modules/swipe/swipe.module';
 
 @NgModule({
   imports: [
+    SwipeModule,
     CommonModule,
     FormsModule,
     IonicModule,

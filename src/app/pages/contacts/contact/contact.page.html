@@ -61,7 +61,8 @@
   <ng-template #hideAll>
   </ng-template>
 <div *ngIf="isCompleted">
-  <app-swipeup nextPage = "/recap-total"></app-swipeup>
+  <app-swipeup nextPage = "/recap-total" appSwipe
+  (swipeUp)="onSwipeUp($event)"></app-swipeup>
 </div>
   
 

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 
+import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-rythme',
   templateUrl: './rythme.page.html',
@@ -12,7 +14,8 @@ export class RythmePage implements OnInit {
   private disabledStatus: boolean = true;
 
   constructor(
-    public userDataService: UserDataService
+    public userDataService: UserDataService,
+    private navCtrl: NavController,
   ) { }
 
   ngOnInit() {
@@ -33,5 +36,9 @@ export class RythmePage implements OnInit {
     if (event.key === "Enter") return this.userDataService.setUserContactFrequency(this.contactFrequency);
     this.isCompleted = true;
   }
+
+  onSwipeUp($event) {
+    this.navCtrl.navigateForward(['/', 'recap-accompagnement']);
+}
 
 }

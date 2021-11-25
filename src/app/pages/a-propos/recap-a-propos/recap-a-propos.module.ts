@@ -12,6 +12,7 @@ import { SwipeupComponent } from 'src/app/components/swipeup/swipeup.component';
 import {LottieModule} from 'ngx-lottie';
 import player from 'lottie-web';
 import { EugenieAnimComponent } from 'src/app/components/eugenie-anim/eugenie-anim.component';
+import { SwipeModule } from 'src/app/modules/swipe/swipe.module';
 
 export function playerFactory(){
   return player
@@ -19,6 +20,7 @@ export function playerFactory(){
 
 @NgModule({
   imports: [
+    SwipeModule,
     LottieModule.forRoot({player:playerFactory}),
     CommonModule,
     FormsModule,
