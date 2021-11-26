@@ -12,9 +12,6 @@ export class FirstnamePage implements OnInit {
   public firstname: string = '';
   private isCompleted: boolean = false;
 
-
-
-
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,

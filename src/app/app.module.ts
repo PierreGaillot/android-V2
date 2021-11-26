@@ -11,7 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
-import { SwipeDirective } from './directives/swipes/swipe.directive';
+// import { SwipeDirective } from './directives/swipes/swipe.directive';
+import { SwipeModule } from './modules/swipe/swipe.module';
 
 
 export function playerFactory() {
@@ -21,8 +22,7 @@ export function playerFactory() {
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    SwipeDirective
+    NavbarComponent
   ],
   entryComponents: [],
   imports: [
@@ -30,6 +30,7 @@ export function playerFactory() {
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    SwipeModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy, }],
   bootstrap: [AppComponent],

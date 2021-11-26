@@ -66,7 +66,8 @@ const routes: Routes = [
   {
     path: 'recap-total',
     loadChildren: () => import('./pages/contacts/recap-total/recap-total.module').then( m => m.RecapTotalPageModule)
-  },  {
+  },
+  {
     path: 'detail-total',
     loadChildren: () => import('./pages/contacts/detail-total/detail-total.module').then( m => m.DetailTotalPageModule)
   },
@@ -74,6 +75,14 @@ const routes: Routes = [
     path: 'fin',
     loadChildren: () => import('./pages/contacts/fin/fin.module').then( m => m.FinPageModule)
   },
+  {
+    path: 'modal-accompagnement',
+    loadChildren: () => import('./pages/accompagnement/modal-accompagnement/modal-accompagnement.module').then( m => m.ModalAccompagnementPageModule)
+  },  {
+    path: 'modal-contact',
+    loadChildren: () => import('./pages/contacts/modal-contact/modal-contact.module').then( m => m.ModalContactPageModule)
+  },
+
 
 
 

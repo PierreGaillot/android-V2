@@ -10,10 +10,13 @@
           <p class="recap-num-question">Question 6</p>
           <div class="recap-goupe-question-reponse">
             <p class="recap-goupeElement-question">motif :</p>
-            <p class="recap-goupeElement-reponse">############## MOTIF</p>
+            <!-- <p class="recap-goupeElement-reponse">{{ data.purpose }}</p> -->
+            <ul>
+              <li *ngFor="let item of data.purpose" class="recap-goupeElement-reponse">{{ item }}</li>
+            </ul>
           </div>
         </div>
-        <img (click)="presentModal('firstname')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img (click)="presentModal('purpose')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
       </div>
       <div class="recap-separateur"></div>
     </div>
@@ -25,10 +28,10 @@
           <p class="recap-num-question">Question 7</p>
           <div class="recap-goupe-question-reponse">
             <p class="recap-goupeElement-question">methode :</p>
-            <p class="recap-goupeElement-reponse">############## METHODE</p>
+            <p class="recap-goupeElement-reponse">{{ data.method }}</p>
           </div>
         </div>
-        <img (click)="presentModal('age')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img (click)="presentModal('method')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
       </div>
       <div class="recap-separateur"></div>
     </div>
@@ -39,11 +42,11 @@
         <div class="recap-question-txt">
           <p class="recap-num-question">Question 8</p>
           <div class="recap-goupe-question-reponse">
-            <p class="recap-goupeElement-question">rythme :</p>
-            <p class="recap-goupeElement-reponse">############## RYTHME</p>
+            <p class="recap-goupeElement-question frequency">rythme :</p>
+            <p class="recap-goupeElement-reponse">{{ data.contactFrequency }}</p>
           </div>
         </div>
-        <img (click)="presentModal('sexe')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img (click)="presentModal('contactFrequency')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
       </div>
       <div class="recap-separateur"></div>
     </div>

@@ -1,0 +1,27 @@
+@import '../../../../global.scss';
+@import '../../a-propos/modal-a-propos/modal-a-propos.page.scss';
+
+.contact-container {
+    position: relative;
+}
+
+.reponses-cb-row.contact {
+    margin-top: 5rem;
+}
+
+.btn-container {
+    margin-top: 6rem;
+}
+
+.alert {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    text-align: center;
+    padding: .75rem 1.25rem;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 0.25rem;
+    color: #721c24;
+}

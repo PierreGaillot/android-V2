@@ -1,0 +1,45 @@
+@import '../../../../global.scss';
+@import '../../a-propos/modal-a-propos/modal-a-propos.page.scss';
+@import '../motif/motif.page.scss';
+
+
+// PURPOSE
+.purpose .reponses-cb-col {
+    padding: 1rem;
+}
+
+// METHOD
+label[for="presentiel"] .rep-cb-circl-stroke,
+label[for="distanciel"] .rep-cb-circl-stroke,
+label[for="presentiel-distanciel"] .rep-cb-circl-stroke {
+   border: 0.3em solid #74B3E2;
+}
+
+.method .reponses-cb-row {
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.method .label {
+  display: flex;
+  align-items: center;
+  margin-bottom: .7rem;
+}
+
+.method .reponse-checkbox-txt {
+  padding: 0 1.2rem;
+  text-align: start;
+  width: auto;
+}
+
+// CONTACT FREQUENCY
+.contact-frequency .reponses-cb-row {
+  gap: 0;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+
+.contact-frequency .reponses-cb-row.autre {
+  align-items: flex-end;
+  margin-top: 0;
+}

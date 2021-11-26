@@ -10,4 +10,15 @@ label[for="mail"] .rep-cb-circl-stroke {
   margin-bottom: 1em !important;
 }
 
-
+.alert {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  text-align: center;
+  padding: .75rem 1.25rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.25rem;
+  color: #721c24;
+}
