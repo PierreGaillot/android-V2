@@ -1,7 +1,9 @@
 {
   "name": "sur-mesure",
   "integrations": {
-    "capacitor": {},
+    "capacitor": {
+      "enabled": false
+    },
     "cordova": {}
   },
   "type": "angular"
