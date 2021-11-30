@@ -9,7 +9,7 @@ import { NavController } from '@ionic/angular';
 })
 export class RecapTotalPage implements OnInit {
 
-  private userFirstname: string = '';
+  public userFirstname: string = '';
 
   constructor(
     public userDataService: UserDataService,
@@ -29,3 +29,4 @@ export class RecapTotalPage implements OnInit {
   }
 
 }
+

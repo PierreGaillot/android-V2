@@ -22,9 +22,14 @@ export class FirstnamePage implements OnInit {
   }
 
   getUserFirstame(event) {
-    if (event.key === "Enter") return this.userDataService.createUser(this.firstname);
-    return this.isCompleted = true;
+    let firstnameUpperCase: string = '';
 
+    if (event.key === "Enter")
+      // Set first letter of firstname to UpperCase 
+      return firstnameUpperCase = this.firstname.charAt(0).toUpperCase() + this.firstname.slice(1), 
+      // Create new user with his firstname
+      this.userDataService.createUser(firstnameUpperCase);
+    return this.isCompleted = true;
   }
 
   onSwipeUp($event) {

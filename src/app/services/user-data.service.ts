@@ -84,6 +84,12 @@ export class UserDataService {
     return console.log('User is undefined');
   }
 
+  setUserContact(userContact): void {
+    if (this.user) return this.user[0].contact = userContact,
+      console.log(this.user);
+    return console.log('UserContact is undefined');
+  }
+  
   // Expose User data 
   getUserData(): UserDataModel[] {
     return this.user;
@@ -100,12 +106,5 @@ export class UserDataService {
     return console.log('userData is undefined');
   }
 
-
-  // ################## PIERRE ####################
-  setUserContact(userContact): void {
-    if (this.user) return this.user[0].contact = userContact,
-      console.log(this.user);
-    return console.log('UserContact is undefined');
-  }
   
 }

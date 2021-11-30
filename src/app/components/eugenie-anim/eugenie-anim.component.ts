@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 
-
 @Component({
   selector: 'app-eugenie-anim',
   templateUrl: './eugenie-anim.component.html',
