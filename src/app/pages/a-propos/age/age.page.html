@@ -43,8 +43,9 @@
             </span>
         </label>
     </div>
-<div *ngIf="isCompleted" appSwipe
-(swipeUp)="onSwipeUp($event)">
-    <app-swipeup nextPage = "/ville"></app-swipeup>
-</div>
+
+    <div *ngIf="isCompleted" appSwipe (swipeUp)="onSwipeUp($event)">
+        <app-swipeup nextPage = "/ville"></app-swipeup>
+    </div>
+
 </ion-content>
