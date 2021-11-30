@@ -9,16 +9,7 @@ import { NavController } from '@ionic/angular';
 })
 export class RecapTotalPage implements OnInit {
 
-  private userFirstname: string = '';
-  private emaill = {
-    to: 'gournay.guillaume@gmail.com',
-    cc: '',
-    bcc: [],
-    attachments: [],
-    subject: 'Cordova Icons',
-    body: 'How are you? Nice greetings from Leipzig',
-    isHtml: true
-  }
+  public userFirstname: string = '';
 
   constructor(
     public userDataService: UserDataService,
