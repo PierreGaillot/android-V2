@@ -28,8 +28,9 @@ export class FirstnamePage implements OnInit {
       // Set first letter of firstname to UpperCase 
       return firstnameUpperCase = this.firstname.charAt(0).toUpperCase() + this.firstname.slice(1), 
       // Create new user with his firstname
-      this.userDataService.createUser(firstnameUpperCase);
-    return this.isCompleted = true;
+      this.userDataService.createUser(firstnameUpperCase),
+      this.isCompleted = true;
+      console.log('test');
   }
 
   onSwipeUp($event) {
