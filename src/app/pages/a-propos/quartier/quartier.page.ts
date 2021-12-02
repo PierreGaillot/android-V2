@@ -3,6 +3,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
 
 import { NavController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-quartier',
   templateUrl: './quartier.page.html',
@@ -11,6 +12,7 @@ import { NavController } from '@ionic/angular';
 export class QuartierPage implements OnInit, AfterViewInit {
 
   public area: string = '';
+  public keyboardOn: boolean = true;
 
   constructor(
     public userDataService: UserDataService,
@@ -30,6 +32,11 @@ export class QuartierPage implements OnInit, AfterViewInit {
 
   onSwipeUp($event) {
     this.navCtrl.navigateForward(['/', 'recap-a-propos']);
+}
+
+toggleSwipeUp(event){
+  console.log('test')
+  this.keyboardOn = false;
 }
 
 }
