@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from '../app/modules/shared/shared.module';
 import { LottieModule } from 'ngx-lottie';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
   ],
   providers: [
     EmailComposer,
+    Keyboard,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, }
   ],
   bootstrap: [AppComponent],

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
 
 import { EugenieAnimComponent } from 'src/app/components/eugenie-anim/eugenie-anim.component';
 import { EugenieInfosComponent } from 'src/app/components/eugenie-infos/eugenie-infos.component';
@@ -30,7 +31,8 @@ export function playerFactory(){
   imports: [
     CommonModule,
     RouterModule,
-    LottieModule.forRoot({player:playerFactory})
+    LottieModule.forRoot({player:playerFactory}),
+    IonicModule,
   ],
   exports: [
     SwipeDirective,
@@ -41,7 +43,8 @@ export function playerFactory(){
     QuestionComponent,
     SwipeupComponent,
     RouterModule,
-    LottieModule
+    LottieModule,
+    IonicModule,
   ]
 })
 
