@@ -32,11 +32,24 @@ export class QuartierPage implements OnInit, AfterViewInit {
 
   onSwipeUp($event) {
     this.navCtrl.navigateForward(['/', 'recap-a-propos']);
+  }
+
+  // toggleSwipeUp(event) {
+  //   console.log('test 01')
+  //   this.keyboardOn = false;
+  // }
+
+
+  checkFocus(){
+    this.keyboardOn = false;
+  }
+  
+  checkBlur(){
+    setTimeout(() => {
+      this.keyboardOn = true;
+    }, 300);
+  };
+
 }
 
-toggleSwipeUp(event){
-  console.log('test')
-  this.keyboardOn = false;
-}
 
-}
