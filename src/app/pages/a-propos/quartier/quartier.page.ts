@@ -3,6 +3,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
 
 import { NavController } from '@ionic/angular';
 
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
   selector: 'app-quartier',
@@ -14,9 +15,12 @@ export class QuartierPage implements OnInit, AfterViewInit {
   public area: string = '';
   public keyboardOn: boolean = true;
 
+
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,
+    private keyboard: Keyboard,
+
   ) { }
 
   ngOnInit() {
@@ -27,7 +31,10 @@ export class QuartierPage implements OnInit, AfterViewInit {
   }
 
   getUserArea(event) {
-    if (event.key === "Enter") return this.userDataService.setUserArea(this.area);
+    if (event.key === "Enter") return this.userDataService.setUserArea(this.area),
+    setTimeout(() => {
+      this.keyboardOn = true;
+    }, 300);
   }
 
   onSwipeUp($event) {
@@ -40,11 +47,11 @@ export class QuartierPage implements OnInit, AfterViewInit {
   // }
 
 
-  checkFocus(){
+  checkFocus() {
     this.keyboardOn = false;
   }
-  
-  checkBlur(){
+
+  checkBlur() {
     setTimeout(() => {
       this.keyboardOn = true;
     }, 300);
