@@ -32,10 +32,10 @@ export class QuartierPage implements OnInit, AfterViewInit {
 
   getUserArea(event) {
     if (event.key === "Enter") return this.userDataService.setUserArea(this.area),
-    this.keyboard.hide(),
-    setTimeout(() => {
-      this.keyboardOn = true;
-    }, 300);
+      this.keyboard.hide(),
+      setTimeout(() => {
+        this.keyboardOn = true;
+      }, 300);
   }
 
   onSwipeUp($event) {
@@ -59,5 +59,3 @@ export class QuartierPage implements OnInit, AfterViewInit {
   };
 
 }
-
-
