@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 
 import { NavController } from '@ionic/angular';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
   selector: 'app-contact',
@@ -15,10 +16,12 @@ export class ContactPage implements OnInit {
   private mailChecked: boolean = false;
   public contact: string = '';
   public displayAlert: boolean = false;
+  private keyboardOn: boolean = false;
 
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,
+    private keyboard: Keyboard,
   ) { }
 
   ngOnInit() {
@@ -43,6 +46,10 @@ export class ContactPage implements OnInit {
 
   getUserContact(event) {
     if (event.key === "Enter") {
+      this.keyboard.hide(),
+      setTimeout(() => {
+        this.keyboardOn = true;
+      }, 1000);
       // Testing phone number format, regex matches each of these lines
         // 0123456789
         // 01 23 45 67 89
@@ -79,7 +86,7 @@ export class ContactPage implements OnInit {
         console.log(`regex error ${tel}`);
         console.log(this.userDataService.user[0]);
       }
-    } 
+    }
   }
 
   onSwipeUp($event) {
