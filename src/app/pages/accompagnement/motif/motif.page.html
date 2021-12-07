@@ -1,35 +1,33 @@
 c<ion-content>
   <app-question txtQuestion="Vous souhaitez être accompagné pour : "
-  questionComponentBgImage="question-component-motif"></app-question>
+    questionComponentBgImage="question-component-motif"></app-question>
 
 
   <!-- ############ tableau de Reponses : chekboxs Horizontal ##### -->
   <div class="reponses-cb-col">
 
     <div *ngFor="let item of checkboxesAnswersList" class="checkbox-hor">
+      <input (change)="changeSelection()" type="checkbox" name="checkbox-btn" class="checkbox-btn" [(ngModel)]="item.isChecked"
+        id="{{item.id}}">
       <label for="{{item.id}}">
-        <input 
-          type="checkbox" 
-          name="checkbox-btn" 
-          id="{{item.id}}"
-          [(ngModel)]="item.isChecked"
-          (change)="changeSelection()">
+        <span class="reponse-checkbox-row">
+          <span class="rep-cb-circl-stroke">
+            <span class="rep-cb-circle-cont">
+              <img [src]="item.icon" alt="">
+            </span>
+          </span>
+          <span class="reponse-checkbox-txt-row">
+            {{ item.content }}
+          </span>
+        </span>
       </label>
-      <span>
-        {{ item.content }}
-      </span>
     </div>
 
-    <ion-button 
-      (click)="getUserPurpose()"
-      [disabled]="disabledStatus" 
-      size="small" 
-      class="btn">Valider
+    <ion-button (click)="getUserPurpose()"expand="block" [disabled]="disabledStatus" class="btn">Valider
     </ion-button>
 
   </div>
-<div *ngIf="isCompleted">
-  <app-swipeup nextPage = "/methode" appSwipe
-  (swipeUp)="onSwipeUp($event)"></app-swipeup>
-</div>
+  <div *ngIf="isCompleted">
+    <app-swipeup nextPage="/methode" appSwipe (swipeUp)="onSwipeUp($event)"></app-swipeup>
+  </div>
 </ion-content>

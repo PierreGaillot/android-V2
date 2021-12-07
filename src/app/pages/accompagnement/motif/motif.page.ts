@@ -3,6 +3,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
 import { NavController } from '@ionic/angular';
 
 
+
 @Component({
   selector: 'app-motif',
   templateUrl: './motif.page.html',
@@ -18,32 +19,38 @@ export class MotifPage implements OnInit {
     {
       id: 'reponse-1',
       content: 'Être aidé pour les modes de gardes d\'enfant, la mobilité, l\'accès aux droits, l\'accompagnement numérique...',
-      isChecked: false
+      isChecked: false,
+      icon: '../../../../assets/img/icon-gardeEnfants.svg'
     },
     {
       id: 'reponse-2',
       content: 'Être coaché pour mes démarches d\'emploi (simulations entretiens d\'embauche, insertion par le sport…)',
-      isChecked: false
+      isChecked: false,
+      icon: '../../../../assets/img/icon-emploi.svg'
     },
     {
       id: 'reponse-3',
       content: 'Trouver un stage en entreprise',
-      isChecked: false
+      isChecked: false,
+      icon: '../../../../assets/img/icon-stage.svg'
     },
     {
       id: 'reponse-4',
       content: 'Effectuer un Service Civique',
-      isChecked: false
+      isChecked: false,
+      icon: '../../../../assets/img/icon-service.svg'
     },
     {
       id: 'reponse-5',
       content: 'Trouver une Alternance (contrat d’apprentissage ou contrat de professionnalisation)',
-      isChecked: false
+      isChecked: false,
+      icon: '../../../../assets/img/icon-apprentissage.svg'
     },
     {
       id: 'reponse-6',
       content: 'Accéder à une formation professionnelle. Trouver un Emploi (Intérim, CDD, CDI…)',
-      isChecked: false
+      isChecked: false,
+      icon: '../../../../assets/img/icon-student.svg'
     },
   ]
 
