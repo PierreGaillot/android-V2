@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
   @Input() txtQuestion: string;
+  @Input() questionComponentBgImage: string;
+
 
   constructor() { }
 

@@ -304,3 +304,40 @@ width: 3.8em;
     background: #74B3E2;
     opacity: 50%;
 }
+
+
+.question-component-firstName, .question-component-sexe, .question-component-age, .question-component-ville, .question-component-quartier, .question-component-motif, .question-component-methode, .question-component-rythme, .question-component-contact{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: bottom !important;
+
+}
+
+
+.question-component-firstName{
+    background-image: url(../src/assets/img/Question-backgound/01_firstname.png);
+}
+.question-component-sexe{
+    background-image: url(../src/assets/img/Question-backgound/02_sexe.png);
+}
+.question-component-age{
+    background-image: url(../src/assets/img/Question-backgound/03_age.png);
+}
+.question-component-ville{
+    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+}
+.question-component-quartier{
+    background-image: url(../src/assets/img/Question-backgound/05_quartier.png);
+}
+.question-component-motif{
+    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+}
+.question-component-methode{
+    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+}
+.question-component-rythme{
+    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+}
+.question-component-contact{
+    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+}
