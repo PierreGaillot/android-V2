@@ -5,25 +5,25 @@ import { UserDataModel } from 'src/app/models/user-data.model';
   providedIn: 'root'
 })
 export class UserDataService {
-  // public user: UserDataModel[];
+  public user: UserDataModel[];
   public userFirstname: string = '';
 
   // testing
-  public user: UserDataModel[] = [
-    {
-      firstname: 'Jean',
-      age: '19-30 ans',
-      sexe: 'homme',
-      city: 'lille',
-      area: 'fives',
-      purpose: ['Trouver un stage en entreprise', 'Effectuer un Service Civique'],
-      method: 'présentiel',
-      contactFrequency: 'Tous les 15 jours',
-      contact: 'georges.bougloudou@gmail.com',
-      isMail: true,
-      isPhone: false,
-    }
-  ]
+  // public user: UserDataModel[] = [
+  //   {
+  //     firstname: 'Jean',
+  //     age: '19-30 ans',
+  //     sexe: 'homme',
+  //     city: 'lille',
+  //     area: 'fives',
+  //     purpose: ['Trouver un stage en entreprise', 'Effectuer un Service Civique'],
+  //     method: 'présentiel',
+  //     contactFrequency: 'Tous les 15 jours',
+  //     contact: 'georges.bougloudou@gmail.com',
+  //     isMail: true,
+  //     isPhone: false,
+  //   }
+  // ]
 
 
   constructor() { }
