@@ -2,7 +2,6 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { UserDataModel } from 'src/app/models/user-data.model';
 import { UserDataService } from 'src/app/services/user-data.service';
-import { EmailComposer } from '@ionic-native/email-composer/ngx'
 
 @Component({
   selector: 'app-fin',
@@ -21,7 +20,6 @@ options:AnimationOptions = {
 
   constructor(
     public userDataService: UserDataService,
-    public emailComposer: EmailComposer
   ) { }
 
   ngOnInit() {
@@ -42,35 +40,35 @@ options:AnimationOptions = {
     } 
   }
 
-  sendMail() {
+  // sendMail() {
 
-    this.emailComposer.hasAccount().then((isValid: boolean) => {
-      if (isValid) {
-        // Now we know we have a valid email account configured
-        console.log('isValid' + isValid)
-      }
-     });
+  //   this.emailComposer.hasAccount().then((isValid: boolean) => {
+  //     if (isValid) {
+  //       // Now we know we have a valid email account configured
+  //       console.log('isValid' + isValid)
+  //     }
+  //    });
 
-    this.emailComposer.isAvailable().then((available: boolean) =>{
-      if(available) { 
-        console.log('isAvailable' + available)
-      } 
-    });
+  //   this.emailComposer.isAvailable().then((available: boolean) =>{
+  //     if(available) { 
+  //       console.log('isAvailable' + available)
+  //     } 
+  //   });
 
-    //Now we know we can send
-    let email = {
-      to: 'gournay.guillaume@gmail.com',
-      cc: 'pr.gaillot@gmail.com',
-      bcc: [],
-      attachments: [],
-      app: 'gmail',
-      subject: 'Ca marche pas wallah',
-      body: 'How are you? Nice greetings from Leipzig',
-      isHtml: true
-    }
+  //   //Now we know we can send
+  //   let email = {
+  //     to: 'gournay.guillaume@gmail.com',
+  //     cc: 'pr.gaillot@gmail.com',
+  //     bcc: [],
+  //     attachments: [],
+  //     app: 'gmail',
+  //     subject: 'Ca marche pas wallah',
+  //     body: 'How are you? Nice greetings from Leipzig',
+  //     isHtml: true
+  //   }
     
-    // Send a text message using default options
-    this.emailComposer.open(email);
-  }
+  //   // Send a text message using default options
+  //   this.emailComposer.open(email);
+  // }
      
 }

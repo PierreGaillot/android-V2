@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sur-mesure-dev": {
+      "hosting": {
+        "app": [
+          "sur-mesure-dev"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sur-mesure-dev"
+  }
+}

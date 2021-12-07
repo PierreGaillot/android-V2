@@ -3,7 +3,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
 import { NavController } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
-
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-firstname',
@@ -19,9 +19,16 @@ export class FirstnamePage implements OnInit {
     public userDataService: UserDataService,
     private navCtrl: NavController,
     private keyboard: Keyboard,
+    public db: AngularFirestore
   ) { }
 
   ngOnInit() {
+    let result;
+    this.db.collection('users').doc('TlC6iECe1I2zZTMTjLRH').get().toPromise()
+      .then((doc) => {
+        result = doc.data();
+        console.log(result);
+      })
   }
 
   getUserFirstame(event) {

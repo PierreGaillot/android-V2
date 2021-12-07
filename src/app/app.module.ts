@@ -7,9 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { SharedModule } from '../app/modules/shared/shared.module';
 import { LottieModule } from 'ngx-lottie';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 
+// Firebase
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 @NgModule({
   declarations: [
@@ -22,12 +28,13 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     SharedModule,
-    LottieModule
+    LottieModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [
-    EmailComposer,
     Keyboard,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, },
   ],
   bootstrap: [AppComponent],
 })
