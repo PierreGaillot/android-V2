@@ -11,61 +11,11 @@
   padding-bottom: 1em;
 }
 
-input[type="checkbox"] {
-  appearance: none;
-  display: inline-block;
-  width: 5em;
-  height: 5em;
-  border-radius: 100%;
-  background: #E3E3E3;
+.reponse-checkbox-txt{
+  width: 6em;
 }
 
-input[type="checkbox"]::before {
-  display: flex;
-  content: "";
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: 75%;
-  width: 4.7em;
-  height: 4.7em;
-  transition: all 0.1s ease-out 0s;
-  border: 0em solid #86BAE5;
-  border-radius: 100%;
-  margin: 0.3em;
-}
-
-input[type="checkbox"]:checked::before {
-  transition: all 0.1s ease-in 0s;
-  width: 4.7em;
-  height: 4.7em;
-  border-radius: 100%;
-  border: 0.3em solid #86BAE5;
-  margin: 0em;
-}
-
-// ################### IMAGE DES CHECKBOX ###################
-
-label[for="reponse-1"] > input {
-  background-image: url(../../../../assets/img/icon-gardeEnfants.svg);
-}
-
-label[for="reponse-2"] > input {
-  background-image: url(../../../../assets/img/icon-emploi.svg);
-}
-
-label[for="reponse-3"] > input {
-  background-image: url(../../../../assets/img/icon-stage.svg);
-}
-
-label[for="reponse-4"] > input {
-  background-image: url(../../../../assets/img/icon-service.svg);
-}
-
-label[for="reponse-5"] > input {
-  background-image: url(../../../../assets/img/icon-apprentissage.svg);
-}
-
-label[for="reponse-6"] > input {
-  background-image: url(../../../../assets/img/icon-student.svg);
+label .rep-cb-circl-stroke {
+  border: 0.3em solid #74B3E2;
+  padding: 0.3em;
 }

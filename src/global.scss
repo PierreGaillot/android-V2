@@ -26,318 +26,435 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 /* You can add global styles to this file, and also import other style files */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
-    padding-top: 3rem !important;
+  line-height: 1;
+  padding-top: 3rem !important;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /////////////////////////////////  FONTS  /////////////////////////////////  
 
 @font-face {
-	font-family: 'Gotham';
-	font-style: normal;
-	font-weight: normal;
-	src: url('./assets/fonts/GothamBook.ttf') format("truetype");
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/GothamBook.ttf') format("truetype");
 }
 
 @font-face {
-	font-family: 'Gotham-bold';
-	font-style: normal;
-	font-weight: bold;
-	src: url('./assets/fonts/GothamBold.ttf') format("truetype");
+  font-family: 'Gotham-bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./assets/fonts/GothamBold.ttf') format("truetype");
 }
 
 :root[mode=ios] .Gotham,
 :root[mode=md] .Gotham {
-	--ion-font-family: 'Gotham' !important;
-	font-family: 'Gotham' !important;
+  --ion-font-family: 'Gotham' !important;
+  font-family: 'Gotham' !important;
 }
 
 :root[mode=ios] .Gotham-bold,
 :root[mode=md] .Gotham-bold {
-	--ion-font-family: 'Gotham-bold' !important;
-	font-family: 'Gotham-bold' !important;
+  --ion-font-family: 'Gotham-bold' !important;
+  font-family: 'Gotham-bold' !important;
 }
 
 * {
-	font-family: "Gotham" !important;
+  font-family: "Gotham" !important;
 }
 
 /////////////////////////////////  BULLE  /////////////////////////////////  
 .bulle-txt {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 1.5em;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #E9F6FF;;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #E9F6FF;
+  ;
 
-    border-radius: 1.5em;
-    padding: 1.5em;
-    background: #74B3E2;
+  border-radius: 1.5em;
+  padding: 1.5em;
+  background: #74B3E2;
 }
 
 .bulle-triangle {
-    display: inline-block;
-    margin-left: 45%;
-    margin-right: 45%;
-    width: 10%;
-    transform: scaleX(-1);
-	margin-top: -1px;
+  display: inline-block;
+  margin-left: 45%;
+  margin-right: 45%;
+  width: 10%;
+  transform: scaleX(-1);
+  margin-top: -1px;
 }
 
 /////////////////////////////////  BUTTONS  /////////////////////////////////  
 ion-button {
-	min-width: 15em;
-	height: 4em;
-	--background: #FFFFFF;
-	--background-activated: #FFFFFF;
-	--color: #000000;
-	--border-color: #74B3E2;
-	--border-radius: 1em;
-	--border-style: solid;
-	--border-width: 2px;
-	--box-shadow: 0px 0px 50px rgba(116, 179, 226, 0.3);
-	text-transform: uppercase;
-  }
+  min-width: 15em;
+  height: 4em;
+  --background: #FFFFFF;
+  --background-activated: #FFFFFF;
+  --color: #000000;
+  --border-color: #74B3E2;
+  --border-radius: 1em;
+  --border-style: solid;
+  --border-width: 2px;
+  --box-shadow: 0px 0px 50px rgba(116, 179, 226, 0.3);
+  text-transform: uppercase;
+}
 
 /////////////////////////////////  INPUTS  /////////////////////////////////  
 
 // INPUT TEXT
 ion-item {
-    max-width: 250px;
-    margin: 1rem auto !important;
-    --color: #92B7D0;
+  max-width: 250px;
+  margin: 1rem auto !important;
+  --color: #92B7D0;
 }
 
 ion-item::part(native) {
-    padding-left: unset;
+  padding-left: unset;
 }
 
 ion-item {
-    --inner-border-width: 0px;
-    --inner-padding-end: 0 !important;
+  --inner-border-width: 0px;
+  --inner-padding-end: 0 !important;
 }
 
 ion-input {
-    background: #E9F6FF !important;
-    border-radius: 7px !important;
-    height: 45px !important;
-	padding-left: 15px !important;
+  background: #E9F6FF !important;
+  border-radius: 7px !important;
+  height: 45px !important;
+  padding-left: 15px !important;
 }
 
 // LABEL 
 ion-label {
-    z-index: 100;
-    font-size: 15px !important;
-    padding-left: 15px !important;
+  z-index: 100;
+  font-size: 15px !important;
+  padding-left: 15px !important;
 }
 
 /* #### REPONSE CHECKBOX RADIO ####*/
-.reponse-checkbox{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1em;
-    width: 106px;
+.reponse-checkbox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  width: 106px;
 }
 
-.reponse-checkbox-row{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 1em;
+.reponse-checkbox-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
 }
 
-.rep-cb-circle-cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 5em;
-    width: 5em;
-    background: #E3E3E3;
-    border-radius: 100%;
+.rep-cb-circle-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5em;
+  width: 5em;
+  background: #E3E3E3;
+  border-radius: 100%;
 }
 
-.rep-cb-circle-cont img{
-    display: block;
+.rep-cb-circle-cont img {
+  display: block;
 }
 
-.rep-cb-circl-stroke{
-    z-index: -1;
+.rep-cb-circl-stroke {
+  z-index: -1;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    height: 4.9em;
-    width: 4.9em;
-    border: 0.3em solid #000000;
-    border-radius: 100%;
+  height: 4.9em;
+  width: 4.9em;
+  border: 0.3em solid #000000;
+  border-radius: 100%;
 }
 
-.reponse-checkbox-txt{
-    display: block;
-    white-space:normal;
-    width: 100%;
-    font-family: Gotham;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 1em;
-    text-align: center;
-    color: #000000;
+.reponse-checkbox-txt {
+  display: block;
+  white-space: normal;
+  width: 100%;
+  font-family: Gotham;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1em;
+  text-align: center;
+  color: #000000;
 }
 
-.reponse-checkbox-txt-row{
-    display: block;
-    white-space:normal;
-    font-family: Gotham;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 1em;
-    text-align: left;
-    color: #000000;
+.reponse-checkbox-txt-row {
+  display: block;
+  white-space: normal;
+  font-family: Gotham;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1em;
+  text-align: left;
+  color: #000000;
 }
 
-.reponses-cb-row{
-    width: 20em;
-    margin-top: 2em;
-    margin-left: calc(50% - 20em/2 - 1px);
-    margin-bottom: 5em;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-	gap: 0.5em;
+.reponses-cb-row {
+  width: 20em;
+  margin-top: 2em;
+  margin-left: calc(50% - 20em/2 - 1px);
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5em;
 }
 
-.reponses-cb-col{
-    width: 20em;
-    margin-top: 2em;
-    margin-left: calc(50% - 20em/2 - 1px);
-    margin-bottom: 5em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-	gap: 1em;
+.reponses-cb-col {
+  width: 20em;
+  margin-top: 2em;
+  margin-left: calc(50% - 20em/2 - 1px);
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em;
 }
 
 
 /* ############### RADIO BTN ############ */
 
 input[type="radio"].radio-btn {
-    display: none;
+  display: none;
 }
 
-input[type="radio"].radio-btn:checked + label .rep-cb-circle-cont {
-transition: all 0.2s ease-in-out 0s;
-height: 3.8em;
-width: 3.8em;
+input[type="radio"].radio-btn:checked+label .rep-cb-circle-cont {
+  transition: all 0.2s ease-in-out 0s;
+  height: 3.8em;
+  width: 3.8em;
 }
 
-.separateur{
-    z-index:1;
-    display: inline-block;
-    position: relative;
-    border-radius: 1em;
-    bottom: 0%;
-    height: 0.3em;
-    width: 100%;
-    background: #74B3E2;
+input[type="checkbox"].checkbox-btn {
+  display: none;
 }
 
-.separateur-opacity50{
-    z-index:1;
-    display: inline-block;
-    position: relative;
-    border-radius: 1em;
-    bottom: 0%;
-    height: 0.2em;
-    width: 100%;
-    background: #74B3E2;
-    opacity: 50%;
+input[type="checkbox"].checkbox-btn:checked+label .rep-cb-circle-cont {
+  transition: all 0.2s ease-in-out 0s;
+  height: 3.8em;
+  width: 3.8em;
 }
 
 
-.question-component-firstName, .question-component-sexe, .question-component-age, .question-component-ville, .question-component-quartier, .question-component-motif, .question-component-methode, .question-component-rythme, .question-component-contact{
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: bottom !important;
+
+
+.separateur {
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  border-radius: 1em;
+  bottom: 0%;
+  height: 0.3em;
+  width: 100%;
+  background: #74B3E2;
+}
+
+.separateur-opacity50 {
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  border-radius: 1em;
+  bottom: 0%;
+  height: 0.2em;
+  width: 100%;
+  background: #74B3E2;
+  opacity: 50%;
+}
+
+
+.question-component-firstName,
+.question-component-sexe,
+.question-component-age,
+.question-component-ville,
+.question-component-quartier,
+.question-component-motif,
+.question-component-methode,
+.question-component-rythme,
+.question-component-contact {
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: bottom !important;
 
 }
 
 
-.question-component-firstName{
-    background-image: url(../src/assets/img/Question-backgound/01_firstname.png);
+.question-component-firstName {
+  background-image: url(../src/assets/img/Question-backgound/01_firstname.png);
 }
-.question-component-sexe{
-    background-image: url(../src/assets/img/Question-backgound/02_sexe.png);
+
+.question-component-sexe {
+  background-image: url(../src/assets/img/Question-backgound/02_sexe.png);
 }
-.question-component-age{
-    background-image: url(../src/assets/img/Question-backgound/03_age.png);
+
+.question-component-age {
+  background-image: url(../src/assets/img/Question-backgound/03_age.png);
 }
-.question-component-ville{
-    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+
+.question-component-ville {
+  background-image: url(../src/assets/img/Question-backgound/04_ville.png);
 }
-.question-component-quartier{
-    background-image: url(../src/assets/img/Question-backgound/05_quartier.png);
+
+.question-component-quartier {
+  background-image: url(../src/assets/img/Question-backgound/05_quartier.png);
 }
-.question-component-motif{
-    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+
+.question-component-motif {
+  background-image: url(../src/assets/img/Question-backgound/04_ville.png);
 }
-.question-component-methode{
-    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+
+.question-component-methode {
+  background-image: url(../src/assets/img/Question-backgound/04_ville.png);
 }
-.question-component-rythme{
-    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+
+.question-component-rythme {
+  background-image: url(../src/assets/img/Question-backgound/04_ville.png);
 }
-.question-component-contact{
-    background-image: url(../src/assets/img/Question-backgound/04_ville.png);
+
+.question-component-contact {
+  background-image: url(../src/assets/img/Question-backgound/04_ville.png);
 }
