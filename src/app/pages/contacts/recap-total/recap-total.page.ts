@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 import { NavController } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { concat } from 'rxjs';
 
 @Component({
   selector: 'app-recap-total',
@@ -31,6 +32,8 @@ export class RecapTotalPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.emailConstructor();
+
   }
 
   ngAfterViewInit() { 
@@ -46,5 +49,60 @@ export class RecapTotalPage implements OnInit {
     this.navCtrl.navigateForward(['/', 'fin']);
   }
 
+
+
+  emailConstructor(){
+    const userData = this.userDataService.user[0];
+    
+    //return le type du contact
+    function getContactType(isPhone){
+      if(isPhone){
+        return 'Téléphone'
+      }else{
+        return 'e-mail'
+      }
+    };
+
+    // retourne une liste du tableau
+    function enumPurpose(purpose){
+      let purboseList:string = `
+      `;
+      for (let i = 0; i < purpose.length ; i ++){
+        // purboseList.concat('- ',purpose[i]);
+        purboseList += ' - ' + purpose[i] + `
+        `;
+        console.log(purpose[i]);
+      }
+      console.log('test : ' + purboseList);
+      return purboseList;
+    };
+  
+    const cc:string = 'S-M: contact: ' + userData.firstname ;
+    const mail:string = 
+    `
+                --==## Prise de contact SUR-MESURE ##==--
+                        créé le 10.10.2021 à 10h10
+
+    ########################### A PROPOS ##################################
+
+    Nom : ${userData.firstname},
+    Sexe : ${userData.sexe}, 
+    age : ${userData.age}, 
+    ville : ${userData.city},
+    quartier : ${userData.area}
+
+    ######################## ACCOMPAGNEMENT ###############################
+
+    souhaite est accompagné pour : ${enumPurpose(userData.purpose)}
+    avec un accompagnement : ${userData.method},
+    avec un rytme de : ${userData.contactFrequency},
+    
+    ########################### CONTACT ###################################
+
+    type de contact : ${getContactType(userData.isPhone)},
+    contact : ${userData.contact},
+    `
+    console.log(mail)
+  }
 }
 

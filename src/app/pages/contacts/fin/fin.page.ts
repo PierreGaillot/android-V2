@@ -39,36 +39,5 @@ options:AnimationOptions = {
       this.userContactType = 'e-mail';
     } 
   }
-
-  // sendMail() {
-
-  //   this.emailComposer.hasAccount().then((isValid: boolean) => {
-  //     if (isValid) {
-  //       // Now we know we have a valid email account configured
-  //       console.log('isValid' + isValid)
-  //     }
-  //    });
-
-  //   this.emailComposer.isAvailable().then((available: boolean) =>{
-  //     if(available) { 
-  //       console.log('isAvailable' + available)
-  //     } 
-  //   });
-
-  //   //Now we know we can send
-  //   let email = {
-  //     to: 'gournay.guillaume@gmail.com',
-  //     cc: 'pr.gaillot@gmail.com',
-  //     bcc: [],
-  //     attachments: [],
-  //     app: 'gmail',
-  //     subject: 'Ca marche pas wallah',
-  //     body: 'How are you? Nice greetings from Leipzig',
-  //     isHtml: true
-  //   }
-    
-  //   // Send a text message using default options
-  //   this.emailComposer.open(email);
-  // }
-     
+  
 }
