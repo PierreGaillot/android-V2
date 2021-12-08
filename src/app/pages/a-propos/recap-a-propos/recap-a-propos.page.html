@@ -12,7 +12,10 @@
 
   <app-progress-bar step=1></app-progress-bar>
 
-  <app-swipeup nextPage = "/motif" appSwipe
-  (swipeUp)="onSwipeUp($event)"></app-swipeup>
+  <div *ngIf="isCompleted">
+    <app-swipeup nextPage = "/motif" appSwipe
+      (swipeUp)="onSwipeUp($event)">
+    </app-swipeup>
+  </div>
   
 </ion-content>

@@ -91,5 +91,5 @@ export class MotifPage implements OnInit {
 
   onSwipeUp($event) {
     this.navCtrl.navigateForward(['/', 'methode']);
-  }
+  }z
 }

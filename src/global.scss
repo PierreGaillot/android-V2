@@ -256,11 +256,16 @@ ion-input {
   padding-left: 15px !important;
 }
 
+:host(.item-interactive.ion-valid) {
+  --highlight-background: none;
+}
+
 // LABEL 
 ion-label {
   z-index: 100;
   font-size: 15px !important;
   padding-left: 15px !important;
+  --ion-color: #A0C9E5 !important;
 }
 
 /* #### REPONSE CHECKBOX RADIO ####*/

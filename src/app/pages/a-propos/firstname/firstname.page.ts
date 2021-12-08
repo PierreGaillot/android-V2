@@ -44,11 +44,11 @@ export class FirstnamePage implements OnInit {
       this.showSwipeDelay();
   }
 
-  showSwipeDelay(){
+  showSwipeDelay() {
     setTimeout(() => {
       this.isCompleted = true;
     }, 300);
-}
+  }
 
   onSwipeUp($event) {
       this.navCtrl.navigateForward(['/', 'sexe']);
