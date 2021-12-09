@@ -32,7 +32,7 @@ exports.sendEmailNotification = functions.firestore.document('users/{docId}')
 
         authData.sendMail({
             from: 'levelupcluster@gmail.com',
-            to: 'ggournay.css@Mail.com',
+            to: 'pr.gaillot@gmail.com',
             subject: 'Test envoi mail',
             text: 'Ceci est un test',
             html: data
