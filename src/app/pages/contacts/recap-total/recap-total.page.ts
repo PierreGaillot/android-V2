@@ -27,11 +27,11 @@ export class RecapTotalPage implements OnInit {
 
   public mailToSend = {
     to: ['pr.gaillot@gmail.com'],
-message: {
-  subject: 'Hello from Firebase!',
-  text: 'This is the plaintext section of the email body.',
-  html: 'This is the <code>HTML</code> section of the email body.',
-}
+    message: {
+      subject: 'SurMesure Formulaire :'  + this.userData.firstname,
+      // text: 'This is the plaintext section of the email body.',
+      html: this.emailConstructor(),
+    }
   }
 
   constructor(
@@ -45,7 +45,7 @@ message: {
 
   }
 
-  ngAfterViewInit() { 
+  ngAfterViewInit() {
     this.userFirstname = this.userDataService.user[0].firstname;
   }
 
@@ -61,58 +61,59 @@ message: {
 
 
 
-  emailConstructor(){
+  emailConstructor() {
     const userData = this.userDataService.user[0];
-    
+
     //return le type du contact
-    function getContactType(isPhone){
-      if(isPhone){
+    function getContactType(isPhone) {
+      if (isPhone) {
         return 'Téléphone'
-      }else{
+      } else {
         return 'e-mail'
       }
     };
 
     // retourne une liste du tableau
-    function enumPurpose(purpose){
-      let purboseList:string = `
+    function enumPurpose(purpose) {
+      let purboseList: string = `
       `;
-      for (let i = 0; i < purpose.length ; i ++){
+      for (let i = 0; i < purpose.length; i++) {
         // purboseList.concat('- ',purpose[i]);
-        purboseList += ' - ' + purpose[i] + `
-        `;
+        purboseList += '<li>' + purpose[i] + '</li>';
         console.log(purpose[i]);
       }
       console.log('test : ' + purboseList);
       return purboseList;
     };
-  
-    const cc:string = 'S-M: contact: ' + userData.firstname ;
-    const mail:string = 
-    `
-                --==## Prise de contact SUR-MESURE ##==--
-                        créé le 10.10.2021 à 10h10
+    const mail: string =
+      `
+    <h2>Prise de contact SUR-MESURE</h2>
+    créé le 10.10.2021 à 10h10
 
-    ########################### A PROPOS ##################################
+    <h2>A PROPOS </h2>
 
-    Nom : ${userData.firstname},
-    Sexe : ${userData.sexe}, 
-    age : ${userData.age}, 
-    ville : ${userData.city},
-    quartier : ${userData.area}
-
-    ######################## ACCOMPAGNEMENT ###############################
-
-    souhaite est accompagné pour : ${enumPurpose(userData.purpose)}
-    avec un accompagnement : ${userData.method},
-    avec un rytme de : ${userData.contactFrequency},
+    <ul>
+      <li>Nom : ${userData.firstname},</li>
+      <li>Sexe : ${userData.sexe}</li>
+      <li>age : ${userData.age}</li>
+      <li>ville : ${userData.city}</li>
+      <li>quartier : ${userData.area}</li>
+    </ul>
     
-    ########################### CONTACT ###################################
-
-    type de contact : ${getContactType(userData.isPhone)},
-    contact : ${userData.contact},
+    <h2>ACCOMPAGNEMENT</h2>
+    <ul>
+      <li>souhaite est accompagné pour : <ul>${enumPurpose(userData.purpose)}<ul></li>
+      <li>avec un accompagnement : ${userData.method}</li>
+      <li>avec un rytme de : ${userData.contactFrequency}</li>
+    </ul>
+    
+    <h2>CONTACT</h2>
+    <ul>
+      <li>type de contact : ${getContactType(userData.isPhone)}</li>
+      <li>contact : ${userData.contact}</li>
+    </ul>
     `
-    console.log(mail)
+    return mail
   }
 }
 
