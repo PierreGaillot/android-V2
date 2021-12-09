@@ -25,6 +25,15 @@ export class RecapTotalPage implements OnInit {
     contact: this.userData.contact
   };
 
+  public mailToSend = {
+    to: ['pr.gaillot@gmail.com'],
+message: {
+  subject: 'Hello from Firebase!',
+  text: 'This is the plaintext section of the email body.',
+  html: 'This is the <code>HTML</code> section of the email body.',
+}
+  }
+
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,
@@ -46,6 +55,7 @@ export class RecapTotalPage implements OnInit {
 
   onSwipeUp($event) {
     this.db.collection('users').add(this.userDataToSend);
+    this.db.collection('mail').add(this.mailToSend);
     this.navCtrl.navigateForward(['/', 'fin']);
   }
 
