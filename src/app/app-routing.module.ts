@@ -78,13 +78,11 @@ const routes: Routes = [
   {
     path: 'modal-accompagnement',
     loadChildren: () => import('./pages/accompagnement/modal-accompagnement/modal-accompagnement.module').then( m => m.ModalAccompagnementPageModule)
-  },  {
+  },
+  {
     path: 'modal-contact',
     loadChildren: () => import('./pages/contacts/modal-contact/modal-contact.module').then( m => m.ModalContactPageModule)
   },
-
-
-
 
 ];
 
