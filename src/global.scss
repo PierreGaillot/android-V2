@@ -249,6 +249,10 @@ ion-item {
   --inner-padding-end: 0 !important;
 }
 
+ion-item.item-has-focus.label-floating {
+  color: #A0C9E5 !important;
+}
+
 ion-input {
   background: #E9F6FF !important;
   border-radius: 7px !important;
