@@ -2,7 +2,7 @@
 
   <app-question txtQuestion="
         Enchanté {{ userFirstname }},
-        vous êtes un homme ou une femme ?"
+        vous êtes... ?"
         
         questionComponentBgImage = "
         question-component-sexe
@@ -21,9 +21,24 @@
             <img src="../../../../assets/img/icon-femme.svg" alt="Je suis une femme">
           </span>
         </span>
-        <span class="reponse-checkbox-txt">Je suis une femme</span>
+        <span class="reponse-checkbox-txt">Une femme</span>
       </span>
     </label>
+
+    <!-- ############ Reponse "Homme" chekbox Radio ##### -->
+    <input (change)="getUserSexe($event.target.value)" type="radio" name="sexe" value="Homme" class="radio-btn"
+    id="homme">
+    <label for="homme">
+      <span class="reponse-checkbox">
+        <span class="rep-cb-circl-stroke">
+          <span class="rep-cb-circle-cont">
+            <img src="../../../../assets/img/icon-homme.svg" alt="Je suis un homme">
+          </span>
+        </span>
+        <span class="reponse-checkbox-txt">Un homme</span>
+      </span>
+    </label>
+
     <!-- ############ Reponse "Je ne sais pas"chekbox Radio ##### -->
     <input (change)="getUserSexe($event.target.value)" type="radio" name="sexe" value="Autre" class="radio-btn"
       id="ne-sais-pas">
@@ -38,19 +53,6 @@
       </span>
     </label>
 
-    <!-- ############ Reponse "Homme" chekbox Radio ##### -->
-    <input (change)="getUserSexe($event.target.value)" type="radio" name="sexe" value="Homme" class="radio-btn"
-      id="homme">
-    <label for="homme">
-      <span class="reponse-checkbox">
-        <span class="rep-cb-circl-stroke">
-          <span class="rep-cb-circle-cont">
-            <img src="../../../../assets/img/icon-homme.svg" alt="Je suis un homme">
-          </span>
-        </span>
-        <span class="reponse-checkbox-txt">Je suis un homme</span>
-      </span>
-    </label>
   </div>
   <div *ngIf="isCompleted">
     <app-swipeup nextPage="/age" appSwipe

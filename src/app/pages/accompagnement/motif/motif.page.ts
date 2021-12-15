@@ -24,7 +24,7 @@ export class MotifPage implements OnInit {
     },
     {
       id: 'reponse-2',
-      content: 'Être coaché pour mes démarches d\'emploi (simulations entretiens d\'embauche, insertion par le sport…)',
+      content: 'Être coaché pour vos démarches d\'emploi (simulations entretiens d\'embauche, insertion par le sport…)',
       isChecked: false,
       icon: '../../../../assets/img/icon-emploi.svg'
     },

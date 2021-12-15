@@ -12,21 +12,28 @@ import { NavController } from '@ionic/angular';
 export class RecapAccompagnementPage implements OnInit {
 
   private userFirstname: string = '';
+  private isCompleted: boolean = false;
 
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,
 
-  ) {
-  }
+  ) {}
 
   ngOnInit() {
     this.userDataService.showUserData();
     this.userFirstname = this.userDataService.getUserFirstname();
+    this.showSwipeDelay();
   }
 
   onSwipeUp($event) {
     this.navCtrl.navigateForward(['/', 'contact']);
-}
+  }
+
+  showSwipeDelay() {
+    setTimeout(() => {
+      this.isCompleted = true;
+    }, 2000);
+  }
 
 }

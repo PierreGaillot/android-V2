@@ -1,7 +1,7 @@
 <ion-content>
 
   <app-eugenie-infos title="Parfait" txtInfos="
-  Super {{ userFirstname }} ! 
+  Parfait {{ userFirstname }} ! 
   J'ai toutes les informations
   qu'il me fallait je vais vous contacter
   dans quelques jours, alors à bientôt !
@@ -16,7 +16,10 @@
 
   <!-- <ion-button (click)="sendData()" class="btn">envoyer</ion-button> -->
 
-  <app-swipeup nextPage = "/fin" appSwipe
-  (swipeUp)="onSwipeUp($event)"></app-swipeup>
+  <div *ngIf="isCompleted">
+    <app-swipeup nextPage = "/fin" appSwipe
+      (swipeUp)="onSwipeUp($event)">
+    </app-swipeup>
+  </div>
 
 </ion-content>

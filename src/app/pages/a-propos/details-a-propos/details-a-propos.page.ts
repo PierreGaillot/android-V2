@@ -9,6 +9,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
   styleUrls: ['./details-a-propos.page.scss'],
 })
 export class DetailsAProposPage implements OnInit, AfterViewInit {
+  isAreaFilled: boolean = false;
   
   constructor(
     public userDataService: UserDataService,
@@ -16,7 +17,9 @@ export class DetailsAProposPage implements OnInit, AfterViewInit {
   ) { }
 
   
-  ngOnInit() { }
+  ngOnInit() { 
+    this.checkArea();
+  }
   
   ngAfterViewInit() {
     this.getUserData();
@@ -25,6 +28,12 @@ export class DetailsAProposPage implements OnInit, AfterViewInit {
   getUserData() {
     this.userDataService.getUserData();
     console.log(this.userDataService.user);
+  }
+
+  checkArea() {
+    if (this.userDataService.user[0].area != '') {
+      this.isAreaFilled = false
+    } 
   }
   
   async presentModal(questionName) {
