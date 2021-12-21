@@ -30,7 +30,8 @@ export class DetailAccompagnementPage implements OnInit, AfterViewInit {
       // passing value for dynamic display in the modal
       componentProps: {
         'question': questionName
-      }
+      },
+      cssClass: 'bgc'
     });
     return await modal.present();
   }

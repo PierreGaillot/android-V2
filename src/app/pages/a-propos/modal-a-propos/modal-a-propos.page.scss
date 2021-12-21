@@ -1,4 +1,5 @@
-@import  '../../../../global.scss';
+// @import  '../../../../global.scss';
+
 
 // ***************** GENERAL *****************
 
@@ -9,8 +10,15 @@
 // Modal dimensions
 .sc-ion-modal-ios-h, .sc-ion-modal-md-h {
     --width: 90%;
-    --height: 85%;
+    --height: 350px;
     --border-radius: 1.5rem;
+}
+
+.main-ctn {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 // Close modal icon
@@ -21,9 +29,13 @@ ion-icon {
     color: #74B3E2;
 }
 
-.modal-text > .comp-question, .modal-radio > .comp-question {
-    margin-top: 3rem !important;
+ion-content.ios.overscroll.hydrated {
+    --keyboard-offset: 0px !important;
 }
+
+// .modal-text > .comp-question, .modal-radio > .comp-question {
+//     margin-top: 3rem !important;
+// }
 
 // .modal-radio > .comp-question {
 //     margin-top: 3rem !important;
@@ -31,6 +43,7 @@ ion-icon {
 
 .reponses-cb-row {
     margin-bottom: 0;
+    margin-top: 1.5em;
 }
 
 // Input text
@@ -41,32 +54,32 @@ ion-input, ion-label {
 // Button
 .btn-container {
     display: flex;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1.25em;
+    // margin-bottom: 2rem;
 }
 
 ion-button {
     margin: auto;
 }
 
-.recap-rubrique-txt{
+.recap-rubrique-txt {
     font-family: 'Gotham-bold' !important;
     font-size: 1.3em;
-    margin-top: 3em;
+    margin: auto 5% auto 5%;
     text-align: center;
     text-transform: uppercase;
     color: #74B3E2;
 }
 
-.question-firstname .recap-rubrique-txt {
-    margin-top: 4em;
-}
+// .question-firstname .recap-rubrique-txt {
+//     margin-top: 4em;
+// }
 
 // ***************** AGE *****************
 
-label[for="16-18"] .rep-cb-circl-stroke,
-label[for="19-30"] .rep-cb-circl-stroke,
-label[for="+30"] .rep-cb-circl-stroke {
+label[for="16-18"] .reponse-checkbox .rep-cb-circl-stroke,
+label[for="19-30"] .reponse-checkbox .rep-cb-circl-stroke,
+label[for="+30"] .reponse-checkbox .rep-cb-circl-stroke {
     border: 0.3em solid #74B3E2;
 }
 
@@ -78,8 +91,20 @@ label[for="+30"] .rep-cb-circl-stroke {
 .reponse-checkbox {
     width: 200px;
     flex-direction: row;
-    // margin-top: .5em;
     margin-bottom: .5em;
+}
+
+.radio-center {
+    width: auto;
+}
+
+.radio-ctn {
+    margin-bottom: 1.25em;
+}
+
+.radio-ctn label {
+    padding-left: 15px;
+    font-size: 1.1em;
 }
 
 
@@ -113,9 +138,9 @@ border: 0.3em solid gray;
 }
 
 .reponse-checkbox-txt{
-width: 6em;
+    width: 6em;
 }
 
-.question-city .recap-rubrique-txt {
-    margin-top: 2em;
-}
+// .question-city .recap-rubrique-txt {
+//     margin-top: 2em;
+// }
