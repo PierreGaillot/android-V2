@@ -32,7 +32,7 @@ export class DetailsAProposPage implements OnInit, AfterViewInit {
 
   checkArea() {
     if (this.userDataService.user[0].area != '') {
-      this.isAreaFilled = false
+      this.isAreaFilled = true;
     } 
   }
   

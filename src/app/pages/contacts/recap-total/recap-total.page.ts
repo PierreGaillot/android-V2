@@ -16,17 +16,17 @@ export class RecapTotalPage implements OnInit {
   public userData = this.userDataService.user[0];
   private isCompleted: boolean = false;
   public currentDateTime = this.datepipe.transform((new Date), 'dd/MM/yyyy h:mm:ss');
-  public userDataToSend: {} = {
-    firstname: this.userData.firstname,
-    age: this.userData.age,
-    sexe: this.userData.sexe,
-    city: this.userData.city,
-    area: this.userData.area,
-    purpose: this.userData.purpose,
-    method: this.userData.method,
-    contactFrequency: this.userData.contactFrequency,
-    contact: this.userData.contact
-  };
+  // public userDataToSend: {} = {
+  //   firstname: this.userData.firstname,
+  //   age: this.userData.age,
+  //   sexe: this.userData.sexe,
+  //   city: this.userData.city,
+  //   area: this.userData.area,
+  //   purpose: this.userData.purpose,
+  //   method: this.userData.method,
+  //   contactFrequency: this.userData.contactFrequency,
+  //   contact: this.userData.contact
+  // };
 
   public mailToSend = {
     to: ['ggournay.csc@gmail.com'],
@@ -65,7 +65,7 @@ export class RecapTotalPage implements OnInit {
   }
 
   onSwipeUp($event) {
-    this.db.collection('users').add(this.userDataToSend);
+    // this.db.collection('users').add(this.userDataToSend);
     this.db.collection('mail').add(this.mailToSend);
     this.navCtrl.navigateForward(['/', 'fin']);
   }
@@ -97,7 +97,7 @@ export class RecapTotalPage implements OnInit {
     const mail: string =
       `
     <h2>Prise de contact SUR-MESURE</h2>
-    créé le ${this.currentDateTime}
+    Créé le ${this.currentDateTime}
 
     <h2>A PROPOS </h2>
 
@@ -111,7 +111,9 @@ export class RecapTotalPage implements OnInit {
     
     <h2>ACCOMPAGNEMENT</h2>
     <ul>
-      <li>souhaite est accompagné pour : <ul>${enumPurpose(userData.purpose)}<ul></li>
+      <li>souhaite est accompagné pour : 
+        <ul>${enumPurpose(userData.purpose)}<ul>
+      </li>
       <li>avec un accompagnement : ${userData.method}</li>
       <li>avec un rytme de : ${userData.contactFrequency}</li>
     </ul>
