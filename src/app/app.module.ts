@@ -4,6 +4,7 @@ import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DatePipe } from '@angular/common';
 
 import { SharedModule } from '../app/modules/shared/shared.module';
 import { LottieModule } from 'ngx-lottie';
@@ -34,6 +35,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
   ],
   providers: [
     Keyboard,
+    DatePipe,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, },
   ],
   bootstrap: [AppComponent],

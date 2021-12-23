@@ -1,168 +1,219 @@
-<ion-content>
+<!-- <ion-content> -->
 
-  <ion-icon (click)="dismiss()" name="close-outline" size="large"></ion-icon>
+<div class="inner-content">
 
-  <!-- ************* IF QUESTION = PURPOSE ************* -->
-  <div *ngIf="question == 'purpose'" class="purpose">
-    <div class="reponses-cb-col">
+  <div class="main-ctn">
 
-      <div *ngFor="let item of checkboxesAnswersList" class="checkbox-hor">
-        <label for="{{item.id}}">
-          <input type="checkbox" name="checkbox-btn" id="{{item.id}}" [(ngModel)]="item.isChecked"
-            (change)="changeSelection()">
-        </label>
-        <span>
-          {{ item.content }}
-        </span>
+    <ion-icon (click)="dismiss()" name="close-outline" size="large"></ion-icon>
+
+    <!-- ************* IF QUESTION = PURPOSE ************* -->
+    <div *ngIf="question == 'purpose'" class="purpose">
+      <div class="reponses-cb-col">
+        <div class="recap-rubrique-txt">Modifier votre motif d'accompagnement</div>
+
+        <div *ngFor="let item of checkboxesAnswersList" class="checkbox-hor">
+          <label for="{{item.id}}">
+            <input type="checkbox" name="checkbox-btn" id="{{item.id}}" [(ngModel)]="item.isChecked"
+              (change)="changeSelection()">
+          </label>
+          <span>
+            {{ item.content }}
+          </span>
+        </div>
+
+        <ion-button (click)="getUserPurpose()" [disabled]="disabledStatus" size="small" class="btn">Valider
+        </ion-button>
+
+      </div>
+    </div>
+
+
+    <!-- ************* IF QUESTION = METHOD ************* -->
+    <div *ngIf="question == 'method'" class="method">
+
+      <div class="recap-rubrique-txt">Modifier votre méthode d'accompagnement</div>
+
+      <div class="reponses-cb-row">
+        <div class="radio-center">
+
+          <!-- ############ Reponse "accompagnement presentiel" chekbox Radio ##### -->
+          <div class="radio-ctn">
+            <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="présentiel"
+              id="presentiel">
+            <label for="presentiel">Je peux me déplacer et venir en présentiel.</label>
+          </div>
+
+          <!-- <div class="label">
+          <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="présentiel"
+            class="radio-btn" id="presentiel">
+          <label for="presentiel">
+            <span class="reponse-checkbox">
+              <span class="rep-cb-circl-stroke">
+                <span class="rep-cb-circle-cont">
+                  <img src="../../../../assets/img/icon-presentiel.svg" alt="entre 19 et 30 ans">
+                </span>
+              </span>
+            </span>
+          </label>
+          <span class="reponse-checkbox-txt">Je peux me déplacer et venir en présentiel.</span>
+        </div> -->
+
+          <!-- ############ Reponse "accompagnement distanciel" chekbox Radio ##### -->
+          <div class="radio-ctn">
+            <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel"
+              id="distanciel">
+            <label for="distanciel">Je préfère être suivi à distance grâce aux outils numériques.</label>
+          </div>
+
+          <!-- <div class="label">
+          <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel"
+            class="radio-btn" id="distanciel">
+          <label for="distanciel">
+            <span class="reponse-checkbox">
+              <span class="rep-cb-circl-stroke">
+                <span class="rep-cb-circle-cont">
+                  <img src="../../../../assets/img/icon-distanciel.svg" alt="entre 16 et 18 ans">
+                </span>
+              </span>
+            </span>
+          </label>
+          <span class="reponse-checkbox-txt">Je préfère être suivi à distance grâce aux outils numériques.</span>
+        </div> -->
+
+          <!-- ############ Reponse "en distanciel & presentiel" chekbox Radio ##### -->
+          <div class="radio-ctn">
+            <input (change)="getUserMethod($event.target.value)" type="radio" name="methode"
+              value="distanciel & présentiel" id="presentiel-distanciel">
+            <label for="presentiel-distanciel">Un mixte des deux types d’accompagnement pourrait me convenir.</label>
+          </div>
+
+          <!-- <div class="label">
+          <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel & présentiel"
+            class="radio-btn" id="presentiel-distanciel">
+          <label for="presentiel-distanciel">
+            <span class="reponse-checkbox">
+              <span class="rep-cb-circl-stroke">
+                <span class="rep-cb-circle-cont">
+                  <img src="../../../../assets/img/icon-presentiel-distanciel.svg" alt="j'ai plus de 30 ans">
+                </span>
+              </span>
+            </span>
+          </label>
+          <span class="reponse-checkbox-txt">Un mixte des deux types d’accompagnement pourrait me convenir.</span>
+        </div> -->
+
+        </div>
       </div>
 
-      <ion-button (click)="getUserPurpose()" [disabled]="disabledStatus" size="small" class="btn">Valider
+    </div>
+
+
+    <!-- ************* IF QUESTION = CONTACT FREQUENCY ************* -->
+    <div *ngIf="question == 'contactFrequency'" class="contact-frequency">
+      <div class="recap-rubrique-txt">Modifier votre rythme d'accompagnement</div>
+
+      <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
+      <div class="reponses-cb-row">
+        <div class="radio-center">
+          <!-- ############ Reponse "1x semaine" chekbox Radio ##### -->
+          <div class="radio-ctn">
+            <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+              value="Une fois par semaine" id="1x-semaine">
+            <label for="1x-semaine">Une fois par semaine</label>
+          </div>
+
+          <!-- <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+          value="Une fois par semaine" class="radio-btn" id="1x-semaine">
+        <label for="1x-semaine">
+          <span class="reponse-checkbox">
+            <span class="rep-cb-circl-stroke">
+              <span class="rep-cb-circle-cont">
+                <img src="../../../../assets/img/icon-calendar-4-par-mois.svg" alt="une fois par semaine">
+              </span>
+            </span>
+            <span class="reponse-checkbox-txt">Une fois par semaine</span>
+          </span>
+        </label> -->
+
+          <!-- ############ Reponse "1 fois toute les deux semaines" chekbox Radio ##### -->
+          <div class="radio-ctn">
+            <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+              value="tous les 15 jours" id="1x-2semaine">
+            <label for="1x-2semaine">Tous les 15 jours</label>
+          </div>
+
+          <!-- <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+          value="tous les 15 jours" class="radio-btn" id="1x-2semaine">
+        <label for="1x-2semaine">
+          <span class="reponse-checkbox">
+            <span class="rep-cb-circl-stroke">
+              <span class="rep-cb-circle-cont">
+                <img src="../../../../assets/img/icon-calendar-2-par-mois.svg" alt="tous les 15 jours.">
+              </span>
+            </span>
+            <span class="reponse-checkbox-txt">Tous les 15 jours</span>
+          </span>
+        </label> -->
+
+          <!-- ############ Reponse "tout les mois" chekbox Radio ##### -->
+          <div class="radio-ctn mb-0">
+            <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+              value="tous les mois" id="1x-mois">
+            <label for="1x-mois">Tous les mois</label>
+          </div>
+
+          <!-- <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="tous les mois"
+          class="radio-btn" id="1x-mois">
+        <label for="1x-mois">
+          <span class="reponse-checkbox">
+            <span class="rep-cb-circl-stroke">
+              <span class="rep-cb-circle-cont">
+                <img src="../../../../assets/img/icon-calendar-1-par-mois.svg" alt="j'ai plus de 30 ans">
+              </span>
+            </span>
+            <span class="reponse-checkbox-txt">Tous les mois</span>
+          </span>
+        </label> -->
+
+          <div class="reponses-cb-row autre">
+            <!-- ############ Reponse "autre" chekbox Radio ##### -->
+            <!-- <div class="radio-ctn"> -->
+            <input (change)="toggleTextInput()" type="radio" name="rythme" value="autre" id="autre">
+            <!-- <label for="autre">Tous les 15 jours</label> -->
+            <!-- </div> -->
+
+            <!-- <input (change)="toggleTextInput()" type="radio" name="rythme" value="autre" class="radio-btn" id="autre">
+          <label for="autre">
+            <span class="reponse-checkbox-row">
+              <span class="rep-cb-circl-stroke">
+                <span class="rep-cb-circle-cont">
+                  <img src="../../../../assets/img/icon-calendar-non-defini.svg" alt="autre">
+                </span>
+              </span>
+            </span>
+          </label> -->
+            <span class="reponse-checkbox-txt-row">
+              <ion-item>
+                <ion-label position="floating">Autre</ion-label>
+                <ion-input (keydown)="getTextContactFrequency($event)" [disabled]="disabledInput" type="text"
+                  name="autre" [(ngModel)]="contactFrequency">
+                </ion-input>
+              </ion-item>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div *ngIf="question !== 'purpose'" class="btn-container">
+      <ion-button *ngIf="question !== 'purpose'" (click)="dismiss()" size="small" [disabled]="disabledStatus">
+        Valider
       </ion-button>
-
-    </div>
-  </div>
-
-
-  <!-- ************* IF QUESTION = METHOD ************* -->
-  <div *ngIf="question == 'method'" class="method">
-
-    <div class="reponses-cb-row">
-      <!-- ############ Reponse "accompagnement presentiel" chekbox Radio ##### -->
-      <div class="label">
-        <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="présentiel"
-          class="radio-btn" id="presentiel">
-        <label for="presentiel">
-          <span class="reponse-checkbox">
-            <span class="rep-cb-circl-stroke">
-              <span class="rep-cb-circle-cont">
-                <img src="../../../../assets/img/icon-presentiel.svg" alt="entre 19 et 30 ans">
-              </span>
-            </span>
-          </span>
-        </label>
-        <span class="reponse-checkbox-txt">Je peux me déplacer et venir en présentiel.</span>
-      </div>
-
-      <!-- ############ Reponse "accompagnement distanciel" chekbox Radio ##### -->
-      <div class="label">
-        <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel"
-          class="radio-btn" id="distanciel">
-        <label for="distanciel">
-          <span class="reponse-checkbox">
-            <span class="rep-cb-circl-stroke">
-              <span class="rep-cb-circle-cont">
-                <img src="../../../../assets/img/icon-distanciel.svg" alt="entre 16 et 18 ans">
-              </span>
-            </span>
-          </span>
-        </label>
-        <span class="reponse-checkbox-txt">Je préfère être suivi à distance grâce aux outils numériques.</span>
-      </div>
-
-      <!-- ############ Reponse "en distanciel & presentiel" chekbox Radio ##### -->
-      <div class="label">
-        <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel & présentiel"
-          class="radio-btn" id="presentiel-distanciel">
-        <label for="presentiel-distanciel">
-          <span class="reponse-checkbox">
-            <span class="rep-cb-circl-stroke">
-              <span class="rep-cb-circle-cont">
-                <img src="../../../../assets/img/icon-presentiel-distanciel.svg" alt="j'ai plus de 30 ans">
-              </span>
-            </span>
-          </span>
-        </label>
-        <span class="reponse-checkbox-txt">Un mixte des deux types d’accompagnement pourrait me convenir.</span>
-      </div>
     </div>
 
   </div>
 
 
-  <!-- ************* IF QUESTION = CONTACT FREQUENCY ************* -->
-  <div *ngIf="question == 'contactFrequency'" class="contact-frequency">
-
-    <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
-    <div class="reponses-cb-row">
-      <!-- ############ Reponse "1x semaine" chekbox Radio ##### -->
-      <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
-        value="Une fois par semaine" class="radio-btn" id="1x-semaine">
-      <label for="1x-semaine">
-        <span class="reponse-checkbox">
-          <span class="rep-cb-circl-stroke">
-            <span class="rep-cb-circle-cont">
-              <img src="../../../../assets/img/icon-calendar-4-par-mois.svg" alt="une fois par semaine">
-            </span>
-          </span>
-          <span class="reponse-checkbox-txt">Une fois par semaine</span>
-        </span>
-      </label>
-
-      <!-- ############ Reponse "1 fois toute les deux semaines" chekbox Radio ##### -->
-      <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
-        value="tous les 15 jours" class="radio-btn" id="1x-2semaine">
-      <label for="1x-2semaine">
-        <span class="reponse-checkbox">
-          <span class="rep-cb-circl-stroke">
-            <span class="rep-cb-circle-cont">
-              <img src="../../../../assets/img/icon-calendar-2-par-mois.svg" alt="tous les 15 jours.">
-            </span>
-          </span>
-          <span class="reponse-checkbox-txt">Tous les 15 jours</span>
-        </span>
-      </label>
-
-      <!-- ############ Reponse "tout les mois" chekbox Radio ##### -->
-      <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="tous les mois"
-        class="radio-btn" id="1x-mois">
-      <label for="1x-mois">
-        <span class="reponse-checkbox">
-          <span class="rep-cb-circl-stroke">
-            <span class="rep-cb-circle-cont">
-              <img src="../../../../assets/img/icon-calendar-1-par-mois.svg" alt="j'ai plus de 30 ans">
-            </span>
-          </span>
-          <span class="reponse-checkbox-txt">Tous les mois</span>
-        </span>
-      </label>
-    </div>
-
-    <div class="reponses-cb-row autre">
-      <!-- ############ Reponse "autre" chekbox Radio ##### -->
-      <input (change)="toggleTextInput()" type="radio" name="rythme" value="autre" class="radio-btn" id="autre">
-      <label for="autre">
-        <span class="reponse-checkbox-row">
-          <span class="rep-cb-circl-stroke">
-            <span class="rep-cb-circle-cont">
-              <img src="../../../../assets/img/icon-calendar-non-defini.svg" alt="autre">
-            </span>
-          </span>
-        </span>
-      </label>
-      <span class="reponse-checkbox-txt-row">
-        <ion-item>
-          <ion-label position="floating">Autre</ion-label>
-          <ion-input 
-            (keydown)="getTextContactFrequency($event)" 
-            [disabled]="disabledInput" 
-            type="text" 
-            name="autre"
-            [(ngModel)]="contactFrequency">
-          </ion-input>
-        </ion-item>
-      </span>
-    </div>
-
-  </div>
-
-  <div *ngIf="question !== 'purpose'" class="btn-container">
-    <ion-button 
-      *ngIf="question !== 'purpose'" 
-      (click)="dismiss()" 
-      size="small" 
-      [disabled]="disabledStatus">
-      Valider
-    </ion-button>
-  </div>
-
-</ion-content>
+</div>
+<!-- </ion-content> -->

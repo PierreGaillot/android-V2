@@ -70,7 +70,8 @@
           <p class="recap-num-question">Question 5</p>
           <div class="recap-goupe-question-reponse">
             <p class="recap-goupeElement-question">quartier :</p>
-            <p class="recap-goupeElement-reponse">{{ data.area }}</p>
+            <p *ngIf="isAreaFilled" class="recap-goupeElement-reponse">{{ data.area }}</p>
+            <p *ngIf="!isAreaFilled" class="recap-goupeElement-reponse">Non renseigné</p>
           </div>
         </div>
         <img (click)="presentModal('area')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">

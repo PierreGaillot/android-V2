@@ -1,7 +1,7 @@
 <ion-content>
 
-  <app-eugenie-infos title="Super !" txtInfos="
-  Super {{ userFirstname }} ! 
+  <app-eugenie-infos title="Parfait !" txtInfos="
+  Parfait {{ userFirstname }} ! 
   J’ai déjà beaucoup d’informations qui me permettront
   de vous recontacter rapidement !
   ">
@@ -13,8 +13,10 @@
 
   <app-progress-bar step=2></app-progress-bar>
 
-  <app-swipeup nextPage = "/contact" appSwipe
-  (swipeUp)="onSwipeUp($event)"></app-swipeup>
+  <div *ngIf="isCompleted">
+    <app-swipeup nextPage = "/contact" appSwipe
+    (swipeUp)="onSwipeUp($event)"></app-swipeup>
+  </div>
   
 </ion-content>
 

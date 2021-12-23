@@ -25,7 +25,7 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-/* You can add global styles to this file, and also import other style files */
+/////////////////////////////////  RESET CSS  ///////////////////////////////// 
 html,
 body,
 div,
@@ -200,8 +200,6 @@ table {
   align-items: center;
   text-align: center;
   color: #E9F6FF;
-  ;
-
   border-radius: 1.5em;
   padding: 1.5em;
   background: #74B3E2;
@@ -247,6 +245,10 @@ ion-item::part(native) {
 ion-item {
   --inner-border-width: 0px;
   --inner-padding-end: 0 !important;
+}
+
+ion-item.item-has-focus.label-floating {
+  color: #A0C9E5 !important;
 }
 
 ion-input {
@@ -385,9 +387,6 @@ input[type="checkbox"].checkbox-btn:checked+label .rep-cb-circle-cont {
   width: 3.8em;
 }
 
-
-
-
 .separateur {
   z-index: 1;
   display: inline-block;
@@ -462,4 +461,26 @@ input[type="checkbox"].checkbox-btn:checked+label .rep-cb-circle-cont {
 
 .question-component-contact {
   background-image: url(../src/assets/img/Question-backgound/09_contact.png);
+}
+
+
+/* ############### RECAP MODAL ############ */
+ion-modal.auto-height {
+  &.bottom {
+      align-items: flex-end;
+  }
+
+  --height: auto;
+
+  .ion-page {
+      position: relative;
+      display: block;
+      contain: content;
+
+      .inner-content {
+          max-height: 90vh;
+          overflow: auto;
+          padding: 3em 1em;
+      }
+  }
 }

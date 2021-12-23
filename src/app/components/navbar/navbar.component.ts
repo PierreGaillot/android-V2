@@ -30,10 +30,10 @@ export class NavbarComponent implements OnInit {
         // console.log(`INDEX : ${index}`);
         // console.log(this.navigation.getRoutes());
 
-        if (index === 0) {
-          this.title = "introduction";
-        } 
-        else if (index > 0 && index < 7) {
+        // if (index === 0) {
+        //   this.title = "introduction";
+        // } 
+        if (index > 0 && index < 7) {
           this.title = "à propos de vous";
         }
         else if (index > 7 && index < 12) {
@@ -45,7 +45,7 @@ export class NavbarComponent implements OnInit {
         else if (index === 7 || index === 12 || index === 15) {
           this.title = "récapitulatif"
         }
-        else {
+        else if (index > 15) {
           this.title = "A bientôt";
         }
 

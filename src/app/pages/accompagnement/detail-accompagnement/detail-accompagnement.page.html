@@ -9,7 +9,7 @@
         <div class="recap-question-txt">
           <p class="recap-num-question">Question 6</p>
           <div class="recap-goupe-question-reponse">
-            <p class="recap-goupeElement-question">motif :</p>
+            <p class="recap-goupeElement-question purpose">motif :</p>
             <!-- <p class="recap-goupeElement-reponse">{{ data.purpose }}</p> -->
             <ul>
               <li *ngFor="let item of data.purpose" class="recap-goupeElement-reponse">{{ item }}</li>
@@ -52,7 +52,7 @@
     </div>
   </div>
   <div class="center">
-    <ion-button [routerLink]="['/contact']" class="btn">Continuer !</ion-button>
+    <ion-button [routerLink]="['/contact']" size="small" class="btn">Continuer !</ion-button>
   </div>
 
 </ion-content>
