@@ -31,7 +31,7 @@ export class DetailAccompagnementPage implements OnInit, AfterViewInit {
       componentProps: {
         'question': questionName
       },
-      cssClass: 'bgc'
+      cssClass: 'auto-height'
     });
     return await modal.present();
   }

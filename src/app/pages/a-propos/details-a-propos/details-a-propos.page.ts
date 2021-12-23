@@ -42,7 +42,8 @@ export class DetailsAProposPage implements OnInit, AfterViewInit {
       // passing value for dynamic display in the modal
       componentProps: {
         'question': questionName
-      }
+      },
+      cssClass: 'auto-height'
     });
     return await modal.present();
   }
