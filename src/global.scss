@@ -462,3 +462,25 @@ input[type="checkbox"].checkbox-btn:checked+label .rep-cb-circle-cont {
 .question-component-contact {
   background-image: url(../src/assets/img/Question-backgound/09_contact.png);
 }
+
+
+/* ############### RECAP MODAL ############ */
+ion-modal.auto-height {
+  &.bottom {
+      align-items: flex-end;
+  }
+
+  --height: auto;
+
+  .ion-page {
+      position: relative;
+      display: block;
+      contain: content;
+
+      .inner-content {
+          max-height: 90vh;
+          overflow: auto;
+          padding: 3em 1em;
+      }
+  }
+}

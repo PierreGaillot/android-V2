@@ -2,9 +2,10 @@
 @import '../motif/motif.page.scss';
 
 // Modal dimensions
-.sc-ion-modal-ios-h, .sc-ion-modal-md-h {
-  --height: 600px;
-}
+// .sc-ion-modal-ios-h, .sc-ion-modal-md-h {
+//   --height: 600px;
+//   // --height: auto;
+// }
 
 .reponses-cb-row {
   flex-direction: row;
@@ -13,7 +14,12 @@
 
 // PURPOSE
 .purpose .reponses-cb-col {
-    padding: 1rem;
+    padding: 0 1rem;
+    margin: 0;
+}
+
+.purpose .recap-rubrique-txt {
+  margin-bottom: 1em;
 }
 
 // METHOD
@@ -24,8 +30,16 @@ label[for="presentiel-distanciel"] .rep-cb-circl-stroke {
 }
 
 .method {
-  max-width: 75%;
+  max-width: 90%;
   margin: auto;
+}
+
+.method .recap-rubrique-txt {
+  margin: auto;
+}
+
+.method .radio-center {
+  width: 90%;
 }
 
 .method .radio-ctn {
@@ -50,8 +64,13 @@ label[for="presentiel-distanciel"] .rep-cb-circl-stroke {
 }
 
 // FREQUENCY
+#autre {
+  margin-left: 4px;
+}
+
 .reponse-checkbox-txt-row {
-  padding-left: 12px;
+  padding-left: 11px;
+  width: 60%;
 }
 
 // .method .reponses-cb-row {
