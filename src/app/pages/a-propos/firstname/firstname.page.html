@@ -15,6 +15,12 @@
         </ion-item>
     </div>
     
+
+    <!-- TEST MODAL RGPD -->
+<ion-button (click)="presentRGPDModal()" expand="block" fill="clear" shape="round">
+    RGPD modal
+</ion-button>
+
     <div *ngIf="isCompleted">
         <app-swipeup nextPage = "/sexe" appSwipe
         (swipeUp)="onSwipeUp($event)"></app-swipeup>

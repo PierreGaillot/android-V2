@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ModalRGPDPage } from '../modal-rgpd/modal-rgpd.page';
 
 @Component({
   selector: 'app-firstname',
@@ -19,7 +20,8 @@ export class FirstnamePage implements OnInit {
     public userDataService: UserDataService,
     private navCtrl: NavController,
     private keyboard: Keyboard,
-    public db: AngularFirestore
+    public db: AngularFirestore,
+    public modalController:ModalController,
   ) { }
 
   ngOnInit() {
@@ -52,5 +54,15 @@ export class FirstnamePage implements OnInit {
 
   onSwipeUp($event) {
       this.navCtrl.navigateForward(['/', 'sexe']);
+  }
+
+
+// AFFICHAGE DE LA MODALE RGPD
+  async presentRGPDModal() {
+    const modal = await this.modalController.create({
+      component: ModalRGPDPage,
+      cssClass: 'rgpdModal',
+    });
+    return await modal.present();
   }
 }

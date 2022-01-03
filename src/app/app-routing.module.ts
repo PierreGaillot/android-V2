@@ -82,7 +82,11 @@ const routes: Routes = [
   {
     path: 'modal-contact',
     loadChildren: () => import('./pages/contacts/modal-contact/modal-contact.module').then( m => m.ModalContactPageModule)
+  },  {
+    path: 'modal-rgpd',
+    loadChildren: () => import('./pages/a-propos/modal-rgpd/modal-rgpd.module').then( m => m.ModalRGPDPageModule)
   },
+
 
 ];
 

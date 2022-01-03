@@ -465,7 +465,7 @@ input[type="checkbox"].checkbox-btn:checked+label .rep-cb-circle-cont {
 
 
 /* ############### RECAP MODAL ############ */
-ion-modal.auto-height {
+ion-modal.auto-height { 
   &.bottom {
       align-items: flex-end;
   }
@@ -483,4 +483,24 @@ ion-modal.auto-height {
           padding: 3em 1em;
       }
   }
+}
+
+.rgpdModal{
+  &.bottom {
+    align-items: flex-end;
+}
+
+--height: auto;
+
+.ion-page {
+    position: relative;
+    display: block;
+    contain: content;
+
+    .inner-content {
+        max-height: 90vh;
+        overflow: auto;
+        padding: 3em 1em;
+    }
+}
 }
