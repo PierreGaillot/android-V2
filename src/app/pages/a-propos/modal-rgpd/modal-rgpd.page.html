@@ -53,10 +53,10 @@
 
 
 
-    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" class="btn-accept">
+    <ion-button (click)="closeModal()" expand="block" fill="clear" shape="round" class="btn-accept">
       Accecter les conditions
     </ion-button>
-    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" class="btn-denied">
+    <ion-button [routerLink]="['/home']" expand="block" fill="clear" shape="round" class="btn-denied">
       je refuse
     </ion-button>
   </div>
