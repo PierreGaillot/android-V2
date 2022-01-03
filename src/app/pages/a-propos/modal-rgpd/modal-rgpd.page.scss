@@ -1,0 +1,59 @@
+// ***************** GENERAL *****************
+
+.ion-page {
+    justify-content: flex-start;
+}
+
+// Modal dimensions
+.sc-ion-modal-ios-h, .sc-ion-modal-md-h {
+    --width: 90%;
+    // --height: 350px;
+    --border-radius: 1.5rem;
+}
+
+.main-ctn {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ion-content.ios.overscroll.hydrated {
+    --keyboard-offset: 0px !important;
+}
+
+// ***************** Txt *****************
+
+
+.title-Rgpd {
+    font-family: 'Gotham-bold' !important;
+    font-size: 2.5em;
+    line-height: 0.5em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #74B3E2;
+    margin-bottom: 1em;
+  }
+  
+  .termes-rgpd {
+    margin-bottom: 0;
+    color: black;
+    padding-bottom: 1em;
+}
+
+.sub-title-Rgpd{
+    font-family: 'Gotham-bold' !important;
+    margin-bottom: 0;
+    color: #74B3E2;
+    margin-bottom: 0.3em;
+}
+
+
+.btn-accept{
+    color: #74B3E2 !important;
+}
+
+.btn-denied{
+    color: grey !important;
+}
