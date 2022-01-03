@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 
 
@@ -11,9 +12,17 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class ModalRGPDPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public modalCtrl:ModalController,
+  ) { 
+  }
 
   ngOnInit() {
   }
 
+  async closeModal(){
+    await this.modalCtrl.dismiss()
+  }
+
 }
+

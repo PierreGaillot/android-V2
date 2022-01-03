@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 import { ModalController, NavController } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
@@ -30,8 +30,11 @@ export class FirstnamePage implements OnInit {
       .then((doc) => {
         result = doc.data();
         console.log(result);
+        // Affiche la MODALE des RGPD;
+        this.presentRGPDModal();
       })
   }
+
 
   getUserFirstame(event) {
     let firstnameUpperCase: string = '';
@@ -62,6 +65,8 @@ export class FirstnamePage implements OnInit {
     const modal = await this.modalController.create({
       component: ModalRGPDPage,
       cssClass: 'rgpdModal',
+      swipeToClose: false,
+      backdropDismiss: false,
     });
     return await modal.present();
   }
