@@ -1,13 +1,21 @@
-<ion-content>
+<!-- <ion-content> -->
+<div class="inner-content">
 
   <ion-icon (click)="dismiss()" name="close-outline" size="large"></ion-icon>
 
   <div *ngIf="question == 'contact'" class="contact-container">
 
     <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
+    <div class="recap-rubrique-txt">Modifier votre méthode de contact</div>
+    
     <div class="reponses-cb-row contact">
       <!-- ############ Reponse "TELEPHONE" chekbox Radio ##### -->
-      <input (change)="isPhoneChecked($event.target.checked)" type="radio" name="phoneOrMail" value="phone"
+      <div class="radio-ctn">
+        <input (change)="isPhoneChecked($event.target.checked)" type="radio" name="phoneOrMail" value="phone" id="phone">
+        <label for="phone">Téléphone</label>
+      </div>
+
+      <!-- <input (change)="isPhoneChecked($event.target.checked)" type="radio" name="phoneOrMail" value="phone"
         class="radio-btn" id="phone">
       <label for="phone">
         <span class="reponse-checkbox">
@@ -18,10 +26,15 @@
           </span>
           <span class="reponse-checkbox-txt">Téléphone</span>
         </span>
-      </label>
+      </label> -->
 
       <!-- ############ Reponse "MAIL" chekbox Radio ##### -->
-      <input (change)="isMailChecked($event.target.checked)" type="radio" name="phoneOrMail" value="mail"
+      <div class="radio-ctn">
+        <input (change)="isMailChecked($event.target.checked)" type="radio" name="phoneOrMail" value="mail" id="mail">
+        <label for="mail">E-mail</label>
+      </div>
+
+      <!-- <input (change)="isMailChecked($event.target.checked)" type="radio" name="phoneOrMail" value="mail"
         class="radio-btn" id="mail">
       <label for="mail">
         <span class="reponse-checkbox">
@@ -32,7 +45,7 @@
           </span>
           <span class="reponse-checkbox-txt">e-mail</span>
         </span>
-      </label>
+      </label> -->
     </div>
 
     <div *ngIf="!phoneChecked && !mailChecked ;then hideAll else testCheck"></div>
@@ -44,11 +57,7 @@
     <ng-template #phone>
       <ion-item>
         <ion-label position="floating">Votre téléphone ...</ion-label>
-        <ion-input 
-          (keydown)="getUserContact($event)" 
-          type="tel" 
-          name="phone" 
-          [(ngModel)]="contact">
+        <ion-input (keydown)="getUserContact($event)" type="tel" name="phone" [(ngModel)]="contact">
         </ion-input>
       </ion-item>
 
@@ -72,4 +81,5 @@
     <ion-button (click)="dismiss()" size="small" [disabled]="disabledStatus">Valider</ion-button>
   </div>
 
-</ion-content>
+</div>
+<!-- </ion-content> -->

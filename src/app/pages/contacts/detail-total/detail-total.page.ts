@@ -23,8 +23,10 @@ export class DetailTotalPage implements OnInit {
       // passing value for dynamic display in the modal
       componentProps: {
         'question': questionName
-      }
+      },
+      cssClass: 'auto-height'
     });
     return await modal.present();
   }
 }
+

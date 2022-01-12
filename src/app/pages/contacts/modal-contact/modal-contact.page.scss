@@ -5,12 +5,21 @@
     position: relative;
 }
 
-.reponses-cb-row.contact {
-    margin-top: 5rem;
+.recap-rubrique-txt {
+    margin-bottom: 2em;
 }
 
-.btn-container {
-    margin-top: 6rem;
+.reponses-cb-row.contact {
+    margin-top: 0;
+    flex-direction: row;
+}
+
+label[for="phone"] {
+    margin-right: 30px;
+}
+
+ion-item {
+    margin: 0 auto !important;
 }
 
 .alert {
