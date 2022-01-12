@@ -485,22 +485,22 @@ ion-modal.auto-height {
   }
 }
 
-.rgpdModal{
-  &.bottom {
-    align-items: flex-end;
-}
+// .rgpdModal{
+//   &.bottom {
+//     align-items: flex-end;
+// }
 
---height: auto;
+// --height: auto;
 
-.ion-page {
-    position: relative;
-    display: block;
-    contain: content;
+// .ion-page {
+//     position: relative;
+//     display: block;
+//     contain: content;
 
-    .inner-content {
-        max-height: 90vh;
-        overflow: auto;
-        padding: 3em 1em;
-    }
-}
-}
+//     .inner-content {
+//         max-height: 90vh;
+//         overflow: auto;
+//         padding: 3em 1em;
+//     }
+// }
+// }

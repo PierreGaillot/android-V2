@@ -25,14 +25,8 @@ export class FirstnamePage implements OnInit {
   ) { }
 
   ngOnInit() {
-    let result;
-    this.db.collection('users').doc('TlC6iECe1I2zZTMTjLRH').get().toPromise()
-      .then((doc) => {
-        result = doc.data();
-        console.log(result);
-        // Affiche la MODALE des RGPD;
-        this.presentRGPDModal();
-      })
+    // Affiche la MODALE des RGPD;
+    this.presentRGPDModal();
   }
 
 
@@ -64,7 +58,7 @@ export class FirstnamePage implements OnInit {
   async presentRGPDModal() {
     const modal = await this.modalController.create({
       component: ModalRGPDPage,
-      cssClass: 'rgpdModal',
+      cssClass: 'auto-height',
       swipeToClose: false,
       backdropDismiss: false,
     });
