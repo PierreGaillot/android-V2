@@ -47,7 +47,6 @@ export class RecapTotalPage implements OnInit {
   ngOnInit() {
     this.emailConstructor();
     this.showSwipeDelay();
-    console.log(this.currentDateTime);
   }
 
   ngAfterViewInit() {
@@ -84,8 +83,7 @@ export class RecapTotalPage implements OnInit {
 
     // retourne une liste du tableau
     function enumPurpose(purpose) {
-      let purboseList: string = `
-      `;
+      let purboseList: string = ``;
       for (let i = 0; i < purpose.length; i++) {
         // purboseList.concat('- ',purpose[i]);
         purboseList += '<li>' + purpose[i] + '</li>';
@@ -96,34 +94,34 @@ export class RecapTotalPage implements OnInit {
     };
     const mail: string =
       `
-    <h2>Prise de contact SUR-MESURE</h2>
-    Créé le ${this.currentDateTime}
+      <h2>Prise de contact SUR-MESURE</h2>
+      Créé le ${this.currentDateTime}
 
-    <h2>A PROPOS </h2>
+      <h2>A PROPOS </h2>
 
-    <ul>
-      <li>Nom : ${userData.firstname}</li>
-      <li>Sexe : ${userData.sexe}</li>
-      <li>age : ${userData.age}</li>
-      <li>ville : ${userData.city}</li>
-      <li>quartier : ${userData.area}</li>
-    </ul>
-    
-    <h2>ACCOMPAGNEMENT</h2>
-    <ul>
-      <li>souhaite est accompagné pour : 
-        <ul>${enumPurpose(userData.purpose)}<ul>
-      </li>
-      <li>avec un accompagnement : ${userData.method}</li>
-      <li>avec un rytme de : ${userData.contactFrequency}</li>
-    </ul>
-    
-    <h2>CONTACT</h2>
-    <ul>
-      <li>type de contact : ${getContactType(userData.isPhone)}</li>
-      <li>contact : ${userData.contact}</li>
-    </ul>
-    `
+      <ul>
+        <li>Nom : ${userData.firstname}</li>
+        <li>Sexe : ${userData.sexe}</li>
+        <li>age : ${userData.age}</li>
+        <li>ville : ${userData.city}</li>
+        <li>quartier : ${userData.area}</li>
+      </ul>
+      
+      <h2>ACCOMPAGNEMENT</h2>
+      <ul>
+        <li>souhaite est accompagné pour : 
+          <ul>${enumPurpose(userData.purpose)}<ul>
+        </li>
+        <li>avec un accompagnement : ${userData.method}</li>
+        <li>avec un rytme de : ${userData.contactFrequency}</li>
+      </ul>
+      
+      <h2>CONTACT</h2>
+      <ul>
+        <li>type de contact : ${getContactType(userData.isPhone)}</li>
+        <li>contact : ${userData.contact}</li>
+      </ul>
+      `
     return mail
   }
 }
