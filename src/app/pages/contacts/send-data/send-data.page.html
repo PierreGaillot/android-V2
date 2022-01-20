@@ -1,0 +1,41 @@
+<ion-content>
+
+  <app-eugenie-infos title="Parfait" txtInfos="
+  Vous n'avez plus qu'à me transmettre vos informations ! 
+  ">
+  </app-eugenie-infos>
+
+
+  <!-- <label for="validation">
+    En cochant cette case vous reconnaissez avoir pris connaissance de la <span class="underline">politique de confidentialité</span>
+  </label>
+    <input type="checkbox" name="checkbox-btn" id="validation"
+      (change)="changeSelection()"> -->
+
+  <!-- <ion-item>
+    <ion-label>
+      En cochant cette case vous reconnaissez avoir pris connaissance de la <span class="underline">politique de confidentialité</span>
+    </ion-label>
+    <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+  </ion-item> -->
+  
+  <div class="consent-ctn">
+    <input (change)="toggleSendBtn($event)" type="checkbox" name="consent" id="consent">
+    <label for="consent">
+      En cochant cette case vous reconnaissez avoir pris connaissance de la 
+      <span (click)="presentRGPDModal()" class="confidentiality-pol">politique de confidentialité</span>
+    </label>
+  </div>
+
+  <div class="center">
+    <ion-button [disabled]="disabledStatus" class="btn">envoyer mes informations</ion-button>
+  </div>
+
+
+  <!-- <div *ngIf="isCompleted">
+    <app-swipeup nextPage = "/send-data" appSwipe
+      (swipeUp)="onSwipeUp($event)">
+    </app-swipeup>
+  </div> -->
+
+</ion-content>

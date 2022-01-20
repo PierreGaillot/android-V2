@@ -86,6 +86,10 @@ const routes: Routes = [
     path: 'modal-rgpd',
     loadChildren: () => import('./pages/a-propos/modal-rgpd/modal-rgpd.module').then( m => m.ModalRGPDPageModule)
   },
+  {
+    path: 'send-data',
+    loadChildren: () => import('./pages/contacts/send-data/send-data.module').then( m => m.SendDataPageModule)
+  },
 
 
 ];

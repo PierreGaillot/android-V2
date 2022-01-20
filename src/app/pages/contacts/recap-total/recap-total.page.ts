@@ -66,7 +66,7 @@ export class RecapTotalPage implements OnInit {
   onSwipeUp($event) {
     // this.db.collection('users').add(this.userDataToSend);
     this.db.collection('mail').add(this.mailToSend);
-    this.navCtrl.navigateForward(['/', 'fin']);
+    this.navCtrl.navigateForward(['/', 'send-data']);
   }
 
   emailConstructor() {

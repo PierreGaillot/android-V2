@@ -1,6 +1,8 @@
 <div class="inner-content">
 
   <div class="main-ctn">
+    <ion-icon (click)="dismiss()" name="close-outline" size="large"></ion-icon>
+
     <h1 class="title-Rgpd">Politique de confidentialité</h1>
 
     <h2 class="sub-title-Rgpd">
@@ -121,15 +123,17 @@
       Dans le cas où l'intégrité, la confidentialité ou la sécurité des données à caractère personnel de l'Utilisateur est compromise, le responsable du traitement s'engage à en informer l'Utilisateur par tout moyen.
     </p>
 
-    <p class="termes-rgpd">
-      Veuillez accepter la politique de confidentialité avant de poursuivre votre navigation.
-    </p>
-
-    <ion-button (click)="closeModal()" expand="block" fill="clear" shape="round" class="btn-accept">
-      Accecter les conditions
-    </ion-button>
-    <ion-button (click)="navigateToHome()" expand="block" fill="clear" shape="round" class="btn-denied">
-      je refuse
-    </ion-button>
+    <div *ngIf="!isSendDataPage" class=consent>
+      <p class="termes-rgpd">
+        Veuillez accepter la politique de confidentialité avant de poursuivre votre navigation.
+      </p>
+  
+      <ion-button (click)="closeModal()" expand="block" fill="clear" shape="round" class="btn-accept">
+        Accecter les conditions
+      </ion-button>
+      <ion-button (click)="navigateToHome()" expand="block" fill="clear" shape="round" class="btn-denied">
+        je refuse
+      </ion-button>
+    </div>
   </div>
 </div>
