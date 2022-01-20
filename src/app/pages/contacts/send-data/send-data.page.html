@@ -5,7 +5,6 @@
   ">
   </app-eugenie-infos>
 
-
   <!-- <label for="validation">
     En cochant cette case vous reconnaissez avoir pris connaissance de la <span class="underline">politique de confidentialité</span>
   </label>
@@ -13,7 +12,7 @@
       (change)="changeSelection()"> -->
 
   <!-- <ion-item>
-    <ion-label>
+    <ion-label>zz
       En cochant cette case vous reconnaissez avoir pris connaissance de la <span class="underline">politique de confidentialité</span>
     </ion-label>
     <ion-checkbox color="secondary" slot="start"></ion-checkbox>
@@ -21,14 +20,14 @@
   
   <div class="consent-ctn">
     <input (change)="toggleSendBtn($event)" type="checkbox" name="consent" id="consent">
-    <label for="consent">
+    <label>
       En cochant cette case vous reconnaissez avoir pris connaissance de la 
       <span (click)="presentRGPDModal()" class="confidentiality-pol">politique de confidentialité</span>
     </label>
   </div>
 
   <div class="center">
-    <ion-button [disabled]="disabledStatus" class="btn">envoyer mes informations</ion-button>
+    <ion-button (click)="sendUserData()" [disabled]="disabledStatus" class="btn">envoyer mes informations</ion-button>
   </div>
 
 

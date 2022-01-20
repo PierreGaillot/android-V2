@@ -11,7 +11,7 @@ import { ModalRGPDPage } from '../modal-rgpd/modal-rgpd.page';
   templateUrl: './firstname.page.html',
   styleUrls: ['./firstname.page.scss'],
 })
-export class FirstnamePage implements OnInit {
+export class FirstnamePage implements OnInit, AfterViewInit {
 
   public firstname: string = '';
   private isCompleted: boolean = false;
@@ -25,6 +25,9 @@ export class FirstnamePage implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+  
+  ngAfterViewInit(): void {
     // Affiche la MODALE des RGPD;
     this.presentRGPDModal();
   }
