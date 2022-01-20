@@ -11,7 +11,7 @@ import { ModalRGPDPage } from '../modal-rgpd/modal-rgpd.page';
   templateUrl: './firstname.page.html',
   styleUrls: ['./firstname.page.scss'],
 })
-export class FirstnamePage implements OnInit {
+export class FirstnamePage implements OnInit, AfterViewInit {
 
   public firstname: string = '';
   private isCompleted: boolean = false;
@@ -25,14 +25,11 @@ export class FirstnamePage implements OnInit {
   ) { }
 
   ngOnInit() {
-    let result;
-    this.db.collection('users').doc('TlC6iECe1I2zZTMTjLRH').get().toPromise()
-      .then((doc) => {
-        result = doc.data();
-        console.log(result);
-        // Affiche la MODALE des RGPD;
-        this.presentRGPDModal();
-      })
+  }
+  
+  ngAfterViewInit(): void {
+    // Affiche la MODALE des RGPD;
+    this.presentRGPDModal();
   }
 
 
@@ -64,7 +61,7 @@ export class FirstnamePage implements OnInit {
   async presentRGPDModal() {
     const modal = await this.modalController.create({
       component: ModalRGPDPage,
-      cssClass: 'rgpdModal',
+      cssClass: 'auto-height',
       swipeToClose: false,
       backdropDismiss: false,
     });

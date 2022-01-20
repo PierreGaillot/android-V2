@@ -1,0 +1,32 @@
+// ion-item {
+//     max-width: 80%;
+// }
+
+// ion-label {
+//     white-space: normal !important;
+//     color: black !important;
+// }
+
+.consent-ctn {
+    max-width: 278px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    padding-left: 25px;
+}
+
+.confidentiality-pol {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.center {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+

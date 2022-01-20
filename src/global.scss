@@ -190,6 +190,10 @@ table {
   font-family: "Gotham" !important;
 }
 
+span {
+  color: black;
+}
+
 /////////////////////////////////  BULLE  /////////////////////////////////  
 .bulle-txt {
   font-style: normal;
@@ -483,24 +487,4 @@ ion-modal.auto-height {
           padding: 3em 1em;
       }
   }
-}
-
-.rgpdModal{
-  &.bottom {
-    align-items: flex-end;
-}
-
---height: auto;
-
-.ion-page {
-    position: relative;
-    display: block;
-    contain: content;
-
-    .inner-content {
-        max-height: 90vh;
-        overflow: auto;
-        padding: 3em 1em;
-    }
-}
 }

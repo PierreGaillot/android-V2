@@ -10,6 +10,11 @@ label[for="mail"] .rep-cb-circl-stroke {
   margin-bottom: 1em !important;
 }
 
+.reponse-checkbox {
+  flex-direction: column;
+  width: auto;
+}
+
 .alert {
   position: absolute;
   left: 50%;
