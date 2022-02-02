@@ -16,7 +16,7 @@ export class SendDataPage implements OnInit {
   public disabledStatus: boolean = true;
   public currentDateTime = this.datepipe.transform((new Date), 'dd/MM/yyyy h:mm:ss');
   public mailToSend = {
-    to: ['ggournay.csc@gmail.com'],
+    to: ['e.simon@projet-surmesure.fr'],
     message: {
       subject: 'SurMesure Formulaire : '  + this.userData.firstname,
       // text: 'This is the plaintext section of the email body.',
