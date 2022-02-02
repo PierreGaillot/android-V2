@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { UserDataModel } from 'src/app/models/user-data.model';
 import { UserDataService } from 'src/app/services/user-data.service';
@@ -7,6 +7,7 @@ import { UserDataService } from 'src/app/services/user-data.service';
   selector: 'app-fin',
   templateUrl: './fin.page.html',
   styleUrls: ['./fin.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class FinPage implements OnInit, AfterViewInit {
   

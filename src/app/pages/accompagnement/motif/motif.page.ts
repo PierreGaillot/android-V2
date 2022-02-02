@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
 import { NavController } from '@ionic/angular';
 
-
-
 @Component({
   selector: 'app-motif',
   templateUrl: './motif.page.html',
@@ -13,6 +11,8 @@ export class MotifPage implements OnInit {
 
   private isCompleted: boolean = false;
   private disabledStatus: boolean = true;
+  public userCity: string = '';
+  public nextPage: string = '';
   private selectedAnswersList = [];
   private finalAnswersContent = [];
   private checkboxesAnswersList = [
@@ -61,10 +61,22 @@ export class MotifPage implements OnInit {
 
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getUserCity();
+  }
 
   changeSelection() {
     this.fetchSelectedAnswers();
+  }
+
+  getUserCity() {
+    this.userCity = this.userDataService.user[0].city;
+
+    if (this.userCity === 'Tourcoing') {
+      this.nextPage = '/methode';
+    } else {
+      this.nextPage = '/contact';
+    }
   }
 
   fetchSelectedAnswers() {
@@ -86,10 +98,15 @@ export class MotifPage implements OnInit {
 
     // Set User purpose with checked answers content 
     if (this.finalAnswersContent.length > 0) return this.userDataService.setUserPurpose(this.finalAnswersContent), this.isCompleted = true;
+
     return console.log('Aucun motif n\'a été sélectionné');
   }
 
   onSwipeUp($event) {
-    this.navCtrl.navigateForward(['/', 'methode']);
-  }z
+    if (this.userCity === "Tourcoing") {
+      this.navCtrl.navigateForward(['/', 'methode']);
+    } else {
+      this.navCtrl.navigateForward(['/', 'contact']);
+    }
+  }
 }

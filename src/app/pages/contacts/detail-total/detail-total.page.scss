@@ -14,5 +14,18 @@
 }
 
 .center {
-    margin-top: 4rem;
+    margin-top: 2rem;
+}
+
+// PURPOSE
+li.recap-goupeElement-reponse {
+    margin-bottom: 0.6em;
+}
+
+li.recap-goupeElement-reponse:last-child {
+    margin-bottom: 0;
+}
+
+.capitalize::first-letter {
+    text-transform: uppercase;
 }

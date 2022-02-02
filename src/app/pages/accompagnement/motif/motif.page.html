@@ -28,6 +28,6 @@ c<ion-content>
 
   </div>
   <div *ngIf="isCompleted">
-    <app-swipeup nextPage="/methode" appSwipe (swipeUp)="onSwipeUp($event)"></app-swipeup>
+    <app-swipeup nextPage={{nextPage}} appSwipe (swipeUp)="onSwipeUp($event)"></app-swipeup>
   </div>
 </ion-content>
