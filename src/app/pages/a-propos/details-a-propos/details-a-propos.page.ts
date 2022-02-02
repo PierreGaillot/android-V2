@@ -4,7 +4,7 @@ import { ModalAProposPage } from '../modal-a-propos/modal-a-propos.page';
 import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
-  selector: 'app-details',
+  selector: 'app-details-a-propos',
   templateUrl: './details-a-propos.page.html',
   styleUrls: ['./details-a-propos.page.scss'],
 })

@@ -1,11 +1,74 @@
 @import '../../../../global.scss';
 @import '../../a-propos/modal-a-propos/modal-a-propos.page.scss';
+@import '../../accompagnement/motif/motif.page.scss';
 
+// PURPOSE
+.purpose .reponses-cb-col {
+    padding: 0 1rem;
+    margin: 0;
+}
+
+.purpose .recap-rubrique-txt {
+  margin-bottom: 1em;
+}
+
+// METHOD
+.method {
+    max-width: 90%;
+    margin: auto;
+}
+
+.method .recap-rubrique-txt {
+    margin: auto;
+}
+
+.method .radio-center {
+    width: 90%;
+}
+
+.method .radio-ctn {
+    display: flex;
+}
+
+.method label {
+    display: inline-block;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+// FREQUENCY
+.radio-center.frequency {
+    margin-top: 10px;
+}
+
+.radio-center.frequency .radio-ctn {
+    margin-bottom: 1.75em;
+}
+
+.radio-ctn.once-month {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0.5em !important;
+}
+
+.radio-ctn.autre {
+    display: flex;
+}
+
+.reponse-checkbox-txt-row.autre {
+    position: relative;
+    bottom: 12px;
+    left: 15px;
+}
+
+// CONTACT
 .contact-container {
     position: relative;
 }
 
-.recap-rubrique-txt {
+.mb-2 {
     margin-bottom: 2em;
 }
 
@@ -34,3 +97,4 @@ ion-item {
     border-radius: 0.25rem;
     color: #721c24;
 }
+

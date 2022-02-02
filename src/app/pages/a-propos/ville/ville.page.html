@@ -48,20 +48,20 @@
     </label>
     <!-- ############ Reponse "Je ne sais pas" chekbox Radio ##### -->
     <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Non renseignée" class="radio-btn"
-      id="ne-sais-pas">
-    <label for="ne-sais-pas">
+      id="autre">
+    <label for="autre">
       <span class="reponse-checkbox">
         <span class="rep-cb-circl-stroke">
           <span class="rep-cb-circle-cont">
             <img src="../../../../assets/img/icon-ne-sais-pas.svg" alt="je ne sais pas">
           </span>
         </span>
-        <span class="reponse-checkbox-txt">boh ! ché po mi !?</span>
+        <span class="reponse-checkbox-txt">Autre</span>
       </span>
     </label>
   </div>
   <div *ngIf="isCompleted">
-    <app-swipeup nextPage="/quartier" appSwipe
+    <app-swipeup nextPage={{nextPage}} appSwipe
     (swipeUp)="onSwipeUp($event)"></app-swipeup>
   </div>
 </ion-content>

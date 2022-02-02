@@ -16,7 +16,6 @@ private isCompleted: boolean = false;
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,
-
   ) { }
 
   ngOnInit() {

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from 'src/app/services/user-data.service';
-
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -11,11 +10,12 @@ import { NavController } from '@ionic/angular';
 export class VillePage implements OnInit {
 
   private isCompleted: boolean = false;
+  public userCity: string = '';
+  public nextPage: string = '';
 
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,
-
   ) { }
 
   ngOnInit() {
@@ -28,10 +28,21 @@ export class VillePage implements OnInit {
   getUserCity(city) {
     this.userDataService.setUserCity(city);
     this.isCompleted = true;
+    this.userCity = this.userDataService.user[0].city;
+
+    if (this.userCity === 'Tourcoing') {
+      this.nextPage = '/quartier';
+    } else {
+      this.nextPage = '/motif';
+    }
   }
 
   onSwipeUp($event) {
-    this.navCtrl.navigateForward(['/', 'quartier']);
+    if (this.userCity === "Tourcoing") {
+      this.navCtrl.navigateForward(['/', 'quartier']);
+    } else {
+      this.navCtrl.navigateForward(['/', 'motif']);
+    }
   }
 
 }
