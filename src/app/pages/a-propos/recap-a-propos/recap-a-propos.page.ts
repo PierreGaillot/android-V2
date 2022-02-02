@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class RecapAProposPage implements OnInit {
 
-  private isCompleted: boolean = false;
+  public isCompleted: boolean = false;
 
   constructor(private navCtrl: NavController,) { }
 

@@ -11,12 +11,12 @@ import { NavController } from '@ionic/angular';
 })
 export class RecapAccompagnementPage implements OnInit {
 
-  private userFirstname: string = '';
-  private isCompleted: boolean = false;
+  public userFirstname: string = '';
+  public isCompleted: boolean = false;
 
   constructor(
     public userDataService: UserDataService,
-    private navCtrl: NavController,
+    public navCtrl: NavController,
 
   ) {}
 

@@ -10,14 +10,14 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class ModalContactPage implements OnInit {
   // A PROPOS
-  private firstname: string = '';
-  private area: string = '';
+  public firstname: string = '';
+  public area: string = '';
 
   // ACCOMPAGNEMENT
   // USER PURPOSE
-  private selectedAnswersList = []; 
-  private finalAnswersContent = [];
-  private checkboxesAnswersList = [
+  public selectedAnswersList = []; 
+  public finalAnswersContent = [];
+  public checkboxesAnswersList = [
     {
       id: 'reponse-1',
       content: 'Être aidé pour les modes de gardes d\'enfant, la mobilité, l\'accès aux droits, l\'accompagnement numérique...',
@@ -50,12 +50,12 @@ export class ModalContactPage implements OnInit {
     },
   ] 
   // USER CONTACT FREQUENCY
-  private contactFrequency: string = '';
-  private disabledInput: boolean = true;
+  public contactFrequency: string = '';
+  public disabledInput: boolean = true;
 
   // CONTACT
-  private phoneChecked: boolean = false;
-  private mailChecked: boolean = false;
+  public phoneChecked: boolean = false;
+  public mailChecked: boolean = false;
   public contact: string = '';
   public disabledStatus: boolean = true;
   public displayAlert: boolean = false;
@@ -78,22 +78,6 @@ export class ModalContactPage implements OnInit {
     });
   }
 
-  isPhoneChecked(status) {
-    this.phoneChecked = status;
-    this.mailChecked = !status;
-  }
-
-  isMailChecked(status) {
-    this.mailChecked = status;
-    this.phoneChecked = !status;
-    // console.log('mail check !');
-  }
-
-  reset() {
-    this.phoneChecked = false;
-    this.mailChecked = false;
-  }
-
   // ######################## A PROPOS ########################
 
   updateUserFirstame(event): void {
@@ -104,7 +88,7 @@ export class ModalContactPage implements OnInit {
   }
 
   updateUserAge(ageValue): void {
-    this.userDataService.setUserAge(ageValue);
+    this.userDataService.setUserAge((ageValue as HTMLInputElement).value);
     
     if (ageValue !== '') {
       this.disabledStatus = false;
@@ -112,7 +96,7 @@ export class ModalContactPage implements OnInit {
   }
 
   updateUserSexe(sexeValue): void {
-    this.userDataService.setUserSexe(sexeValue);
+    this.userDataService.setUserSexe((sexeValue as HTMLInputElement).value);
     
     if (sexeValue !== '') {
       this.disabledStatus = false;
@@ -120,7 +104,7 @@ export class ModalContactPage implements OnInit {
   }
 
   updateUserCity(cityValue): void {
-    this.userDataService.setUserCity(cityValue);
+    this.userDataService.setUserCity((cityValue as HTMLInputElement).value);
     
     if (cityValue !== '') {
       this.disabledStatus = false;
@@ -166,7 +150,7 @@ export class ModalContactPage implements OnInit {
 
   // USER METHOD
   getUserMethod(userMethod) {
-    this.userDataService.setUserMethod(userMethod);
+    this.userDataService.setUserMethod((userMethod as HTMLInputElement).value);
 
     if (userMethod !== '') {
       this.disabledStatus = false;
@@ -176,7 +160,7 @@ export class ModalContactPage implements OnInit {
   // USER CONTACT FREQUENCY
   getUserContactFrequency(userContactFrequency) {
     this.disabledInput = true;
-    this.userDataService.setUserContactFrequency(userContactFrequency);
+    this.userDataService.setUserContactFrequency((userContactFrequency as HTMLInputElement).value);
 
     if (userContactFrequency !== '') {
       this.disabledStatus = false;
@@ -195,6 +179,20 @@ export class ModalContactPage implements OnInit {
 
 
   // ######################## CONTACT ########################
+  isPhoneChecked(status) {
+    this.phoneChecked = status;
+    this.mailChecked = !status;
+  }
+
+  isMailChecked(status) {
+    this.mailChecked = status;
+    this.phoneChecked = !status;
+  }
+
+  reset() {
+    this.phoneChecked = false;
+    this.mailChecked = false;
+  }
 
   getUserContact(event) {
     if (event.key === "Enter") {

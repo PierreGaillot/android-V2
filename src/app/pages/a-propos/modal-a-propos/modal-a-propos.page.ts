@@ -12,9 +12,9 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class ModalAProposPage implements OnInit {
 
-  private firstname: string = '';
-  private area: string = '';
-  private disabledStatus: boolean = true;
+  public firstname: string = '';
+  public area: string = '';
+  public disabledStatus: boolean = true;
 
   constructor(
     public modalController: ModalController,
@@ -46,7 +46,7 @@ export class ModalAProposPage implements OnInit {
   }
 
   updateUserAge(ageValue): void {
-    this.userDataService.setUserAge(ageValue);
+    this.userDataService.setUserAge((ageValue as HTMLInputElement).value);
     
     if (ageValue !== '') {
       this.disabledStatus = false;
@@ -54,7 +54,7 @@ export class ModalAProposPage implements OnInit {
   }
 
   updateUserSexe(sexeValue): void {
-    this.userDataService.setUserSexe(sexeValue);
+    this.userDataService.setUserSexe((sexeValue as HTMLInputElement).value);
     
     if (sexeValue !== '') {
       this.disabledStatus = false;
@@ -62,7 +62,7 @@ export class ModalAProposPage implements OnInit {
   }
 
   updateUserCity(cityValue): void {
-    this.userDataService.setUserCity(cityValue);
+    this.userDataService.setUserCity((cityValue as HTMLInputElement).value);
     
     if (cityValue !== '') {
       this.disabledStatus = false;

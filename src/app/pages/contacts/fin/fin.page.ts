@@ -15,9 +15,9 @@ options:AnimationOptions = {
   path:'../../../../assets/img/data.json'
 }
 
-  private userContactType: string = '';
-  private contactIsPhone : boolean;
-  private userData: UserDataModel[] = [];
+  public userContactType: string = '';
+  public contactIsPhone : boolean;
+  public userData: UserDataModel[] = [];
 
   constructor(
     public userDataService: UserDataService,

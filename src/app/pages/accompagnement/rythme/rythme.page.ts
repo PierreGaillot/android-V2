@@ -9,9 +9,9 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./rythme.page.scss'],
 })
 export class RythmePage implements OnInit {
-  private isCompleted: boolean = false; 
-  private contactFrequency: string = '';
-  private disabledStatus: boolean = true;
+  public isCompleted: boolean = false; 
+  public contactFrequency: string = '';
+  public disabledStatus: boolean = true;
 
   constructor(
     public userDataService: UserDataService,
@@ -23,7 +23,7 @@ export class RythmePage implements OnInit {
 
   getUserContactFrequency(userContactFrequency) {
     this.disabledStatus = true;
-    this.userDataService.setUserContactFrequency(userContactFrequency);
+    this.userDataService.setUserContactFrequency((userContactFrequency as HTMLInputElement).value);
     this.isCompleted = true
   }
 

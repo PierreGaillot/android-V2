@@ -6,7 +6,7 @@
   <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
   <div class="reponses-cb-row">
     <!-- ############ Reponse "Tourcoing" chekbox Radio ##### -->
-    <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Tourcoing" class="radio-btn"
+    <input (change)="getUserCity($event.target)" type="radio" name="city" value="Tourcoing" class="radio-btn"
       id="tourcoing">
     <label for="tourcoing">
       <span class="reponse-checkbox">
@@ -19,7 +19,7 @@
       </span>
     </label>
     <!-- ############ Reponse "Roubaix"chekbox Radio ##### -->
-    <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Roubaix" class="radio-btn"
+    <input (change)="getUserCity($event.target)" type="radio" name="city" value="Roubaix" class="radio-btn"
       id="roubaix">
     <label for="roubaix">
       <span class="reponse-checkbox">
@@ -34,7 +34,7 @@
   </div>
   <div class="reponses-cb-row">
     <!-- ############ Reponse "Lille" chekbox Radio ##### -->
-    <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Lille" class="radio-btn"
+    <input (change)="getUserCity($event.target)" type="radio" name="city" value="Lille" class="radio-btn"
       id="lille">
     <label for="lille">
       <span class="reponse-checkbox">
@@ -47,7 +47,7 @@
       </span>
     </label>
     <!-- ############ Reponse "Je ne sais pas" chekbox Radio ##### -->
-    <input (change)="getUserCity($event.target.value)" type="radio" name="city" value="Non renseignée" class="radio-btn"
+    <input (change)="getUserCity($event.target)" type="radio" name="city" value="Non renseignée" class="radio-btn"
       id="autre">
     <label for="autre">
       <span class="reponse-checkbox">

@@ -13,7 +13,7 @@ import { ModalRGPDPage } from '../../a-propos/modal-rgpd/modal-rgpd.page';
 export class SendDataPage implements OnInit {
   public userFirstname: string = '';
   public userData = this.userDataService.user[0];
-  private disabledStatus: boolean = true;
+  public disabledStatus: boolean = true;
   public currentDateTime = this.datepipe.transform((new Date), 'dd/MM/yyyy h:mm:ss');
   public mailToSend = {
     to: ['ggournay.csc@gmail.com'],

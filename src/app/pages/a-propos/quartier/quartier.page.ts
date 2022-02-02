@@ -15,7 +15,6 @@ export class QuartierPage implements OnInit, AfterViewInit {
   public area: string = '';
   public keyboardOn: boolean = true;
 
-
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,

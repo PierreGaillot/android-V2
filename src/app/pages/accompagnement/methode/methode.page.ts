@@ -10,23 +10,23 @@ import { NavController } from '@ionic/angular';
 })
 export class MethodePage implements OnInit {
 
-  private isCompleted: boolean = false; 
+  public isCompleted: boolean = false; 
 
   constructor(
     public userDataService: UserDataService,
     private navCtrl: NavController,
-
   ) { }
 
   ngOnInit() {
   }
 
   getUserMethod(userMethod) {
-    this.userDataService.setUserMethod(userMethod);
+    this.userDataService.setUserMethod((userMethod as HTMLInputElement).value);
     this.isCompleted = true;
   }
+
   onSwipeUp($event) {
     this.navCtrl.navigateForward(['/', 'rythme']);
-}
+  }
   
 }

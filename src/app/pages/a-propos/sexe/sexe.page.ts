@@ -10,12 +10,12 @@ import { NavController } from '@ionic/angular';
 
 export class SexePage implements OnInit, AfterViewInit {
   
-private userFirstname: string  = '';
-private isCompleted: boolean = false; 
+public userFirstname: string  = '';
+public isCompleted: boolean = false; 
 
   constructor(
     public userDataService: UserDataService,
-    private navCtrl: NavController,
+    public navCtrl: NavController,
   ) { }
 
   ngOnInit() {
@@ -27,12 +27,12 @@ private isCompleted: boolean = false;
   }
 
   getUserSexe(sexe) {
-    this.userDataService.setUserSexe(sexe);
+    this.userDataService.setUserSexe((sexe as HTMLInputElement).value);
     this.isCompleted = true;
   }
 
   onSwipeUp($event) {
     this.navCtrl.navigateForward(['/', 'age']);
-}
+  }
 
 }

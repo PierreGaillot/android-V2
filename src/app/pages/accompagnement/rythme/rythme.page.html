@@ -6,7 +6,7 @@
   <div class="reponses-cb-row">
 
     <!-- ############ Reponse "1x semaine" chekbox Radio ##### -->
-    <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="Une fois par semaine"
+    <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme" value="Une fois par semaine"
       class="radio-btn" id="1x-semaine">
     <label for="1x-semaine">
       <span class="reponse-checkbox">
@@ -20,7 +20,7 @@
     </label>
 
     <!-- ############ Reponse "1 fois toute les deux semaines" chekbox Radio ##### -->
-    <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="tous les 15 jours"
+    <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme" value="tous les 15 jours"
       class="radio-btn" id="1x-2semaine">
     <label for="1x-2semaine">
       <span class="reponse-checkbox">
@@ -34,7 +34,7 @@
     </label>
 
     <!-- ############ Reponse "tout les mois" chekbox Radio ##### -->
-    <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="tous les mois"
+    <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme" value="tous les mois"
       class="radio-btn" id="1x-mois">
     <label for="1x-mois">
       <span class="reponse-checkbox">

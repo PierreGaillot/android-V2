@@ -10,7 +10,7 @@
 
     <!-- ############ Reponse "accompagnement presentiel" chekbox Radio ##### -->
     <div class="label">
-      <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="présentiel"
+      <input (change)="getUserMethod($event.target)" type="radio" name="methode" value="présentiel"
       class="radio-btn" id="presentiel">
       <label for="presentiel">
         <span class="reponse-checkbox">
@@ -26,7 +26,7 @@
 
     <!-- ############ Reponse "accompagnement distanciel" chekbox Radio ##### -->
     <div class="label">
-      <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel"
+      <input (change)="getUserMethod($event.target)" type="radio" name="methode" value="distanciel"
       class="radio-btn" id="distanciel">
       <label for="distanciel">
         <span class="reponse-checkbox">
@@ -42,7 +42,7 @@
 
     <!-- ############ Reponse "en distanciel & presentiel" chekbox Radio ##### -->
     <div class="label">
-      <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel & présentiel"
+      <input (change)="getUserMethod($event.target)" type="radio" name="methode" value="distanciel & présentiel"
       class="radio-btn" id="presentiel-distanciel">
       <label for="presentiel-distanciel">
         <span class="reponse-checkbox">

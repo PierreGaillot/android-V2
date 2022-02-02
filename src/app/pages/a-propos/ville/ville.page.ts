@@ -9,7 +9,7 @@ import { NavController } from '@ionic/angular';
 })
 export class VillePage implements OnInit {
 
-  private isCompleted: boolean = false;
+  public isCompleted: boolean = false;
   public userCity: string = '';
   public nextPage: string = '';
 
@@ -26,7 +26,7 @@ export class VillePage implements OnInit {
   }
 
   getUserCity(city) {
-    this.userDataService.setUserCity(city);
+    this.userDataService.setUserCity((city as HTMLInputElement).value);
     this.isCompleted = true;
     this.userCity = this.userDataService.user[0].city;
 

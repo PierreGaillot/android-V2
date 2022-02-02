@@ -9,13 +9,13 @@ import { NavController } from '@ionic/angular';
 })
 export class MotifPage implements OnInit {
 
-  private isCompleted: boolean = false;
-  private disabledStatus: boolean = true;
+  public isCompleted: boolean = false;
+  public disabledStatus: boolean = true;
   public userCity: string = '';
   public nextPage: string = '';
-  private selectedAnswersList = [];
-  private finalAnswersContent = [];
-  private checkboxesAnswersList = [
+  public selectedAnswersList = [];
+  public finalAnswersContent = [];
+  public checkboxesAnswersList = [
     {
       id: 'reponse-1',
       content: 'Être aidé pour les modes de gardes d\'enfant, la mobilité, l\'accès aux droits, l\'accompagnement numérique...',

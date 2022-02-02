@@ -9,7 +9,7 @@
   <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
   <div class="reponses-cb-row">
     <!-- ############ Reponse "TELEPHONE" chekbox Radio ##### -->
-    <input (change)="isPhoneChecked($event.target.checked)" type="radio" name="phoneOrMail" value="phone"
+    <input (change)="isPhoneChecked($event.target)" type="radio" name="phoneOrMail" value="phone"
       class="radio-btn" id="phone">
     <label for="phone">
       <span class="reponse-checkbox">
@@ -23,7 +23,7 @@
     </label>
 
     <!-- ############ Reponse "MAIL" chekbox Radio ##### -->
-    <input (change)="isMailChecked($event.target.checked)" type="radio" name="phoneOrMail" value="mail"
+    <input (change)="isMailChecked($event.target)" type="radio" name="phoneOrMail" value="mail"
       class="radio-btn" id="mail">
     <label for="mail">
       <span class="reponse-checkbox">

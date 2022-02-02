@@ -11,12 +11,12 @@ import { NavController } from '@ionic/angular';
 export class AgePage implements OnInit, AfterViewInit {
 
 
-  private userFirstname: string = '';
-  private isCompleted: boolean = false; 
+  public userFirstname: string = '';
+  public isCompleted: boolean = false; 
 
   constructor(
     public userDataService: UserDataService,
-    private navCtrl: NavController,
+    public navCtrl: NavController,
 
   ) { }
 
@@ -30,7 +30,7 @@ export class AgePage implements OnInit, AfterViewInit {
   }
 
   getUserAge(ageValue): void {
-    this.userDataService.setUserAge(ageValue);
+    this.userDataService.setUserAge((ageValue as HTMLInputElement).value);
     this.isCompleted = true;
   }
 

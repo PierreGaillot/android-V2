@@ -14,12 +14,12 @@ import { ModalRGPDPage } from '../modal-rgpd/modal-rgpd.page';
 export class FirstnamePage implements OnInit, AfterViewInit {
 
   public firstname: string = '';
-  private isCompleted: boolean = false;
+  public isCompleted: boolean = false;
 
   constructor(
     public userDataService: UserDataService,
-    private navCtrl: NavController,
-    private keyboard: Keyboard,
+    public navCtrl: NavController,
+    public keyboard: Keyboard,
     public db: AngularFirestore,
     public modalController:ModalController,
   ) { }

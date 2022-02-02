@@ -12,12 +12,12 @@ import { UserDataService } from 'src/app/services/user-data.service';
 })
 export class ModalAccompagnementPage implements OnInit {
 
-  private disabledStatus: boolean = true;
+  public disabledStatus: boolean = true;
 
   // USER PURPOSE
-  private selectedAnswersList = []; 
-  private finalAnswersContent = [];
-  private checkboxesAnswersList = [
+  public selectedAnswersList = []; 
+  public finalAnswersContent = [];
+  public checkboxesAnswersList = [
     {
       id: 'reponse-1',
       content: 'Être aidé pour les modes de gardes d\'enfant, la mobilité, l\'accès aux droits, l\'accompagnement numérique...',
@@ -50,8 +50,8 @@ export class ModalAccompagnementPage implements OnInit {
     },
   ] 
   // USER CONTACT FREQUENCY
-  private contactFrequency: string = '';
-  private disabledInput: boolean = true;
+  public contactFrequency: string = '';
+  public disabledInput: boolean = true;
 
   constructor(
     public modalController: ModalController,
@@ -100,7 +100,7 @@ export class ModalAccompagnementPage implements OnInit {
 
   // USER METHOD
   getUserMethod(userMethod) {
-    this.userDataService.setUserMethod(userMethod);
+    this.userDataService.setUserMethod((userMethod as HTMLInputElement).value);
 
     if (userMethod !== '') {
       this.disabledStatus = false;
@@ -110,7 +110,7 @@ export class ModalAccompagnementPage implements OnInit {
   // USER CONTACT FREQUENCY
   getUserContactFrequency(userContactFrequency) {
     this.disabledInput = true;
-    this.userDataService.setUserContactFrequency(userContactFrequency);
+    this.userDataService.setUserContactFrequency((userContactFrequency as HTMLInputElement).value);
 
     if (userContactFrequency !== '') {
       this.disabledStatus = false;

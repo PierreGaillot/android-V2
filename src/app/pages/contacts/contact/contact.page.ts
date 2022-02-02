@@ -11,12 +11,12 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
 })
 export class ContactPage implements OnInit {
 
-  private isCompleted: boolean = false;
-  private phoneChecked: boolean = false;
-  private mailChecked: boolean = false;
+  public isCompleted: boolean = false;
+  public phoneChecked: boolean = false;
+  public mailChecked: boolean = false;
   public contact: string = '';
   public displayAlert: boolean = false;
-  private keyboardOn: boolean = false;
+  public keyboardOn: boolean = false;
 
   constructor(
     public userDataService: UserDataService,
@@ -29,13 +29,15 @@ export class ContactPage implements OnInit {
   }
 
   isPhoneChecked(status) {
-    this.phoneChecked = status;
-    this.mailChecked = !status;
+    let isItChecked = (status as HTMLInputElement).checked;
+    this.phoneChecked = isItChecked;
+    this.mailChecked = !isItChecked;
   }
 
   isMailChecked(status) {
-    this.mailChecked = status;
-    this.phoneChecked = !status;
+    let isItChecked = (status as HTMLInputElement).checked;
+    this.mailChecked = isItChecked;
+    this.phoneChecked = !isItChecked;
     console.log('mail check !');
   }
 

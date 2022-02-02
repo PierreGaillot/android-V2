@@ -38,13 +38,13 @@
 
           <!-- ############ Reponse "accompagnement presentiel" chekbox Radio ##### -->
           <div class="radio-ctn">
-            <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="présentiel"
+            <input (change)="getUserMethod($event.target)" type="radio" name="methode" value="présentiel"
               id="presentiel">
             <label for="presentiel">Je peux me déplacer et venir en présentiel.</label>
           </div>
 
           <!-- <div class="label">
-          <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="présentiel"
+          <input (change)="getUserMethod($event.target)" type="radio" name="methode" value="présentiel"
             class="radio-btn" id="presentiel">
           <label for="presentiel">
             <span class="reponse-checkbox">
@@ -60,13 +60,13 @@
 
           <!-- ############ Reponse "accompagnement distanciel" chekbox Radio ##### -->
           <div class="radio-ctn">
-            <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel"
+            <input (change)="getUserMethod($event.target)" type="radio" name="methode" value="distanciel"
               id="distanciel">
             <label for="distanciel">Je préfère être suivi à distance grâce aux outils numériques.</label>
           </div>
 
           <!-- <div class="label">
-          <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel"
+          <input (change)="getUserMethod($event.target)" type="radio" name="methode" value="distanciel"
             class="radio-btn" id="distanciel">
           <label for="distanciel">
             <span class="reponse-checkbox">
@@ -82,13 +82,13 @@
 
           <!-- ############ Reponse "en distanciel & presentiel" chekbox Radio ##### -->
           <div class="radio-ctn">
-            <input (change)="getUserMethod($event.target.value)" type="radio" name="methode"
+            <input (change)="getUserMethod($event.target)" type="radio" name="methode"
               value="distanciel & présentiel" id="presentiel-distanciel">
             <label for="presentiel-distanciel">Un mixte des deux types d’accompagnement pourrait me convenir.</label>
           </div>
 
           <!-- <div class="label">
-          <input (change)="getUserMethod($event.target.value)" type="radio" name="methode" value="distanciel & présentiel"
+          <input (change)="getUserMethod($event.target)" type="radio" name="methode" value="distanciel & présentiel"
             class="radio-btn" id="presentiel-distanciel">
           <label for="presentiel-distanciel">
             <span class="reponse-checkbox">
@@ -117,12 +117,12 @@
         <div class="radio-center">
           <!-- ############ Reponse "1x semaine" chekbox Radio ##### -->
           <div class="radio-ctn">
-            <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+            <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme"
               value="Une fois par semaine" id="1x-semaine">
             <label for="1x-semaine">Une fois par semaine</label>
           </div>
 
-          <!-- <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+          <!-- <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme"
           value="Une fois par semaine" class="radio-btn" id="1x-semaine">
         <label for="1x-semaine">
           <span class="reponse-checkbox">
@@ -137,12 +137,12 @@
 
           <!-- ############ Reponse "1 fois toute les deux semaines" chekbox Radio ##### -->
           <div class="radio-ctn">
-            <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+            <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme"
               value="tous les 15 jours" id="1x-2semaine">
             <label for="1x-2semaine">Tous les 15 jours</label>
           </div>
 
-          <!-- <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+          <!-- <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme"
           value="tous les 15 jours" class="radio-btn" id="1x-2semaine">
         <label for="1x-2semaine">
           <span class="reponse-checkbox">
@@ -157,12 +157,12 @@
 
           <!-- ############ Reponse "tout les mois" chekbox Radio ##### -->
           <div class="radio-ctn mb-0">
-            <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme"
+            <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme"
               value="tous les mois" id="1x-mois">
             <label for="1x-mois">Tous les mois</label>
           </div>
 
-          <!-- <input (change)="getUserContactFrequency($event.target.value)" type="radio" name="rythme" value="tous les mois"
+          <!-- <input (change)="getUserContactFrequency($event.target)" type="radio" name="rythme" value="tous les mois"
           class="radio-btn" id="1x-mois">
         <label for="1x-mois">
           <span class="reponse-checkbox">
