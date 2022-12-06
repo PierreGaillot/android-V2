@@ -19,25 +19,24 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  entryComponents: [],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
-    SharedModule,
-    LottieModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-  ],
-  providers: [
-    Keyboard,
-    DatePipe,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, },
-  ],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        BrowserModule,
+        RouterModule,
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        SharedModule,
+        LottieModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule,
+    ],
+    providers: [
+        Keyboard,
+        DatePipe,
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, },
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
