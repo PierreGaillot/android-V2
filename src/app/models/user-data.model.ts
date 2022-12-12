@@ -8,6 +8,8 @@ export class UserDataModel {
     method: string = '';
     contactFrequency: string = '';
     contact: string = '';
+    mail:string = "";
+    phone:string = "";
     isMail: boolean;
     isPhone: boolean;
 }

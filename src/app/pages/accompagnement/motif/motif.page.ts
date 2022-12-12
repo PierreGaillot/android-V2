@@ -72,11 +72,8 @@ export class MotifPage implements OnInit {
   getUserCity() {
     this.userCity = this.userDataService.user[0].city;
 
-    if (this.userCity === 'Tourcoing') {
       this.nextPage = '/methode';
-    } else {
-      this.nextPage = '/contact';
-    }
+   
   }
 
   fetchSelectedAnswers() {
@@ -103,10 +100,6 @@ export class MotifPage implements OnInit {
   }
 
   onSwipeUp($event) {
-    if (this.userCity === "Tourcoing") {
       this.navCtrl.navigateForward(['/', 'methode']);
-    } else {
-      this.navCtrl.navigateForward(['/', 'contact']);
-    }
   }
 }

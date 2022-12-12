@@ -14,7 +14,7 @@ export class RecapTotalPage implements OnInit {
 
   public userFirstname: string = '';
   public userData = this.userDataService.user[0];
-  // public isCompleted: boolean = false;
+  public isCompleted: boolean = false;
   public currentDateTime = this.datepipe.transform((new Date), 'dd/MM/yyyy h:mm:ss');
 
   constructor(

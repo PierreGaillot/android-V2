@@ -1,5 +1,4 @@
 <ion-content>
-
   <!-- ######################## RECAP A PROPOS ######################## -->
 
   <div *ngFor="let data of userDataService.user" class="recapitulatif recap-mt">
@@ -13,7 +12,11 @@
             <p class="recap-goupeElement-reponse">{{ data.firstname }}</p>
           </div>
         </div>
-        <img (click)="presentModal('firstname')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('firstname')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
       <div class="recap-separateur"></div>
     </div>
@@ -26,7 +29,11 @@
             <p class="recap-goupeElement-reponse">{{ data.age }}</p>
           </div>
         </div>
-        <img (click)="presentModal('age')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('age')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
       <div class="recap-separateur"></div>
     </div>
@@ -39,7 +46,11 @@
             <p class="recap-goupeElement-reponse capitalize">{{ data.sexe }}</p>
           </div>
         </div>
-        <img (click)="presentModal('sexe')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('sexe')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
       <div class="recap-separateur"></div>
     </div>
@@ -52,7 +63,11 @@
             <p class="recap-goupeElement-reponse capitalize">{{ data.city }}</p>
           </div>
         </div>
-        <img (click)="presentModal('city')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('city')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
       <div class="recap-separateur"></div>
     </div>
@@ -62,20 +77,33 @@
         <div class="recap-question-txt">
           <div class="recap-goupe-question-reponse">
             <p class="recap-goupeElement-question">quartier :</p>
-            <p *ngIf="isAreaFilled" class="recap-goupeElement-reponse capitalize">{{ data.area }}</p>
-            <p *ngIf="!isAreaFilled" class="recap-goupeElement-reponse">Non renseigné</p>
+            <p
+              *ngIf="isAreaFilled"
+              class="recap-goupeElement-reponse capitalize"
+            >
+              {{ data.area }}
+            </p>
+            <p *ngIf="!isAreaFilled" class="recap-goupeElement-reponse">
+              Non renseigné
+            </p>
           </div>
         </div>
-        <img (click)="presentModal('area')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('area')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
       <div class="recap-separateur"></div>
     </div>
   </div>
 
-
   <!-- ######################## RECAP ACCOMPAGNEMENT ######################## -->
 
-  <div *ngFor="let data of userDataService.user" class="recapitulatif recap-bloc">
+  <div
+    *ngFor="let data of userDataService.user"
+    class="recapitulatif recap-bloc"
+  >
     <div class="recap-rubrique-txt">2 - accompagnement</div>
 
     <div class="recap-cont-question">
@@ -84,11 +112,20 @@
           <div class="recap-goupe-question-reponse">
             <p class="recap-goupeElement-question purpose">motif :</p>
             <ul>
-              <li *ngFor="let item of data.purpose" class="recap-goupeElement-reponse">{{ item }}</li>
+              <li
+                *ngFor="let item of data.purpose"
+                class="recap-goupeElement-reponse"
+              >
+                {{ item }}
+              </li>
             </ul>
           </div>
         </div>
-        <img (click)="presentModal('purpose')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('purpose')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
       <div class="recap-separateur"></div>
     </div>
@@ -98,10 +135,16 @@
         <div class="recap-question-txt">
           <div class="recap-goupe-question-reponse">
             <p class="recap-goupeElement-question">methode :</p>
-            <p class="recap-goupeElement-reponse capitalize">{{ data.method }}</p>
+            <p class="recap-goupeElement-reponse capitalize">
+              {{ data.method }}
+            </p>
           </div>
         </div>
-        <img (click)="presentModal('method')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('method')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
       <div class="recap-separateur"></div>
     </div>
@@ -111,38 +154,65 @@
         <div class="recap-question-txt">
           <div class="recap-goupe-question-reponse">
             <p class="recap-goupeElement-question frequency">rythme :</p>
-            <p class="recap-goupeElement-reponse">{{ data.contactFrequency }}</p>
+            <p class="recap-goupeElement-reponse">
+              {{ data.contactFrequency }}
+            </p>
           </div>
         </div>
-        <img (click)="presentModal('contactFrequency')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('contactFrequency')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
       <div class="recap-separateur"></div>
     </div>
   </div>
-
 
   <!-- ######################## RECAP CONTACT ######################## -->
 
-  <div *ngFor="let data of userDataService.user" class="recapitulatif recap-bloc">
+  <div
+    *ngFor="let data of userDataService.user"
+    class="recapitulatif recap-bloc"
+  >
     <div class="recap-rubrique-txt">3 - contact</div>
 
     <div class="recap-cont-question">
+      <!-- Phone -->
       <div class="recap-question">
         <div class="recap-question-txt">
           <div class="recap-goupe-question-reponse">
-            <p class="recap-goupeElement-question">contact :</p>
-            <p class="recap-goupeElement-reponse">{{ data.contact }}</p>
+            <p class="recap-goupeElement-question">téléphone :</p>
+            <p class="recap-goupeElement-reponse">{{ data.phone }}</p>
           </div>
         </div>
-        <img (click)="presentModal('contact')" src="../../../../../assets/img/edit.svg" alt="modifier sa reponse">
+        <img
+          (click)="presentModal('phone')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
       </div>
-      <div class="recap-separateur"></div>
+      <!-- Mail ? -->
+      <div *ngIf="data.mail"  class="recap-question">
+        <div class="recap-question-txt">
+          <div class="recap-goupe-question-reponse">
+            <p class="recap-goupeElement-question">mail :</p>
+            <p class="recap-goupeElement-reponse">{{ data.mail }}</p>
+          </div>
+        </div>
+        <img
+          (click)="presentModal('mail')"
+          src="../../../../../assets/img/edit.svg"
+          alt="modifier sa reponse"
+        />
+      </div>
     </div>
+    <div class="recap-separateur"></div>
   </div>
 
   <div class="center">
-    <ion-button [routerLink]="['/send-data']" class="btn">Continuer !</ion-button>
+    <ion-button [routerLink]="['/send-data']" class="btn"
+      >Continuer !</ion-button
+    >
   </div>
-
 </ion-content>
-

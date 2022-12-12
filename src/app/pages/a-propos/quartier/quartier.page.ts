@@ -13,7 +13,7 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
 export class QuartierPage implements OnInit, AfterViewInit {
 
   public area: string = '';
-  public keyboardOn: boolean = true;
+  public keyboardOn: boolean = false;
 
   constructor(
     public userDataService: UserDataService,

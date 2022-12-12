@@ -17,6 +17,7 @@ export class SendDataPage implements OnInit {
   public currentDateTime = this.datepipe.transform((new Date), 'dd/MM/yyyy h:mm:ss');
   public mailToSend = {
     to: ['e.simon@projet-surmesure.fr'],
+    // to : ['p.gaillot@essteam.fr'],
     message: {
       subject: 'SurMesure Formulaire : '  + this.userData.firstname,
       // text: 'This is the plaintext section of the email body.',
@@ -49,18 +50,10 @@ export class SendDataPage implements OnInit {
     this.disabledStatus = !event.target.checked
   }
 
-  //  CREAT EMAIL TO BE SENT
+  //  CREATE EMAIL TO BE SENT
   emailConstructor() {
     const userData = this.userData;
 
-    //return le type du contact
-    function getContactType(isPhone) {
-      if (isPhone) {
-        return 'Téléphone'
-      } else {
-        return 'e-mail'
-      }
-    };
 
     // retourne une liste du tableau
     function enumPurpose(purpose) {
@@ -99,8 +92,8 @@ export class SendDataPage implements OnInit {
       
       <h2>CONTACT</h2>
       <ul>
-        <li>type de contact : ${getContactType(userData.isPhone)}</li>
-        <li>contact : ${userData.contact}</li>
+        <li>numéro de téléphone : ${userData.phone}</li>
+        <li>adresse mail : ${userData.mail}</li>
       </ul>
       `
     return mail

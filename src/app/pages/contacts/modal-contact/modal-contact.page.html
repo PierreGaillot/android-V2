@@ -233,57 +233,41 @@
   </div>
 
 
+  
 
-  <!-- ######################## CONTACT ######################## -->
 
-  <div *ngIf="question == 'contact'" class="contact-container">
+  <!-- ######################## PHONE ######################## -->
+
+  <div *ngIf="question == 'phone'" class="phone-container">
 
     <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
-    <div class="recap-rubrique-txt mb-2">Modifier votre méthode de contact</div>
+    <div class="recap-rubrique-txt mb-2">Modifier votre numéro de téléphone</div>
 
-    <div class="reponses-cb-row contact">
-      <!-- ############ Reponse "TELEPHONE" chekbox Radio ##### -->
-      <div class="radio-ctn">
-        <input (change)="isPhoneChecked($event.target)" type="radio" name="phoneOrMail" value="phone"
-          id="phone">
-        <label for="phone">Téléphone</label>
-      </div>
-
-      <!-- ############ Reponse "MAIL" chekbox Radio ##### -->
-      <div class="radio-ctn">
-        <input (change)="isMailChecked($event.target)" type="radio" name="phoneOrMail" value="mail" id="mail">
-        <label for="mail">E-mail</label>
-      </div>
-    </div>
-
-    <div *ngIf="!phoneChecked && !mailChecked ;then hideAll else testCheck"></div>
-
-    <ng-template #testCheck>
-      <div *ngIf="phoneChecked ;then phone else mail"></div>
-    </ng-template>
-
-    <ng-template #phone>
       <ion-item>
         <ion-label position="floating">0610203040</ion-label>
-        <ion-input (keydown)="getUserContact($event)" type="tel" name="phone" [(ngModel)]="contact">
+        <ion-input (keydown)="getUserPhone($event)" type="tel" name="phone" [(ngModel)]="phone">
         </ion-input>
       </ion-item>
-
-      <div *ngIf="displayAlert" class="alert">Le format du numéro est incorrect</div>
-    </ng-template>
-
-    <ng-template #mail>
-      <ion-item>
-        <ion-label position="floating">jean.dupont@gmail.com</ion-label>
-        <ion-input (keydown)="getUserContact($event)" type="email" name="email" [(ngModel)]="contact"></ion-input>
-      </ion-item>
-
-      <div *ngIf="displayAlert" class="alert">Le format de l'adresse email est incorrect</div>
-    </ng-template>
-
-    <ng-template #hideAll></ng-template>
-
+      <div *ngIf="displayAlertPhone" class="alert">Le format du numéro est incorrect</div>
   </div>
+
+
+
+  <!-- ######################## MAIL ######################## -->
+
+  <div *ngIf="question == 'mail'" class="mail-container">
+
+    <!-- ############ tableau de Reponses : chekboxs Radio ##### -->
+    <div class="recap-rubrique-txt mb-2">Modifier votre adresse mail</div>
+
+      <ion-item>
+        <ion-label position="floating">monadresse@mail.fr</ion-label>
+        <ion-input (keydown)="getUserMail($event)" type="email" name="email" [(ngModel)]="mail">
+        </ion-input>
+      </ion-item>
+      <div *ngIf="displayAlertMail" class="alert">Le format de l'adresse mail est incorrect</div>
+  </div>
+
 
   <div *ngIf="question !== 'purpose'" class="btn-container">
     <ion-button (click)="dismiss()" size="small" [disabled]="disabledStatus">Valider</ion-button>
